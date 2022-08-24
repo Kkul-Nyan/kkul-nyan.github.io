@@ -40,7 +40,7 @@ disqus_shortname:   NoranFox
 #email:
 twitter:            username
 facebook:           username
-github-url:         https://github.com/noranfox/
+github-url:         noranfox
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
 #linkedin:          username
 #xing:              username
@@ -50,7 +50,7 @@ instagram:          username
 #medium:            '@username'
 #pinterest:         username
 #foursquare:        username
-steam:              https://steamcommunity.com/profiles/76561198066770670
+steam:              76561198066770670
 #dribbble:          username
 #youtube:           username
 #youtube-channel:   channel
