@@ -7,7 +7,7 @@ words_per_minute:   200
 logo:               'assets/img/logo1.jpeg'
 background:         'assets/img/869.webp'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
-locale:             en_US
+locale:             ko_KR
 url:                https://noranfox.github.io/
 
 # Jekyll
