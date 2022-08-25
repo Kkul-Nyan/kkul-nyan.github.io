@@ -1,0 +1,41 @@
+I"�<h2 id="포스팅에서-다양한-글효과-사용하기">포스팅에서 다양한 글효과 사용하기</h2>
+<hr />
+
+<h3 id="tweet-사용방법">Tweet 사용방법</h3>
+<p>원하는 글의 시작과 끝 부분에 &lt;&gt;적어준뒤 tweet을 적어주면<br />
+&lt;tweet&gt;Cat cAt caT&lt;/tweet&gt; 라 적어주면</p>
+<tweet>Cat cAt caT</tweet>
+
+<p>같은 효과가 생기게 된다</p>
+
+<hr />
+
+<h3 id="공부하는-식빵맘-정보">공부하는 식빵맘 정보</h3>
+<ul>
+  <li>문단 나누는 방법(줄바꿈)
+    <ol>
+      <li>스페이스바 2번+ Enter</li>
+      <li>&lt;br&gt;를 사용하는 방법
+<br /></li>
+    </ol>
+  </li>
+  <li>중접된 구조<br />
+스페이스바 2번 눌러 띄워준 후 작성, 3번 중첩된 줄은 스페이스바 4번 그리고 앞에 ‘-‘+스페이스바</li>
+</ul>
+
+<p>예시</p>
+<ul>
+  <li>Hello
+    <ul>
+      <li>World
+        <ul>
+          <li>!</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+:ET
