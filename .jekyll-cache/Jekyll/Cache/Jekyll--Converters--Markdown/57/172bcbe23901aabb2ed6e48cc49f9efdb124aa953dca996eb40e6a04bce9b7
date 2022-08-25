@@ -1,0 +1,138 @@
+I"`<h2 id="포스팅에서-다양한-글효과-사용하기">포스팅에서 다양한 글효과 사용하기</h2>
+<hr />
+
+<h3 id="tweet-사용방법">Tweet 사용방법</h3>
+<p>원하는 글의 시작과 끝 부분에 &lt;&gt;적어준뒤 tweet을 적어주면<br />
+&lt;tweet&gt;Cat cAt caT&lt;/tweet&gt; 라 적어주면</p>
+<tweet>Cat cAt caT</tweet>
+
+<p>같은 효과가 생기게 된다</p>
+
+<hr />
+
+<h2 id="-공부하는-식빵맘---정보"><span style="color:purple"> <strong>공부하는 식빵맘</strong> </span>  정보</h2>
+
+<h3 id="1-문단-나누는-방법줄바꿈">1. 문단 나누는 방법(줄바꿈)</h3>
+<ol>
+  <li>스페이스바 2번+ Enter</li>
+  <li>&lt;br&gt;를 사용하는 방법
+<br /></li>
+</ol>
+
+<h3 id="2-중접된-구조">2. 중접된 구조<br /></h3>
+<p>스페이스바 2번 눌러 띄워준 후 작성, 3번 중첩된 줄은 스페이스바 4번 그리고 앞에 ‘-‘+스페이스바</p>
+
+<p>예시</p>
+<ul>
+  <li>Hello
+    <ul>
+      <li>World
+        <ul>
+          <li>!</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="3-마크다운-문법을-그대로-보고주고-싶을때는-역슬러쉬를-사용한다">3. 마크다운 문법을 그대로 보고주고 싶을때는 (역슬러쉬)를 사용한다.</h3>
+<h3 id="4-에-갯수에-따라-제목-글자-사이즈가-작아진다">4. #에 갯수에 따라 제목 글자 사이즈가 작아진다</h3>
+
+<p>예시</p>
+<h1 id="1번-1번">1번 #1번</h1>
+<h2 id="2번-2번">2번 ##2번</h2>
+<h3 id="3번-3번">3번 ###3번</h3>
+<h4 id="4번-4번">4번 ####4번</h4>
+<h5 id="5번-5번">5번 #####5번</h5>
+<h6 id="6번-6번">6번 ######6번</h6>
+
+<h3 id="5텍스트-효과">5.텍스트 효과</h3>
+<ul>
+  <li><strong>강조</strong>
+    <ul>
+      <li>**강조** 할부분에 효과를 줍니다</li>
+      <li><strong>강조</strong> 할부분에 효과를 줍니다</li>
+    </ul>
+  </li>
+  <li><strong>기울임</strong>
+    <ul>
+      <li>*기울어진*  효과를 줄 부분을 감싸줍니다</li>
+      <li><em>기울어진</em>  효과를 줄 부분을 감싸줍니다.</li>
+    </ul>
+  </li>
+  <li><strong>취소선</strong>
+    <ul>
+      <li>~~취소선~~ 효과를 줄 부분을 감싸줍니다.</li>
+      <li><del>취소선</del> 효과를 줄 부분을 감싸줍니다.</li>
+    </ul>
+  </li>
+  <li><strong>밑줄</strong>
+    <ul>
+      <li>&lt;u&gt;밑줄&lt;/u&gt; 효과를 줄 부분을 감싸줍니다.</li>
+      <li><u>밑줄</u> 효과를 줄 부분을 감싸줍니다.</li>
+    </ul>
+  </li>
+  <li><strong>색넣기</strong>
+    <ul>
+      <li><span style="color:green"> 색바꾸기를 </span> 할 부분에 효과를 줍니다.
+<br /></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="6코드-블록">6.코드 블록</h3>
+<ul>
+  <li>inline코드 블록</li>
+  <li>코드에 `<code class="language-plaintext highlighter-rouge">형광펜</code>`같은 모양을 쓰워줍니다.(‘작은따음표’가 아닙니다.)</li>
+  <li>코드에 <code class="language-plaintext highlighter-rouge">형광펜</code>같은 모양을 쓰워줍니다.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>문장,문단에 효과를 줄수도있습니다
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>이사이에 코드를 치면 IDE 편집기같이 코드를 보기 편하게 색이 입혀집니다.
+단, ``` 바로 뒤에 <strong>c나 c++를 붙여줘서 c언어를 사용한다고 선언해줘야 합니다.</strong></p>
+
+<p>저는 C#을 적어도 효과는 없고, C와C++ 적었을때만 작동했습니다.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">using</span> <span class="n">namespace</span> <span class="o">;</span>
+
+<span class="kd">public</span> <span class="n">string</span> <span class="nc">Hello</span><span class="o">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="o">()</span>
+<span class="o">{</span>
+    <span class="n">consolo</span><span class="o">.</span><span class="na">Writeline</span><span class="o">(</span><span class="s">"Hello"</span><span class="o">);</span> <span class="c1">//c대신 java를 넣어도됩니다.</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+<p>```로  감싸져서 효과가 생기면, <strong>내부에  markdown효과를 사라집니다</strong>.</p>
+
+<p><u>중첩 구조 없을 때</u> 스페이스바 4번을 문자을 앞에써주면 그문장은 자동으로 <strong>inline효과</strong>가 생깁니다.</p>
+
+<p>스페이스 4번입니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>스페이스4번으로 효과주기
+</code></pre></div></div>
+
+<p>###7. 링크</p>
+<ul>
+  <li>링크주소 그대로 링크걸기
+<code class="language-plaintext highlighter-rouge">- &lt;https://noranfox.github.io&gt;</code>
+    <ul>
+      <li><a href="https://noranfox.github.io">https://noranfox.github.io</a></li>
+    </ul>
+  </li>
+  <li>특정 단어나 문장에 링크걸기
+<code class="language-plaintext highlighter-rouge">- [NoranFox blog](https://noranfox.github.io)</code>
+    <ul>
+      <li><a href="https://noranfox.github.io">NoranFox blog</a> 블로그 부분만 링크가 걸렸습니다.</li>
+    </ul>
+  </li>
+  <li>목차만들때 유용한 문장 링크걸기
+    <ul>
+      <li><a href="#tweet-사용방법">Tweet 사용방법</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+:ET
