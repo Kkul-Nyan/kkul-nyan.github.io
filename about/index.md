@@ -6,7 +6,7 @@ date: 2022-08-24
 comments: false
 ---
     
-<center><a href="http://noranfox.github.io"><b>Noranfox</b></a> C#, Blender and Unity Game Dev blog.</center>
+<center><a href="http://noranfox.github.io"><b>Noranfox</b></a> C#, Shader and Unity Game Dev blog.</center>
 
 ## about NoranFox
 * 33years old
