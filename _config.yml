@@ -1,76 +1,76 @@
-# Site
-title:              NoranFox
-bio:                'C#,Shader and Unity.'
-description:        "NoranFox C#,Shader and Unity Game Dev blog."
-reading_time:       true
-words_per_minute:   200
-logo:               'assets/img/logo1.jpeg'
-background:         'assets/img/869.webp'
-tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
-locale:             ko_KR
-url:                https://noranfox.github.io/
+# (string) Title of your wiki
+title: git-wiki
+demo_ver: 1.0.14
+remote_theme: Drassil/git-wiki-theme@master
+description: Git-Wiki demo and documentation
+show_downloads: true
+show_wiki_pages: true
+show_wiki_pages_limit: 10
+paginate: 5
+paginate_path: "assets/blog/page:num"
+blog_feature: true
+show_wiki_posts: true
+show_wiki_posts_limit: 5
+logo_url: assets/images/1200px-Wikipedia-logo-v2.svg_.png
+google_analytics:
+git_branch: gh-pages
+use_github_wiki: false
+use_prose_io: true
+service: github
+search_engine : "js"
+google_cse_token: 007197903287787072094:8rbvkeqo6qw
+wiki_folder : "wiki"
+permalink: /blog/posts/:year/:month/:day/:title:output_ext
+site_root: 
 
+#
 # Jekyll
-permalink:          /:title/
-markdown:           kramdown
-highlighter:        rouge
-kramdown:
-  auto_ids:         true
-  footnote_nr:      1
-  entity_output:    as_char
-  toc_levels:       1..6
-  enable_coderay:   false
-mathjax:            true
-sass:
-  sass_dir:         _sass
-  style:            compressed
+#
 
-# Comments
-disqus_shortname:   NoranFox
+defaults:
+ - 
+    scope:
+      path: "wiki"
+    values:
+      permalink: /:basename
+ -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "git-wiki-default"
+ -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "git-wiki-default"
+ -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "git-wiki-post"
+ -
+    scope:
+      path: assets/blog
+    values:
+      layout: "git-wiki-blog"
 
-# Social
-# if you don't have any of social below, comment the line.
-#google:
-  #plus:            #username
-  #analytics:
-  #verify:
-  #ad-client:
-  #ad-slot:
-#bing-verify:
-#email:
-twitter:            username
-facebook:           username
-github-url:         noranfox
-#stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
-#linkedin:          username
-#xing:              username
-instagram:          username
-#lastfm:            username
-#tumblr:            username
-#medium:            '@username'
-#pinterest:         username
-#foursquare:        username
-steam:              76561198066770670
-#dribbble:          username
-#youtube:           username
-#youtube-channel:   channel
-#soundcloud:        username
-#weibo:             username
-#flickr:            username
-#codepen:           username
-#keybase:           username
-#xmpp:              username@server.com
-#hackernews:        username
+plugins:
+ - jekyll-feed
+ - jekyll-redirect-from
+ - jekyll-seo-tag
+ - jekyll-sitemap
+ - jekyll-avatar
+ - jemoji
+ - jekyll-mentions
+  
+#
+# INCLUDING HOOKS
+# They are optional, change them only if you need
+# Check wiki documentation to learn how they work
+#
 
-# Gems
-gems:
-  - jekyll-mentions
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-gist
-
-jekyll-mentions:
-    base_url: https://github.com
-
-# Exclude list
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
+inc_after_content: "drassil/comments.html"
+inc_after_head : "drassil/head.html"
+inc_before_page_list : "drassil/sidebar.html"
