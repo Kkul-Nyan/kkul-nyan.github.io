@@ -11,6 +11,7 @@ comments: false
 ## about NoranFox
 * 33years old
 * Busan, Korea
+* Start Study at 22-06-04
 * Studing C#
 * Studing Shader
 * Studing Unity
