@@ -5,8 +5,8 @@ show_date: true
 title:  MAXST and Vuforia
 date:   2022-08-26
 description: How to use effect for posting
-img: assets/img/posts/20210125/Perceptron.jpg 
-tags: [C#, AR, Maxst, Vuforia]
+img: banner/AR.jpg 
+tags: [Unity, AR, Maxst, Vuforia]
 author: Noranfox
 github:  noranfox/
 mathjax: yes
