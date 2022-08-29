@@ -1,0 +1,33 @@
+I"x	<h3 id="백준-입출력과사칙연산-10926">백준 입출력과사칙연산 10926</h3>
+<hr />
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">question</span>
+<span class="p">{</span>
+    <span class="k">internal</span> <span class="k">class</span> <span class="err">10926</span>
+    <span class="err">{</span>
+        <span class="nc">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">string</span> <span class="n">A</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">();</span>
+
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">A</span><span class="p">+</span><span class="s">"??!"</span><span class="p">);</span>
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="입렵값뒤에-지정된-문자열을-배치-하는-문제입니다">입렵값뒤에 지정된 문자열을 배치 하는 문제입니다.</h3>
+
+<p><mark style="background-color: #dcffe4">string A</mark>를 통해 A라는 문자열을 선언해준뒤,<br />
+<mark style="background-color: #dcffe4">Console.ReadLine()</mark>을 통해 입력값을 가져옵니다.<br />
+<br />
+<mark style="background-color: #dcffe4">Console.WriteLine()</mark>으로 값을 출력해줍니다.<br />
+출력값에 입렵값을 가지고있는 A와 문자열을 의미하는  <mark style="background-color: #dcffe4">""</mark>  을 통해<br />
+<span style="color:green">입력값 A와 그뒤에 특정 문자열을 함꼐 출력합니다</span></p>
+:ET
