@@ -1,0 +1,25 @@
+I"Z<h3 id="백준-입출력과사칙연산-18108">백준 입출력과사칙연산 18108</h3>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace question
+{
+    internal class 입출력과사칙연산a11
+    {
+        static void Main(string[] args)
+        {
+            string A = Console.ReadLine();
+            int B = int.Parse(A);
+
+            Console.WriteLine(B-543);
+        }
+    }
+}
+</code></pre></div></div>
+
+:ET
