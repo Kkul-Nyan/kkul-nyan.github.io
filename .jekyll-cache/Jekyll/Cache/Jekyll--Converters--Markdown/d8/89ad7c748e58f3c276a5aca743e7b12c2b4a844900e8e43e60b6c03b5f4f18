@@ -1,4 +1,5 @@
-I"<h2 id="백준-입출력과사칙연산-3003">백준 입출력과사칙연산 3003</h2>
+I"<h2 id="백준-입출력과사칙연산-3003">백준 입출력과사칙연산 3003</h2>
+<hr />
 
 <div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>

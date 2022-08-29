@@ -1,4 +1,4 @@
-I"�<h3 id="백준-입출력과사칙연산-18108">백준 입출력과사칙연산 18108</h3>
+I"�<h3 id="백준-입출력과사칙연산-18108">백준 입출력과사칙연산 18108</h3>
 <hr />
 
 <div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
@@ -15,7 +15,7 @@
         <span class="p">{</span>
             <span class="kt">string</span> <span class="n">A</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">();</span>
             <span class="kt">int</span> <span class="n">B</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">A</span><span class="p">);</span>
-<span class="err">ß</span>
+
             <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">B</span><span class="p">-</span><span class="m">543</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
