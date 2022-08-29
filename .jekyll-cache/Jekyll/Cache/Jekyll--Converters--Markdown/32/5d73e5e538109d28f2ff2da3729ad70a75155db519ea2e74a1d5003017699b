@@ -1,0 +1,52 @@
+I"�<hr />
+<h3 id="백준-입출력과사칙연산-2588">백준 입출력과사칙연산 2588</h3>
+<hr />
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">question</span>
+<span class="p">{</span>
+    <span class="k">internal</span> <span class="k">class</span> <span class="err">2588</span>
+    <span class="err">{</span>
+        <span class="nc">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">string</span> <span class="n">A</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">();</span>
+            <span class="kt">string</span> <span class="n">B</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">();</span>
+
+            <span class="kt">int</span> <span class="n">C</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">A</span><span class="p">);</span>
+            <span class="kt">int</span> <span class="n">D</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">B</span><span class="p">.</span><span class="nf">Substring</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">));</span>
+            <span class="kt">int</span> <span class="n">E</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">B</span><span class="p">.</span><span class="nf">Substring</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">));</span>
+            <span class="kt">int</span> <span class="n">F</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">B</span><span class="p">.</span><span class="nf">Substring</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">));</span>
+            <span class="kt">int</span> <span class="n">G</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">B</span><span class="p">);</span>
+
+
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">C</span><span class="p">*</span><span class="n">F</span><span class="p">);</span>   
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">C</span><span class="p">*</span><span class="n">E</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">C</span><span class="p">*</span><span class="n">D</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">C</span><span class="p">*</span><span class="n">G</span><span class="p">);</span>
+
+           
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+<h3 id="가장-먼저-입력-조건과-출력-조건을-확인하겠습니다">가장 먼저 입력 조건과 출력 조건을 확인하겠습니다.</h3>
+<ul>
+  <li>첫째 줄에 (1)의 위치에 들어갈 세 자리 자연수가, 둘째 줄에 (2)의 위치에 들어갈 세자리 자연수가 주어진다.
+    <ul>
+      <li>2줄의 정수값이 입력될것이 확인됩니다. 입력값을 2번 받을것을 염두해둡니다.</li>
+    </ul>
+  </li>
+  <li>첫째 줄부터 넷째 줄까지 차례대로 (3), (4), (5), (6)에 들어갈 값을 출력한다.
+    <ul>
+      <li>4줄로 출력값을 내보내야할것이 확인됩니다. 따라서 <mark style="background-color: #dcffe4"> WriteLine() </mark>를 염두해둡니다.<br /><br /></li>
+    </ul>
+  </li>
+</ul>
+
+:ET

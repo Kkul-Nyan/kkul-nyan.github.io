@@ -1,0 +1,38 @@
+I"�<blockquote>
+  <h3 id="백준-입출력과사칙연산-10430">백준 입출력과사칙연산 10430</h3>
+  <hr />
+</blockquote>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">question</span>
+<span class="p">{</span>
+    <span class="k">internal</span> <span class="k">class</span> <span class="err">10430</span>
+    <span class="err">{</span>
+        <span class="nc">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">string</span><span class="p">[]</span> <span class="n">num</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">().</span><span class="nf">Split</span><span class="p">();</span>
+            <span class="kt">int</span> <span class="n">A</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">num</span><span class="p">[</span><span class="m">0</span><span class="p">]);</span>
+            <span class="kt">int</span> <span class="n">B</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">num</span><span class="p">[</span><span class="m">1</span><span class="p">]);</span>
+            <span class="kt">int</span> <span class="n">C</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">num</span><span class="p">[</span><span class="m">2</span><span class="p">]);</span>
+
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">((</span><span class="n">A</span><span class="p">+</span><span class="n">B</span><span class="p">)%</span><span class="n">C</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(((</span><span class="n">A</span><span class="p">%</span><span class="n">C</span><span class="p">)+(</span><span class="n">B</span><span class="p">%</span><span class="n">C</span><span class="p">))%</span><span class="n">C</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">((</span><span class="n">A</span><span class="p">*</span><span class="n">B</span><span class="p">)%</span><span class="n">C</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(((</span><span class="n">A</span><span class="p">%</span><span class="n">C</span><span class="p">)*(</span><span class="n">B</span><span class="p">%</span><span class="n">C</span><span class="p">))%</span><span class="n">C</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>첫째 줄에 (A+B)%C, 둘째 줄에 ((A%C) + (B%C))%C, 셋째 줄에 (A×B)%C, 넷째 줄에 ((A%C) × (B%C))%C를 출력한다.<br /><br />
+출력 조건을 보니 한줄씩 출력해야하므로 <mark style="background-color: #dcffe4">WriteLine()</mark>를 염두해둡니다.<br /><br />
+입력값이 연달아 3개가 입력 되므로<br />
+<mark style="background-color: #dcffe4"> string[]num = Console.ReadLine().Split()</mark>로 값을 받음과 동시에 집합으로 분리해줍니다.<br />
+각각 조건에 맞게 int값을 선언해주고 문자로 받은 num을 <mark style="background-color: #dcffe4"> int.Parse</mark>를 통해 정수형으로 변경해줍니다.<br /><br />
+변수들을 제시된 조건에 맞게 출력해줍니다.</p>
+
+:ET

@@ -1,0 +1,32 @@
+I"F<hr />
+<h3 id="백준-입출력과사칙연산-10998">백준 입출력과사칙연산 10998</h3>
+<hr />
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">question</span>
+<span class="p">{</span>
+    <span class="k">internal</span> <span class="k">class</span> <span class="err">10998</span>
+    <span class="err">{</span>
+        <span class="nc">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">string</span><span class="p">[]</span> <span class="n">num</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">().</span><span class="nf">Split</span><span class="p">();</span>
+            <span class="kt">int</span> <span class="n">A</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">num</span><span class="p">[</span><span class="m">0</span><span class="p">]);</span>
+            <span class="kt">int</span> <span class="n">B</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">num</span><span class="p">[</span><span class="m">1</span><span class="p">]);</span>
+
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">A</span><span class="p">*</span><span class="n">B</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><mark style="background-color: #dcffe4">string[] num</mark> 으로 글자그룹을 선언 해주고,<br />
+<mark style="background-color: #dcffe4">Console.ReadLine()</mark>으로 입력값을 받아온뒤 , <mark style="background-color: #dcffe4">Split()</mark>로 단어 단위로 쪼개어 줍니다.<br /><br />
+나누어준 <mark style="background-color: #dcffe4">string</mark>을 <mark style="background-color: #dcffe4">int.Parse</mark>를 통해 <mark style="background-color: #dcffe4">string</mark>을 <mark style="background-color: #dcffe4">int</mark>로 변환해줍니다.</p>
+
+<p>마지막으로, <mark style="background-color: #dcffe4">Console.WriteLine()</mark>으로  두개의 <mark style="background-color: #dcffe4">int</mark>의 곱샘값를 출력합니다.</p>
+:ET
