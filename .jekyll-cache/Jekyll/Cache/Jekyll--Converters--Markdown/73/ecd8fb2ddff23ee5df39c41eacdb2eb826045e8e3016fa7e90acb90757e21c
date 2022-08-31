@@ -1,0 +1,104 @@
+I"^"<hr />
+
+<h3 id="백준-입출력과사칙연산-2480">백준 입출력과사칙연산 2480</h3>
+<hr />
+
+<hr />
+
+<p>layout: post
+read_time: true
+show_date: true
+title:  백준 문제번호 2480
+date:   2022-08-31
+description: How to solve problem
+img: banner/C.jpg
+tags: [C# 백준]
+author: Noranfox
+github:  noranfox/
+mathjax: yes
+—</p>
+
+<hr />
+
+<h3 id="백준-입출력과사칙연산-2480-1">백준 입출력과사칙연산 2480</h3>
+<hr />
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">question</span>
+<span class="p">{</span>
+    <span class="k">internal</span> <span class="k">class</span> <span class="err">2480</span>
+    <span class="err">{</span>
+        <span class="nc">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">string</span><span class="p">[]</span> <span class="n">random</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">().</span><span class="nf">Split</span><span class="p">();</span>
+
+            <span class="kt">int</span> <span class="n">A</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">random</span><span class="p">[</span><span class="m">0</span><span class="p">]);</span>
+            <span class="kt">int</span> <span class="n">B</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">random</span><span class="p">[</span><span class="m">1</span><span class="p">]);</span>
+            <span class="kt">int</span> <span class="n">C</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">random</span><span class="p">[</span><span class="m">2</span><span class="p">]);</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">A</span><span class="p">==</span><span class="n">B</span> <span class="p">&amp;&amp;</span> <span class="n">B</span><span class="p">==</span><span class="n">C</span> <span class="p">&amp;&amp;</span> <span class="n">A</span><span class="p">==</span><span class="n">C</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="kt">int</span> <span class="n">All</span> <span class="p">=</span> <span class="m">10000</span> <span class="p">+</span> <span class="n">A</span> <span class="p">*</span> <span class="m">1000</span><span class="p">;</span>
+                <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">All</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">A</span><span class="p">==</span><span class="n">B</span> <span class="p">&amp;&amp;</span> <span class="n">A</span> <span class="p">!=</span> <span class="n">C</span><span class="p">)</span>
+            <span class="p">{</span>
+                    <span class="kt">int</span> <span class="n">case1</span> <span class="p">=</span> <span class="m">1000</span> <span class="p">+</span> <span class="n">A</span> <span class="p">*</span> <span class="m">100</span><span class="p">;</span>
+                    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">case1</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">B</span> <span class="p">==</span> <span class="n">C</span> <span class="p">&amp;&amp;</span> <span class="n">A</span> <span class="p">!=</span> <span class="n">B</span><span class="p">)</span>
+            <span class="p">{</span>
+                    <span class="kt">int</span> <span class="n">case2</span> <span class="p">=</span> <span class="m">1000</span> <span class="p">+</span> <span class="n">B</span> <span class="p">*</span> <span class="m">100</span><span class="p">;</span>
+                    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">case2</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">A</span> <span class="p">==</span> <span class="n">C</span> <span class="p">&amp;&amp;</span> <span class="n">B</span> <span class="p">!=</span> <span class="n">C</span> <span class="p">)</span>
+            <span class="p">{</span>
+                    <span class="kt">int</span> <span class="n">case3</span> <span class="p">=</span> <span class="m">1000</span> <span class="p">+</span> <span class="n">C</span> <span class="p">*</span> <span class="m">100</span><span class="p">;</span>
+                    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">case3</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">A</span> <span class="p">&gt;</span> <span class="n">B</span> <span class="p">&amp;&amp;</span> <span class="n">A</span> <span class="p">&gt;</span> <span class="n">C</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="kt">int</span> <span class="n">case4</span> <span class="p">=</span> <span class="n">A</span> <span class="p">*</span> <span class="m">100</span><span class="p">;</span>
+                    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">case4</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">B</span> <span class="p">&gt;</span> <span class="n">A</span> <span class="p">&amp;&amp;</span> <span class="n">B</span> <span class="p">&gt;</span> <span class="n">C</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="kt">int</span> <span class="n">case5</span> <span class="p">=</span> <span class="n">B</span> <span class="p">*</span> <span class="m">100</span><span class="p">;</span>
+                    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">case5</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="k">else</span>
+                <span class="p">{</span>
+                    <span class="kt">int</span> <span class="n">case6</span> <span class="p">=</span> <span class="n">C</span> <span class="p">*</span> <span class="m">100</span><span class="p">;</span>
+                    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">case6</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>   
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="주사위-세개">주사위 세개</h2>
+
+<ul>
+  <li>입력 : 한줄에 3개의 정수가 주어집니다.<br /></li>
+  <li>조건
+    <ul>
+      <li>정수 3개가 동일할시 10000 + 주사위 눈 X 1000원</li>
+      <li>정수 2개가 같은 경우, 1000 + 주사위 눈 X 100원</li>
+      <li>정수가 모두 다른 경우, 100 + 주사위 눈 X 10원</li>
+    </ul>
+  </li>
+  <li>출력 : 조건에 맞게 계산된 상금을 출력합니다.<br /></li>
+</ul>
+
+<p><br /><br /></p>
+
+<p>입력조건에 맞게</p>
+:ET
