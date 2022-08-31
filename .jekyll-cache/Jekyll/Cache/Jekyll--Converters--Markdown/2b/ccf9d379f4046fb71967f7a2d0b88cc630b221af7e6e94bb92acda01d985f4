@@ -1,0 +1,84 @@
+I"f<hr />
+
+<h3 id="백준-입출력과사칙연산-2480">백준 입출력과사칙연산 2480</h3>
+<hr />
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">question</span>
+<span class="p">{</span>
+    <span class="k">internal</span> <span class="k">class</span> <span class="err">2480</span>
+    <span class="err">{</span>
+        <span class="nc">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">string</span> <span class="n">Num</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">();</span>
+
+            <span class="kt">int</span> <span class="n">A</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">Num</span><span class="p">);</span>
+            <span class="kt">int</span> <span class="n">B</span> <span class="p">=</span> <span class="n">A</span> <span class="p">%</span> <span class="m">4</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">C</span> <span class="p">=</span> <span class="n">A</span> <span class="p">%</span> <span class="m">100</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">D</span> <span class="p">=</span> <span class="n">A</span> <span class="p">%</span> <span class="m">400</span><span class="p">;</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">B</span> <span class="p">==</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">C</span> <span class="p">==</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">D</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"1"</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">B</span> <span class="p">==</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">C</span> <span class="p">!=</span> <span class="m">0</span> <span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"1"</span><span class="p">);</span>
+            <span class="p">}</span>
+                    
+                    
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"0"</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="윤년인지-아닌지를-구분해야합니다">윤년인지 아닌지를 구분해야합니다.</h2>
+<ul>
+  <li>윤년의 단판하기 위한 변수는 총 3가지입니다.<br />
+    <ul>
+      <li>
+        <ol>
+          <li>4의 배수이다.</li>
+        </ol>
+      </li>
+      <li>
+        <ol>
+          <li>100으로 나누어 떨어진다.</li>
+        </ol>
+      </li>
+      <li>
+        <ol>
+          <li>400으로 나누어 떨어진다.</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>그에 따라 윤년인 조건은 2가지이며, 그외는 윤년이 아닙니다.<br />
+    <ul>
+      <li>
+        <ol>
+          <li>3가지 변수가 모두 만족한다.</li>
+        </ol>
+      </li>
+      <li>
+        <ol>
+          <li>1번 변수가 만족되지만 2번 변수가 만족되면 안된다.</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+:ET
