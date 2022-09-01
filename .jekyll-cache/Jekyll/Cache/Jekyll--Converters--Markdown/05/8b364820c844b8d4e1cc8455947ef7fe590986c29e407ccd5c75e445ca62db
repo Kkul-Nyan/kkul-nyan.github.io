@@ -1,0 +1,54 @@
+I"�<hr />
+<h3 id="백준-입출력과사칙연산-2439">백준 입출력과사칙연산 2439</h3>
+<hr />
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="err">백준</span><span class="nn">._003</span><span class="err">단계</span>
+<span class="p">{</span>
+    <span class="k">internal</span> <span class="k">class</span> <span class="err">반복문</span><span class="nc">_010</span>
+    <span class="p">{</span>
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">T</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">());</span>
+            <span class="n">Console</span><span class="p">.</span><span class="nf">Clear</span><span class="p">();</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">T</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="p">=</span> <span class="n">T</span><span class="p">;</span> <span class="n">j</span> <span class="p">&gt;</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span><span class="p">--</span> <span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">Console</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">k</span> <span class="p">&lt;</span> <span class="n">i</span> <span class="p">;</span> <span class="n">k</span><span class="p">++)</span>
+                <span class="p">{</span>
+                    <span class="n">Console</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="s">"*"</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="별찍기---2">별찍기 - 2</h2>
+<ul>
+  <li>단순한 식을 반복시키는 이중 반복문 무제입니다.</li>
+  <li>입력 : 반복할 횟수인 정수형 T가 입력됩니다.</li>
+  <li>조건 : 5줄 반복, 공란 1칸 감소, 별하나씩 증가 반복</li>
+  <li>출력 : 한줄당 공란 하나씩 감소, *하나씩 증가하며 T만큼 반복해줍니다<br /><br /></li>
+</ul>
+
+<p>반복횟수를 <mark style="background-color: #dcffe4">int.Parse(Console.ReadLine())</mark>를 이용해서 입력값을 받자말자 정수형으로 변환해줍니다.<br /><br /></p>
+
+<p><mark style="background-color: #dcffe4">T번 반복하기 위한 반복문, 한번반복때마다 공란 한칸 감소하는 반복문, 별하나가 증가하는 반복문</mark><br />
+이렇게 3종류가 필요할것입니다. 공란이 먼저들어가고 별이 들어오기때문에,<br />  공란 반복문이 별 반복문보다 이전에 작동하게 해줘야합니다<br /> 
+공란 반복문은 공식으로 생각하면 총반복횟수에서 n+1 이 반복해서 빼져가는 방식입니다.
+따라서 for반복문에서 <strong>j값은 총반복횟수 이며, 반복이 진행될때마나 하나씩 줄여 가게 해줍니다</strong>.</p>
+
+<p>별을 찍는 반복문은 위의 반복문과 달리 <strong>현반복횟수 = 별갯수</strong> 입니다.
+k는 현 반복횟수 만큼만 반복되게해주고, 현반복횟수와 동일 반복이 되면 반복을 멈추게해줍니다.</p>
+
+:ET

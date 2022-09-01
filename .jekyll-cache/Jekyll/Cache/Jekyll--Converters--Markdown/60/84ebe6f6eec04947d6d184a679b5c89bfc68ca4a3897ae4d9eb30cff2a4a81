@@ -1,0 +1,58 @@
+I"�<hr />
+<h3 id="백준-입출력과사칙연산-10871">백준 입출력과사칙연산 10871</h3>
+<hr />
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">question</span>
+<span class="p">{</span>
+    <span class="k">internal</span> <span class="k">class</span> <span class="err">10871</span>
+    <span class="err">{</span>
+        <span class="nc">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">string</span><span class="p">[]</span> <span class="n">str</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">().</span><span class="nf">Split</span><span class="p">();</span>
+            <span class="kt">int</span> <span class="n">N</span> <span class="p">=</span><span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="m">0</span><span class="p">]);</span> <span class="kt">int</span> <span class="n">X</span> <span class="p">=</span><span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="m">1</span><span class="p">]);</span>
+            
+            <span class="kt">string</span><span class="p">[]</span> <span class="n">chars</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">().</span><span class="nf">Split</span><span class="p">();</span>
+            <span class="kt">int</span><span class="p">[]</span> <span class="n">Nums</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
+
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="n">Nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">chars</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+            <span class="p">}</span>
+
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">Nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&lt;</span> <span class="n">X</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">Console</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="n">Nums</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+                    <span class="n">Console</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="x보다-작은-수">X보다 작은 수</h2>
+<ul>
+  <li>반복문과 가정법을 섞은 문제입니다.</li>
+  <li>입력 : 반복횟수 정수 N과 비교할정수 X가 주어진다.</li>
+  <li>조건 : N만큼 반복 하며, X와 다른수를 조건(X보다 작은수)에 따라 비교해줍니다.</li>
+  <li>출력 : 조건문에따라 걸려진 정답을 출력해줍니다.</li>
+</ul>
+
+<p>먼저 첫번째 입력값을 <mark style="background-color: #dcffe4"> string[] str</mark>으로 받아준뒤 헷갈리지 않게<mark style="background-color: #dcffe4"> N,X로 int.Parse</mark>를 통해 정수형으로 변환해줍니다.
+2번째 받을 입력값을 위해  <mark style="background-color: #dcffe4">string[] chars</mark>로 받아준뒤, 반복횟수를 집합개수로 정수형 집합을 선언해줍니다.</p>
+
+<p>먼저 반복문을 통해 두번쨰 <strong>문자열집합을 정수형 집합</strong>으로 변환해주도록 하겠습니다.</p>
+
+<p>변환된 정수열 집합을 집합갯수 만큼 반복문을 반복해주면서 
+<mark style="background-color: #dcffe4">if문</mark>을 통해 <strong>조건인 X 보다 작은 숫자</strong>만 <mark style="background-color: #dcffe4">if문</mark>안에 식을 작동하게 해주겠습니다.</p>
+
+<p>if문안의 내부식은 <mark style="background-color: #dcffe4">Console.Write()</mark>를 통해 한줄에 조건에 맞는 숫자를 출력해 주는것입니다.</p>
+:ET
