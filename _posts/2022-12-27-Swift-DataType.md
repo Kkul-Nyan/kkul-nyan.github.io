@@ -126,22 +126,18 @@ but kitty doesn't have enough time to find safty place.
 
    - String형은 특수 문자를 사용 할 수 있습니다.
    - 문자열의 개별 문자를 for-in loop을 사용해서 접근 할 수 있습니다.
+
 ```swift
 for char in "Cat!"{
    print(char)
 }
 ```
+
    - 문자 배열을 이용해 문자열의 초기화 메소드에 인자로 넣어 문자열을 생성 할수 있다.
+
 ```swift
 let cat: [Character] = ["c", "a", "t"]
 let catSpelling = String(cat)
 print(catSpelling)
 ```
 
-#### 단항, 이항, 삼항 연산자를 지원한다
-```swift
-let b = 10
-var a = 5
-a = b 
-print(a)
-```
