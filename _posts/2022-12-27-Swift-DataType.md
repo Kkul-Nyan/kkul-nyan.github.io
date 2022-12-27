@@ -67,12 +67,12 @@ else {
    - Float은 32비트, 6자리 정확도를 가진다
    - Double은 64비트, 15자리 정확도를 가진다
    - 선언이 없다면, 기본적으로 Double이 기본추정 된다.
-   ```swift
-    let pi = 3.14159
-    let anotherPi = 3 + 0.14159
+```swift
+let pi = 3.14159
+let anotherPi = 3 + 0.14159
 
-    print(ype(of:pi),type(of:anotherPi))
-   ```
+print(ype(of:pi),type(of:anotherPi))
+```
 #### Bool: 참거짓 데이터타입
    - 참 또는 거짓(1 또는 0)조건을 처리할수 있는 데이터 타입이다.
    - Boolean 데이터 타입을 처리하기 위하여 두 개의 Boolean 상수 값을 사용한다.
@@ -102,7 +102,6 @@ print(type(of: mause))
 var catName = "kitty"
 var age = 5
 var cat = "\(catName)의 나이는 \(age)입니다."
-
 print(cat)
 ```
    - 문자열은 큰 따옴표(")로 묶어 표한 한다.
