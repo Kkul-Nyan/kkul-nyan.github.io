@@ -86,5 +86,13 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+# Analytics
+analytics:
+  provider               : "google-gtag" 
+                          # false (default), "google", "google-universal", "google-gtag", "custom"
+  google:
+    tracking_id          : "G-F0BM2DD5RW"
+    anonymize_ip         : # true, false (default)
+
 include: [_pages]
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock", "package-lock.json", "assets/css/sass/"]
