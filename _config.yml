@@ -43,8 +43,8 @@ stackoverflow: stackoverflow # Add your stackoverflow account
 mailchimp: "-"
 
 # Tracker
-analytics: G-R8SZS2YBZK
-fbadmin: ar.maybach
+analytics: G-F0BM2DD5RW
+fbadmin: google-gtag
 
 # Paginate
 paginate: 6
