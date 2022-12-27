@@ -5,7 +5,7 @@ show_date: true
 title:  Swift DataType
 date:   2022-12-27
 description: Basic DataType
-img: banner/Swift_logo.png
+img: banner/Swift_logo.jpg
 tags: [Swift]
 author: Noranfox
 github:  noranfox/
