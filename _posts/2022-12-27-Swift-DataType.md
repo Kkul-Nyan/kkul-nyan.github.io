@@ -58,15 +58,16 @@ else {
    - Int데이터 타입은 해당 코드가 실행되는 플랫폼에 맞는 정수 크기를 사용한다.
    - 32비트 부호 있는 정수데이터 타입에 대한 최솟값과 최댓값을 출력한 것이다. 이렇게 직접 코드를 통해 확인할수 있다.
    
-   ```swift
-    print("Int32 Min = \(Int32.min) Int32 Max = \(Int32.max)")
-   ```
+```swift
+print("Int32 Min = \(Int32.min) Int32 Max = \(Int32.max)")
+```
 #### Double, Float: 소수(부동소수점)형 데이터타입
    - 소수점이 있는 숫자
    - Float과 Double이 존재한다
    - Float은 32비트, 6자리 정확도를 가진다
    - Double은 64비트, 15자리 정확도를 가진다
    - 선언이 없다면, 기본적으로 Double이 기본추정 된다.
+
 ```swift
 let pi = 3.14159
 let anotherPi = 3 + 0.14159
