@@ -84,6 +84,7 @@ else {
    -  따로 선언을 해줘야한다.
    - 선언이 작은 따옴표(')가 아니라 큰따옴표(")라서, 따로 선언하지 않으면 아래 이야기 할 String이 초기값이 된다.
    - 아래 처럼 Charactor로 선언 해주지 않으면, String이 된다. C#처럼 작은 따옴표를 써봤자 오류가 난다.
+
 ```swift
 let mause: Character
 mause = "m"
@@ -97,13 +98,13 @@ print(type(of: mause))
    - 저장, 검색, 비교, 문자열연결, 수정 등의 기능을 포함한다.
    - 단순 연산자를 통해 문자열과 문자, 문자열과 문자열을 결합 할 수 있다.
    - 문자열 보간(String Interpolation)을 사용하는 문자열과 변수, 상수, 표현식, 함수 호출의 조합으로 만들 수도 있다.
-   ```swift
-   var catName = "kitty"
-   var age = 5
-   var cat = "\(catName)의 나이는 \(age)입니다."
-   
-   print(cat)
-   ```
+```swift
+var catName = "kitty"
+var age = 5
+var cat = "\(catName)의 나이는 \(age)입니다."
+
+print(cat)
+```
    - 문자열은 큰 따옴표(")로 묶어 표한 한다.
    - 여러줄 문자열 리터럴
       - 여러줄의 문자열 즉 문단 이상을 사용하고 싶은 경우 큰 따옴표 3개(""")로 묶어서 사용할수 있다.
@@ -111,27 +112,27 @@ print(type(of: mause))
       - 여러줄 문자열을 사용하여 줄바꿈을 하고 싶다면 백슬래쉬를 사용합니다.
       - 문자열의 시작과 끝에 각각 빈줄을 넣고 싶다면 한 줄을 띄어서 문자열을 입력하면 됩니다
       - 들여쓰기의 경우, 들여쓰기 기준은 뒤에있는 """의 위치입니다.
-   ```swift
-   let catDream = """ 
+```swift
+let catDream = """ 
 
-   this cat try to move other place for kitty. \ 
-   but kitty doesn't have enough time to find safty place.
+this cat try to move other place for kitty. \ 
+but kitty doesn't have enough time to find safty place.
 
-   """
-   ```
+"""
+```
    - String형은 특수 문자를 사용 할 수 있습니다.
    - 문자열의 개별 문자를 for-in loop을 사용해서 접근 할 수 있습니다.
-   ```swift
-   for char in "Cat!"{
-    print(char)
-   }
-   ```
+```swift
+for char in "Cat!"{
+   print(char)
+}
+```
    - 문자 배열을 이용해 문자열의 초기화 메소드에 인자로 넣어 문자열을 생성 할수 있다.
-   ```swift
-   let cat: [Character] = ["c", "a", "t"]
-   let catSpelling = String(cat)
-   print(catSpelling)
-   ```
+```swift
+let cat: [Character] = ["c", "a", "t"]
+let catSpelling = String(cat)
+print(catSpelling)
+```
 
 #### 단항, 이항, 삼항 연산자를 지원한다
 ```swift
