@@ -2,7 +2,7 @@
 layout: post
 read_time: true
 show_date: true
-title:  Swift DataType
+title:  Swift DataType01
 date:   2022-12-27
 description: Basic DataType
 img: banner/Swift_logo.jpg
@@ -13,7 +13,7 @@ mathjax: yes
 ---
 
 ---
-## Swift 데이터 타입
+## Swift 데이터 타입01
 ---
 \* 스스로 공부 및 정리를 위해 [The Swift Language Guide](https://jusung.gitbook.io/the-swift-language-guide/)을 요약 및 정리 한 내용입니다. 
 
