@@ -29,7 +29,7 @@ mathjax: yes
 #### 배열의 축약형문법
    - 배열타입은 Array, 축약형으로 [Element]형태로 사용할수 있습니다.
    - 배열의 선언은 [배열의타입 이름 = [데이터타입]() 으로 선언해 둘수있습니다
-   - append로 추가할수 있습니다.
+   - <mark style='background-color: #dcffe4'>append</mark>로 추가할수 있습니다.
    - []를 통해 Array를 비워 줄 수 있습니다.
 
 ```swift
@@ -80,13 +80,13 @@ print(type(of: catsName2))
 ``` 
 
 #### 배열의 접근과 변환
-   - 배열의 원소 샛구를 구할때는 .count를 이용합니다.
+   - 배열의 원소 갯수를 구할때는 <mark style='background-color: #dcffe4'>.count</mark>를 이용합니다.
 
 ```swift
 print(catsName2.count)
 ```
 
-   - 배열이 비었는지 확인할때는 .isEmpty를 이용합니다.
+   - 배열이 비었는지 확인할때는 <mark style='background-color: #dcffe4'>.isEmpty</mark>를 이용합니다.
 
 ```swift
 if catsName2.isEmpty{
@@ -97,8 +97,8 @@ else{
 }
 ```
 
-   - 배열에 원소를 추가 할떄는 += 연사자와 []를 이용합니다.
-   - 배열에 원소를 추가 하는 방법은 .append()를 사용합니다.
+   - 배열에 원소를 추가 할떄는 <mark style='background-color: #dcffe4'>+= 연사자와 []</mark>를 이용합니다.
+   - 배열에 원소를 추가 하는 방법은 <mark style='background-color: #dcffe4'>.append()</mark>를 사용합니다.
 
 ```swift
 catsName2.append("Small")
@@ -106,7 +106,7 @@ catsName2 += ["Big"]
 print(catsName2)
 ```
 
-   - 특정 원소에 접근할떄는 [number]를 통해 원하는 원소를 접근 가능합니다.
+   - 특정 원소에 접근할떄는 <mark style='background-color: #dcffe4'>[number]</mark>를 통해 원하는 원소를 접근 가능합니다.
 
 ```swift
 print(catsName2[0])
