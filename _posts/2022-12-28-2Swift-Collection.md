@@ -96,3 +96,38 @@ else{
     print(catsName2.count)
 }
 ```
+
+   - 배열에 원소를 추가 할떄는 += 연사자와 []를 이용합니다.
+   - 배열에 원소를 추가 하는 방법은 .append()를 사용합니다.
+
+```swift
+catsName2.append("Small")
+catsName2 += ["Big"]
+print(catsName2)
+```
+
+   - 특정 원소에 접근할떄는 [number]를 통해 원하는 원소를 접근 가능합니다.
+
+```swift
+print(catsName2[0])
+print(catsName2[0...2])
+```
+
+   - 문자열 관리처럼 특정 index 위치에 원소를 insert를 통해 추가하거나, remove를 통해 삭제할수있습니다.
+
+```swift
+catsName2.insert("middle", at:1)
+print(catsName2)
+catsName2.remove(at:1)
+print(catsName2)
+catsName2.removeLast()
+print(catsName2)
+```
+
+   - for-in을 이용해 배열을 순회할수 있습니다.
+
+```swift
+for item in catsName2{
+    print(item)
+}
+```
