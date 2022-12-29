@@ -41,7 +41,7 @@ Cats = []
 print(Cats)
 ```
 
- #### 기본 값으로 빈배열 생성
+#### 기본 값으로 빈배열 생성
    - repeating 메소드와 count 메소드를 이용해 기본 값으로 빈 배열을 생성할수 있습니다.
 
 ```swift
@@ -66,9 +66,33 @@ print(NewIntArray)
    - [value1, value2, value3] 형태를 이용해 배열을 생성 할수 있습니다.
    - 저는 처음에 이방법으로 생성시 Cannot convert value of type '[String]' to specified type 'String' 오류가 생겨 당황했습니다
    - String 역시 []사이에 넣어줘야했는데, []없이 String만 선언했다는 의미입니다.
-
+   - [String]은 생략 가능합니다.
+   - Tuple과 비교해서 작생했습니다. 두 모습이 비슷하지만 Type을 찍었을때, 확연히 다릅니다.
 
 ```swift
-var catsName: [String] =["KKUL","NYNONG","MiLLION"]
-print(catsNAme)
+var CatsNAME = ("KKUL", 123, 3.20)
+print(CatsNAME)
+print(type(of: CatsNAME))
+
+var catsName2: [String] = ["KKUL", "NYNONG", "MiLLION"]
+print(catsName2)
+print(type(of: catsName2))
 ``` 
+
+#### 배열의 접근과 변환
+   - 배열의 원소 샛구를 구할때는 .count를 이용합니다.
+
+```swift
+print(catsName2.count)
+```
+
+   - 배열이 비었는지 확인할때는 .isEmpty를 이용합니다.
+
+```swift
+if catsName2.isEmpty{
+    print("nil")
+}
+else{
+    print(catsName2.count)
+}
+```

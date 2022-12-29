@@ -79,7 +79,7 @@ print(ype(of:pi),type(of:anotherPi))
    - Boolean 데이터 타입을 처리하기 위하여 두 개의 Boolean 상수 값을 사용한다.
    - 초기값은 true가 적용된다. Bool은 일반적으로 생략한다 
 
-### 03.만자열과 문자(Strings and Characters)
+### 03.문자열과 문자(Strings and Characters)
 #### Charactor: 문자데이터타입
    - 문자,숫자,심볼,문장부호같은 유니코드 문자 하나를 저장
    -  따로 선언을 해줘야한다.
