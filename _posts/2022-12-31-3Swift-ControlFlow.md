@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title:  Swift Control Flow
-date:   2022-12-28
+date:   2023-01-01
 description: about Control Flow
 img: banner/Swift_logo.jpg
 tags: [Swift]
@@ -154,6 +154,7 @@ default:
 #### 값바인딩(Value Bindings)
    - 특정 변수를 각각 다른 case에서 정의하고 그정의된 상수,변수를 또다른 case에서 사용할수 있습니다.
 
+```swift
 var LuckeyNumbers = (0, 2)
 switch LuckeyNumbers {
 case (let x, 0):
@@ -163,3 +164,38 @@ case (0, let y):
 case let (x, y):
     print("LuckyNumber is \(x) and \(y)")
 }
+```
+
+#### where문을 사용가능합니다
+   - Switch문 내에 case에서 where문을 사용할수 있습니다.
+   - MYSQL에서도 공부했던 where절은 Swift에서도 조건을 추가하는데 사용합니다.
+
+ ```swift
+ var points = (50, 100)
+switch points {
+case let (x, y) where x > y:
+    print("\(x) is Winner")
+case let (x,y) where x < y:
+    print("\(y) is Winner")
+default:
+    print("Same")
+}
+```  
+
+### 제어 전송 구문 (Control Transfer Statement)
+   - 코드의 진행을 계속 할지 말지를 결정하거나, 코드의 흐름을 바꾸기 위해 사용합니다.
+   - continue : 현재 루프를 중지하고 다음 루프를 실행합니다.
+   - break : 전체 루프를 중지합니다.
+   - fallthrough : 조건이 완성되도, 무시하고 루프를 계속진행합니다. 조건이 맞는 case찾아도 break되지 않고 계속 진행시키는겁니다. case실행은 합니다.
+   - return : 처음으로 돌아가서 다시 루프를 실행합니다.
+   - throw : 결과값 유무에 상관없이 루프 실행을 멈춥니다.
+
+#### 레이블구문 (Labeled Statements)
+   - label 이름 while로 조건을 넣어 특정 구문을 실행하는데 사용합니다
+
+```swift
+label name: while condition{
+    Statements
+}
+```
+#### dw
