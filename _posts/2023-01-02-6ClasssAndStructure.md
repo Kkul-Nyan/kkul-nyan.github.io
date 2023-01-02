@@ -23,7 +23,7 @@ mathjax: yes
    - 하나의 파일에 구조체나 클래스를 정의하면, Swiftrㅏ 알아서 해당 클래스와 그조체를 사용할수 있는 인터페이스를 생성해줍니다.
 
 ### 클래스와 구조체의 비교 (Comparing Class and Structure)
-   #### 공통점
+#### 공통점
    1. 값을 저장하기 위해 프로퍼티 정의
    2. 기능을 제공하기 위한 메소드 정의
    3. 특정 값을 접근할수 있는 subscrpt 정의
@@ -31,7 +31,7 @@ mathjax: yes
    5. 기본 구현에서 기능 확장
    6. 프로토콜 순응(conform)
    
-   #### 클래스에서만 가능한 기능
+#### 클래스에서만 가능한 기능
    1. 상속(Inheritance)
    2. 타입캐스팅(Type Casting) : 런타임에 클래스 인스턴스의 타입을 확인
    3. 소멸자(Deinitializer) : 할당된 자원을 해체
@@ -43,13 +43,67 @@ mathjax: yes
 
 ```swift
 class ClassName{
-    //내용
+    var width = 1
+    var height = 1
 }
 
 struct StructName {
-    //내용
+    var resolution = ClassName()
+    var interlaced = false;
+    var frameRate = 0.0
+    var name: String?
 }
 ```
 
 ### 클래스와 구조체 인스턴스(Class and Struct Instance)
-   -
+   - 이름 뒤에 빈 괄호를 적으면 각각의 인스턴스를 생성할수 있습니다.
+
+```swift
+let ClassInstance = ClassName()
+let StructInstance = StructName()
+```
+
+### 프로퍼티 접근(Accessing Property)
+   - Dot문법을 통해 클래스/구조체 인스턴스의 프로퍼티에 접근할수 있습니다.
+   - 인스턴스를 통해 접근할수도 있습니다.
+   - 하위레벨 프로퍼티도 Dot문법을 통해 접근할수 있습니다.
+   - Dot문법을 통해 값을 할당 할수도 있습니다.
+
+```swift
+print(ClassName().height)
+print(StructName().frameRate)
+print(StructInstance.interlaced)
+print(StructName().resolution.height)
+ClassInstance.resolution.height = 1200
+print("now \(ClassInstance.resolution.height)")
+```
+
+### 구조체형 맴버 초기화 (Memberwise Initializer for Structure Type)
+   - 모든 구조체는 초기화시 프로퍼티를 선언할수 있는 초기자를 자동으로 생성합니다.
+   - width와 height 프로퍼티만 정의했다면 자동으로 사용 가능하다는 의미입니다.
+
+```swift
+let Xlarge = StructName(width: 1980, height: 1080)
+```
+
+### 구조체와 열거형은 값타입(Structure and Enumeration Are Value Type)
+   - 구조체와 열거형은 새로운 값타입입니다.
+   - 함수에서 상수나 변수에 전달될 때 그 값이 복사되서 전달 된다는 의미입니다
+   - 복사되서 전달된다는것은 원본은 바뀌지 않았다는것입니다.
+   - 새로운 인자에 값을 할당해주고 변경해도 새로운인자만 변경됩니다.
+
+```swift
+let Xlarge = StructName(width: 1980, height: 1080)
+var newX = Xlarge
+newX.height = 2500
+print(newX.height)
+print(Xlarge.height)
+```
+
+### 클래스는 참조타입(Class Are Reference Type)
+   - 변수나 상수에 값을 할당을 하거나 함수에 인자로 전달할 때 그 값이 복사되지 않고 참조 됩니다.
+   - 참조 된다는 의미는 그 값을 갖고 있는 메모리를 보고있다는 의미입니다.
+   - 즉 새로운 메모리를 만든게 아니라 그 원본 메모리가 바뀌게 됩니다.
+   - 구조체와 다르게, 값을 변경하면 바뀌게 됩니다.
+
+### 식별 연산자(Identity Operator)
