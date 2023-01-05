@@ -70,3 +70,68 @@ let freezingPointOfWater = Celsius(fromKelvin: 273.15)
 ```
 
 #### 파라미터 이름과 인자 레이블 (Parameter Name and Arguement Label)
+   - 메소드와 초기화 모두 파라미터 이름과 인자 레이블을 가지지만, 초기화파라미터는 특정메소드에서 지정하는 메소드 이름을 지정하지 않고, 초기화 식별자로 파라미터를 사용 합니다.
+   - 사용자가 이 레이블을 지정하지 않으면 Swift가 자동으로 하나를 할당해 제공합니다
+  \* 예시는 초기화 파라미터를 3개 입력받는 초기화와 하나만 입력받는 초기화입니다.
+
+```swift
+struct Color {
+    let red, green, blue: Double
+    init(red: Double, green: Double, blue: Double){
+        self.red = red
+        self.green = green
+        self.blue = blue
+    }
+    init(white: Double){
+        red = white
+        green = white
+        blue = white
+    }
+    let baseColor = Color(red: 1, green: 1, blue: 1)
+    let whiteColor = Color(white: 1)
+    let baseColor = Color(1,1,1)// 인자가 없기 떄문에 에러가 발생합니다.
+}
+```
+
+#### 인자 레이블이 없는 이니셜라이저 파라미터 (Initializer Parameter Without Argument Label)
+   - "_" 기호를 사용해서 인자 레이블을 생략할수 있습니다.
+
+```swift
+struct Color {
+    let red, green, blue: Double
+    init(_ red: Double, _ green: Double, _ blue: Double){
+        self.red = red
+        self.green = green
+        self.blue = blue
+    }
+    init(white: Double){
+        red = white
+        green = white
+        blue = white
+    }
+}
+
+let baseColor = Color(1,1,1)
+
+```
+
+#### 옵셔널 프로퍼티 타입 (Optional Property Type)
+   - 옵셔널을 사용해서 최초에 값이 없고 나중에 추가할수 있도록 만듭니다. 옵셔널 특징상 자동으로 값이없으면 nil로 초기화됩니다.
+
+```swift
+class SurveyQuestion {
+    var text: String
+    var response: String?
+    init(text: String) {
+        self.text = text
+    }
+    func ask() {
+        print(text)
+    }
+}
+
+let cheeseQuestion = SurveyQuestion(text: "Do you like cheese?")
+cheeseQuestion.ask()
+```
+
+#### 초기화 중에 상수 프로퍼티 할당 (Assigning Constant Property During Initalization)
