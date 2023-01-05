@@ -134,7 +134,7 @@ let cheeseQuestion = SurveyQuestion(text: "Do you like cheese?")
 cheeseQuestion.ask()
 ```
 
-#### 초기화 중에 상수 프로퍼티 할당 (Assigning Constant Property During Initalization)
+#### 초기화 중에 상수 프로퍼티 할당 (Assigning Constant Property During Initializtion)
    - 초기화는 상수 프로퍼티에 값을 할당하는 것이 가능합니다.
    - 단, 그 클래스에서만 가능하고 서브클래스에서는 변경이 안됩니다.
    - 결국, 상수는 처음에 초기화 되면 그 값으면 변경되지 않는 프로터피인게 됩니다.
@@ -159,3 +159,22 @@ cheeseQuestion.ask()
 cheeseQuestion.response = "Yes"
 cheeseQuestion.answer()
 ```
+
+### 기본 이니셜라이저 (Default Initializer)
+   - 모든 프로퍼티의 초기값이 설정돼 있고, 하나의 초기자도 정하지 않았다면 Swift는 모든 프로퍼티를 기본값으로 초기화 하는 기본 초기자를 제공합니다.
+
+```swift
+class Animals {
+    var name: String?
+    var numberOfLegs = 1
+    var Live = true
+}
+var cat = Animals()
+cat.name = "cat"
+cat.numberOfLegs = 4
+
+print(cat.name)
+print(cat.numberOfLegs)
+print(cat.Live)
+```
+#### 구조체 타입을 위한 멤버쪽 이니셜라이저 (Memberwise Initializer for Structure Type)
