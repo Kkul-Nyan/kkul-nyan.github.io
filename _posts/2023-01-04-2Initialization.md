@@ -138,3 +138,24 @@ cheeseQuestion.ask()
    - 초기화는 상수 프로퍼티에 값을 할당하는 것이 가능합니다.
    - 단, 그 클래스에서만 가능하고 서브클래스에서는 변경이 안됩니다.
    - 결국, 상수는 처음에 초기화 되면 그 값으면 변경되지 않는 프로터피인게 됩니다.
+
+```swift
+class SurveyQuestion {
+    let text: String
+    var response: String?
+    init(text: String) {
+        self.text = text
+    }
+    func ask() {
+        print(text)
+    }
+    func answer(){
+        print(response)
+    }
+}
+
+let cheeseQuestion = SurveyQuestion(text: "Do you like cheese?")
+cheeseQuestion.ask()
+cheeseQuestion.response = "Yes"
+cheeseQuestion.answer()
+```
