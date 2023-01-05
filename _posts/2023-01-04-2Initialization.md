@@ -135,3 +135,6 @@ cheeseQuestion.ask()
 ```
 
 #### 초기화 중에 상수 프로퍼티 할당 (Assigning Constant Property During Initalization)
+   - 초기화는 상수 프로퍼티에 값을 할당하는 것이 가능합니다.
+   - 단, 그 클래스에서만 가능하고 서브클래스에서는 변경이 안됩니다.
+   - 결국, 상수는 처음에 초기화 되면 그 값으면 변경되지 않는 프로터피인게 됩니다.
