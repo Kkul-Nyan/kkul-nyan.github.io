@@ -6,7 +6,7 @@ title:  Metaverse Smart Store Pamphlet
 date:   2023-01-07
 description: Metaverse Smart Store Pamphlet
 img: banner/unity.jpeg
-tags: [Swift]
+tags: [SmartStore]
 author: Noranfox
 github:  noranfox/
 mathjax: yes
