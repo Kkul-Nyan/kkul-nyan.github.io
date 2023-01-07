@@ -177,4 +177,18 @@ print(cat.name)
 print(cat.numberOfLegs)
 print(cat.Live)
 ```
+
 #### 구조체 타입을 위한 멤버쪽 이니셜라이저 (Memberwise Initializer for Structure Type)
+   - 맴버쪽 이니셜라이저는 프로퍼티가 기본 값이 없어도 커스텀 이니셜라이저를 정의하지 않았다면 멤버쪽 이니셜라이저를 제공해 줍니다.
+   - 이 초기자는 선언한 모든 프로퍼티를 인자로 사용합니다.
+
+```swift
+struct NoteBook{
+    var width = 0.0, height = 0.0, price = 1000
+}
+
+let monnaNoteBook = NoteBook(width: 30, height: 20, price: 500)
+print(monnaNoteBook)
+```
+
+### 값 타입을 위한 이니셜라이저 위임 (Initializer Delegation for Value Type)
