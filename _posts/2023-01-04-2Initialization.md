@@ -244,4 +244,12 @@ print(Rect.init(center: Point(x: 4, y: 4), size: Size(width: 4, height: 4)))
    2. 편리한 초기자는 반드시 같은 클래스의 다른 초기자를 호출해야합니다.
    3. 편리한 초기자는 궁극적으로 지정초기자를 호출해야합니다.
 
-![cat](assets/img/posts/Swift/ClassDelegation.jpeg)
+![ClassDelegation](assets/img/posts/Swift/ClassDelegation.jpeg)
+
+#### 2단계 초기화 (Two-Phase Initialization)
+   - 클래스 초기화는 2단계로 진행됩니다.
+   1. 각 저장된 프로퍼티는 초기값으로 초기화 됩니다. 모든 저장된 프로퍼티의 상태가 결정되면 2단계가 시작됩니다.
+   2. 저장된 프로퍼티를 커스터마이징 하는 단계입니다. 이후 새로운 인스턴스의 사용이 준비되었다고 알려주게됩니다.
+
+#### 안전확인 (Safety-check)
+   - Swift 컴파일러는 2단계초기화가 에러없이 끝나는 것을 보장하기 위해 4단계 안전확인을 합니다.
