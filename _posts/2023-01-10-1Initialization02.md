@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title:  Swift Inheritance02
-date:   2022-12-31
+date:   2023-01-10
 description: about Inheritance02
 img: banner/Swift_logo.jpg
 tags: [Swift]
