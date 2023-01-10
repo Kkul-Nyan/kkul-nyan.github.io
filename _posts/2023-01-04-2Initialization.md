@@ -244,7 +244,7 @@ print(Rect.init(center: Point(x: 4, y: 4), size: Size(width: 4, height: 4)))
    2. 편리한 초기자는 반드시 같은 클래스의 다른 초기자를 호출해야합니다.
    3. 편리한 초기자는 궁극적으로 지정초기자를 호출해야합니다.
 
-![ClassDelegation](assets/img/posts/Swift/ClassDelegation.png)
+
 
 #### 2단계 초기화 (Two-Phase Initialization)
    - 클래스 초기화는 2단계로 진행됩니다.
@@ -311,7 +311,7 @@ print(unname.description)
    - 아래 예시는 Animal을 상속받는 새로운 클래스입니다.
    - superclass의 init(name:)을 상속 받아 지정초기자로 생성된 init(name: , isWings:)입니다
    - 그 지정초기자를 편리한 초기자 conveninence init(name: String)에서 오버라이딩해서 사용합니다.
-   - 지정초기자에 override키워드가 붙은게 아니지만, 분명히 상속받아 생성된 지정초기자입니다.
+ 
 
 ```Swift
 class Bird: Animal {
@@ -372,6 +372,7 @@ for pet in newBirds {
    - 실패 가능한 초기자는 반환값으로 옵셔널 값을 생성합니다.
    - 따라서, 실패하는 부분에서 nil을 반환하는 코드를 작성해 초기화가 실패했다는것을 나타낼수 있습니다.
    - 엄밀히 말하면 init은 값을 반환하지 않습니다. nil을 반호나하는 return nil 코드는 사용하지만, 성공한경우 return키워드를 사용하지 않습니다.
+   - 실패 가능한 초기자를 실패가 가능하지 않은 초기자에 위임해서 특정 상황에만 실패하는 초기자로 만들수 있습니다
 
 ```Swift
 struct Animal {
@@ -388,3 +389,100 @@ let Black = Animal(species: "Cat")
 //print(Black.species) - 이렇게 작성시 오류가 발생합니다.
 print(Black?.species) //- Optional로 되어있습니다.
 ```
+
+#### 열거형에서 사용하는 실패 가능한 초기자 (Failable Initializer for Enumeration)
+   - 열거형에서도 실패 가능한 초기자를 사용할수 있습니다.
+   - 지정된 값이 아니면 당연히 default값이 되면서 nil이 반환됩니다.
+
+```swift
+enum KeySetting {
+    case attack,defense
+    init?(key: Character){
+        switch key {
+        case "A":
+            self = .attack
+        case "B":
+            self = .defense
+        default:
+            return nil
+        }
+    }
+}
+
+let attackButton = KeySetting(key: "A")
+if attackButton != nil {
+    print("Success Attack")
+}
+else {
+    print("fail Attaack")
+}
+
+let defenseButton = KeySetting(key: "D")
+if defenseButton != nil {
+    print("Success Defense")
+}
+else{
+    print("fail Defense")
+}
+```
+
+#### 열거형에서 Raw값을 사용하는 실패 가능한 초기자 (Failable Initializer for Enumeration with Raw Value)
+   - 각 케이스에 지정되어있는 Raw값을 초기자 인지로 넣어 초기화에 사용할수 있습니다.
+   - 앞의 경우보다 초기자 구현이 훨씬 간단해졌습니다.
+
+```swift
+enum KeySetting: Character {
+    case attack = "A", defense = "B"
+}
+
+let attackButton = KeySetting(rawValue: "A")
+if attackButton != nil {
+    print("Success Attack")
+}
+else {
+    print("fail Attaack")
+}
+
+let defenseButton = KeySetting(rawValue: "D")
+if defenseButton != nil {
+    print("Success Defense")
+}
+else{
+    print("fail Defense")
+}
+```
+
+#### 초기자 실패의 생성 (Propagation of Initializer Failure)
+   - 실패가능한 초기자에서 실패가 발생하면 즉시 관련된 초기자가 중단 됩니다.
+   - 첫번째와 2번째 인자는 각각, species와 age가 조건에 맞지 않아 초기자가 중단됩니다
+   - 따라서 desciption을 하여도 인자가 nil이기때문에 description 역시 nil이 됩니다. 
+   
+```swift
+class Animal {
+    let species: String
+    init?(species: String){
+        if species.isEmpty {return nil}
+        self.species = species
+    }
+}
+class DetailAnimal: Animal {
+    var age: Int
+    init?(species: String, age: Int){
+        if age < 1 {return nil}
+        self.age = age
+        super.init(species: species)
+    }
+    var desciption: String{
+        return "it is \(species) and age is \(age)"
+    }
+}
+var FindAnimal = [DetailAnimal(species: "", age: 5),DetailAnimal(species: "Dog", age: 0), DetailAnimal(species: "Cat", age: 3)]
+for animal in FindAnimal {
+    print(animal?.desciption)
+}
+```
+
+#### 실패 가능한 초기자의 오버라이딩 (Overriding Failable Initializer)
+    - superclass의 실패가능한 초기자를 subclass에서 실패불가능한 초기자로 오버라이딩 할 수 있습니다.
+    - 단, 그 반대는 불가능합니다
+    - 
