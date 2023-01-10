@@ -55,7 +55,7 @@ mathjax: yes
    - 클래스에서 모든 프로퍼티의 초기 값이 지정돼 있고 아무런 커스텀 초기자를 선언하지 않았다면 기본초기자 init()을 사용할수 있습니다.
    - subclass에서 상속자를 오버라이드하기 위해선 그 초기자에 override 키워드를 붙이고 재정의 해야합니다.
 
-```Swift
+```swift
 class Vehicle {
     var nuberofWheels = 0
     var description: String {
@@ -81,7 +81,7 @@ print(car.description)
 #### 지정초기자와 편리한 초기자의 사용
    - 바로 아래 예시는 unname에서 초기값을 지정하지 않았지만, 편리한 초기자에 의하 "Unname"을 갖게 되었습니다.
 
-```Swift
+```swift
 class Animal {
     var name: String
     var description: String {
@@ -106,7 +106,7 @@ print(unname.description)
    - 그 지정초기자를 편리한 초기자 conveninence init(name: String)에서 오버라이딩해서 사용합니다.
  
 
-```Swift
+```swift
 class Bird: Animal {
     var isWings: Bool
     override var description: String {
@@ -136,7 +136,7 @@ print(Unname2.description)
    - isPet 프로퍼티의 경우, 값이 지정되어있으므로, subclass는 superclass의 초기자를 모두 자동으로 상속받습니다.
    - 따라서, 3가지 초기자를 사용할수 있습니다.
 
-```Swift
+```swift
 class PetBird: Bird{
     var isPet = true
     var petDesription: String{
