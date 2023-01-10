@@ -192,3 +192,56 @@ print(monnaNoteBook)
 ```
 
 ### 값 타입을 위한 이니셜라이저 위임 (Initializer Delegation for Value Type)
+   - 이니셜라이저에서 다른 이니셜라이저를 호출할수 있습니다.(이니셜나리저 위임)
+   - 값 타입은 자기자신의 다른 이니셜라이저에서만 사용할수있습니다. (상속불가)
+   - clsss타입은 superclass의 이니셜라이저를 subclass에서 호출 가능합니다 (상속가능)
+   - 커스텀 이니셜라이저 선언시 기본 이니셜라이저 혹은 멤버쪽 이니셜라이저를 사용할수 없습니다. 
+   - 2번째 init을 3번째 init에서 불려와 사용하는 예시입니다.
+
+```swift
+struct Size {
+    var width = 0.0, height = 0.0
+}
+struct Point {
+    var x = 0.0, y = 0.0
+}
+struct Rect {
+    var origin = Point()
+    var size = Size()
+    init() {}
+    init(origin: Point, size: Size){
+        self.origin = origin
+        self.size = size
+    }
+    init(center: Point, size: Size){
+        let originX = center.x - (size.width / 2 )
+        let originY = center.x - (size.height / 2 )
+        self.init(origin: Point(x: originX,y: originY), size: size)
+    }
+    
+}
+print(Rect.init())
+print(Rect.init(origin: Point(x: 4, y: 4), size: Size(width: 4, height: 4)))
+print(Rect.init(center: Point(x: 4, y: 4), size: Size(width: 4, height: 4)))
+```
+
+### 클래스 상속과 초기화 (Class Inheritance and Initialization)
+   - 모든 클래스의 저장 프로퍼티와 상속받은 프로퍼티는 초기화 단계에서 반드시 초기값이 할당되어야 합니다.
+
+#### 지정 초기자와 편리한 초기자 (Desiginated Initializer and Convenience Initializer)
+   - 지정 초기자는 클래스의 주(Primary) 초기자 입니다.
+   - 지정 초기자는 클래스의 모든 프로퍼티를 초기화 합니다.
+   - 반드시 클래스당 한개 이상의 지정 초기자가 있어야합니다.
+
+#### 지정 초기자와 편리한 초기자의 문법 (Syntax for Designated and Convenience Initlalizer)
+   - 지정초기자의 문법은 값 타입 초기자와 동일합니다
+   - init(parameters){statements} 입니다.
+   - 단, 편리한 초기자는 문법이 같지만 convenience init(parameters){statements} 입니다.
+
+#### 클래스 타입을 위한 이니셜라이저 위임(Initializer Delegation for Class Type)
+   - 3가지 규칙을 따릅니다
+   1. 반드시 직계 superclass의 지정 초기자를 호출해야합니다.
+   2. 편리한 초기자는 반드시 같은 클래스의 다른 초기자를 호출해야합니다.
+   3. 편리한 초기자는 궁극적으로 지정초기자를 호출해야합니다.
+
+![cat](assets/img/posts/Swift/ClassDelegation.jpeg)
