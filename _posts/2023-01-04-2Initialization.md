@@ -224,4 +224,3 @@ print(Rect.init())
 print(Rect.init(origin: Point(x: 4, y: 4), size: Size(width: 4, height: 4)))
 print(Rect.init(center: Point(x: 4, y: 4), size: Size(width: 4, height: 4)))
 ```
-
