@@ -168,7 +168,7 @@ for pet in newBirds {
    - 엄밀히 말하면 init은 값을 반환하지 않습니다. nil을 반호나하는 return nil 코드는 사용하지만, 성공한경우 return키워드를 사용하지 않습니다.
    - 실패 가능한 초기자를 실패가 가능하지 않은 초기자에 위임해서 특정 상황에만 실패하는 초기자로 만들수 있습니다
 
-```Swift
+```swift
 struct Animal {
     let species: String
     init?(species: String) {
