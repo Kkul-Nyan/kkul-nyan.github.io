@@ -100,6 +100,7 @@ print(Cat.description)
 let unname = Animal()
 print(unname.description)
 ```
+
    - 아래 예시는 Animal을 상속받는 새로운 클래스입니다.
    - superclass의 init(name:)을 상속 받아 지정초기자로 생성된 init(name: , isWings:)입니다
    - 그 지정초기자를 편리한 초기자 conveninence init(name: String)에서 오버라이딩해서 사용합니다.
@@ -130,6 +131,7 @@ print(Raven.description)
 print(Parrot.description)
 print(Unname2.description)
 ```
+
    - 아래 예시는 Bird를 상속받는 새로운 클래스입니다.
    - isPet 프로퍼티의 경우, 값이 지정되어있으므로, subclass는 superclass의 초기자를 모두 자동으로 상속받습니다.
    - 따라서, 3가지 초기자를 사용할수 있습니다.
