@@ -253,3 +253,138 @@ print(Rect.init(center: Point(x: 4, y: 4), size: Size(width: 4, height: 4)))
 
 #### 안전확인 (Safety-check)
    - Swift 컴파일러는 2단계초기화가 에러없이 끝나는 것을 보장하기 위해 4단계 안전확인을 합니다.
+   1. 지정 초기자는 클래스 안에서 초기화를 superclass의 초기자에게 위임하기 전에 모든 프로퍼티를 초기화 해야합니다.
+   2. 지정 초기자는 반드시 상속된 값을 할당하기 전에 superclass의 초기자로 위임을 넘겨야 합니다.
+   3. 편리한 초기자는 반드시 어떤프로퍼티를 할당하기 전에 다른 초기자로 위임을 넘거야합니다.
+   4. 초기화의 1단계가 끝나기 전에는 self의 값을 촘조하거나 어떤 프로퍼티, 메소드 등을 호출하거나 읽을수 없습니다.
+
+#### 이니셜라이저의 상속과 오버라이딩 (Initializer Inheritance and Overriding)
+   - Swift에서는 기본적으로 subclass에서 superclass의 이니셜라이저를 상속하지 않습니다.
+   - 클래스에서 모든 프로퍼티의 초기 값이 지정돼 있고 아무런 커스텀 초기자를 선언하지 않았다면 기본초기자 init()을 사용할수 있습니다.
+   - subclass에서 상속자를 오버라이드하기 위해선 그 초기자에 override 키워드를 붙이고 재정의 해야합니다.
+
+```Swift
+class Vehicle {
+    var nuberofWheels = 0
+    var description: String {
+        return "\(nuberofWheels) wheel(s)"
+    }
+}
+
+class Car: Vehicle {
+    override init() {
+        super.init()
+        nuberofWheels = 4
+    }
+}
+var car = Car()
+print(car.description)
+```
+
+#### 자동 초기자 인스턴스 (Automatic Initializer Inheritance)
+   - subclass는 superclass의 초기자를 기본적으로 상속하지 않습니다. 하지만 특정 상황에서 자동으로 상속 받습니다.
+   1. subclass가 지정초기자를 정의하지 않으면 자동으로 모든 지정초기자를 상속합니다.(편리한초기자 포함)
+   2. subclass가 superclass의 지정초기자를 모든 구현한 경우 자동으로 수퍼클래스의 편리한 초기자를 추가합니다.
+
+#### 지정초기자와 편리한 초기자의 사용
+   - 바로 아래 예시는 unname에서 초기값을 지정하지 않았지만, 편리한 초기자에 의하 "Unname"을 갖게 되었습니다.
+
+```Swift
+class Animal {
+    var name: String
+    var description: String {
+        return "name is \(name)"
+    }
+    init(name: String) {
+        self.name = name
+    }
+    convenience init() {
+        self.init(name: "Unnamed")
+    }
+}
+
+let Cat = Animal(name: "Cat")
+print(Cat.description)
+let unname = Animal()
+print(unname.description)
+```
+   - 아래 예시는 Animal을 상속받는 새로운 클래스입니다.
+   - superclass의 init(name:)을 상속 받아 지정초기자로 생성된 init(name: , isWings:)입니다
+   - 그 지정초기자를 편리한 초기자 conveninence init(name: String)에서 오버라이딩해서 사용합니다.
+   - 지정초기자에 override키워드가 붙은게 아니지만, 분명히 상속받아 생성된 지정초기자입니다.
+
+```Swift
+class Bird: Animal {
+    var isWings: Bool
+    override var description: String {
+        return "name is \(name) and iswings is \(isWings)"
+    }
+    init(name: String, isWings: Bool) {
+        self.isWings = isWings
+        super.init(name: name)
+    }
+    override convenience init(name: String) {
+        self.init(name: name, isWings: true)
+    }
+    convenience init() {
+        self.init(name: "UnnamedBird", isWings: true)
+    }
+}
+
+let Raven = Bird(name: "Raven")
+let Parrot = Bird(name: "Parrot" , isWings: true)
+let Unname2 = Bird()
+print(Raven.description)
+print(Parrot.description)
+print(Unname2.description)
+```
+   - 아래 예시는 Bird를 상속받는 새로운 클래스입니다.
+   - isPet 프로퍼티의 경우, 값이 지정되어있으므로, subclass는 superclass의 초기자를 모두 자동으로 상속받습니다.
+   - 따라서, 3가지 초기자를 사용할수 있습니다.
+
+```Swift
+class PetBird: Bird{
+    var isPet = true
+    var petDesription: String{
+        var output = "\(name) is Egg or not? \(isEgg) and is Pet?"
+        output += isPet ? "Yes" : "No"
+        return output
+    }
+}
+let newRaven = PetBird(name: "NewRaven", isEgg: true)
+let newParrot = PetBird(name: "NewParrot")
+let newUnnamed = PetBird()
+print(newRaven.petDesription)
+print(newParrot.petDesription)
+print(newUnnamed.petDesription)
+
+var newBirds = [PetBird(), PetBird(name: "Cute"),PetBird(name: "Black", isEgg: true)]
+newBirds[0].name = "White"
+newBirds[0].isPet = false
+
+for pet in newBirds {
+    print(pet.petDesription)
+}
+```
+
+### 실패 가능한 초기자 (Failable Initializer)
+   - 초기화 과정 중에 실패할 가능성이 있다면 init뒤에 "?"를 사용해 실패가 가능한 초기자라고 표시 할 수 있습니다.
+   - 실패 가능한 초기자는 반환값으로 옵셔널 값을 생성합니다.
+   - 따라서, 실패하는 부분에서 nil을 반환하는 코드를 작성해 초기화가 실패했다는것을 나타낼수 있습니다.
+   - 엄밀히 말하면 init은 값을 반환하지 않습니다. nil을 반호나하는 return nil 코드는 사용하지만, 성공한경우 return키워드를 사용하지 않습니다.
+
+```Swift
+struct Animal {
+    let species: String
+    init?(species: String) {
+        if species.isEmpty {return nil}
+        self.species = species
+    }
+}
+
+let White = Animal(species: "")
+print(White?.species) // nil값이 확인됩니다.
+let Black = Animal(species: "Cat")
+//print(Black.species) - 이렇게 작성시 오류가 발생합니다.
+print(Black?.species) //- Optional로 되어있습니다.
+```
