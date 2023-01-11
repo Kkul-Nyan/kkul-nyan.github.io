@@ -279,7 +279,7 @@ for animal in FindAnimal {
 #### 실패 가능한 초기자의 오버라이딩 (Overriding Failable Initializer)
     - superclass의 실패가능한 초기자를 subclass에서 실패불가능한 초기자로 오버라이딩 할 수 있습니다.
     - 단, 그 반대는 불가능합니다
-    - 결국 핵심은 overridingd을 통해 실패해서 생기는 nil값을 다른값으로 대처하는 것입니다.
+    - 결국 핵심은 overriding을 통해 실패해서 생기는 nil값을 다른값으로 대처하는 것입니다.
 
 #### 실패 가능한 init! 초기자 (The init! Failable Initializer)
    -  실패 가능한 초기자 init!로 오버라이딩 할수 있고 아니면 위임해서 사용할수 있습니다.
