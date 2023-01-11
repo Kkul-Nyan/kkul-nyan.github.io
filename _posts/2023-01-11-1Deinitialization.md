@@ -28,6 +28,3 @@ mathjax: yes
    - deinit{ } 형식입니다.
    - 자동으로 호출되고 수동으로 호출할수는 없습니다.
    - Superclass의 Deinitialization은 subclass에서 선언하지 않아도 자동으로 호출됩니다.
-
-#### 초기화 해지의 사용 (Deinitalizer in Action)
-   - 
