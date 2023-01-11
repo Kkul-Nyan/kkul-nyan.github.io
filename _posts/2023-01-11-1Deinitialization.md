@@ -23,3 +23,11 @@ mathjax: yes
    - 오직 클래스 타입에서만 사용 가능합니다.
 
 #### 초기화 해지의 동작 (How Deinitializaion Work)
+   - 보통 Swift가 자동으로 자원의 해제 하지만, 열었던 파일을 사용이 끝나고 닫는 등 사용자가 자원해지를 소동으로 작업해야하는 경우도 있습니다.
+   - 클래스당 오직 하나만 선언할 수 있고 파라미터를 받을수 었습니다. 
+   - deinit{ } 형식입니다.
+   - 자동으로 호출되고 수동으로 호출할수는 없습니다.
+   - Superclass의 Deinitialization은 subclass에서 선언하지 않아도 자동으로 호출됩니다.
+
+#### 초기화 해지의 사용 (Deinitalizer in Action)
+   - 
