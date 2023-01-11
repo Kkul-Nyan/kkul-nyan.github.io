@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title:  Swift Deinitialization
-date:   2023-01-10
+date:   2023-01-11
 description: about Deinitialization
 img: banner/Swift_logo.jpg
 tags: [Swift]
