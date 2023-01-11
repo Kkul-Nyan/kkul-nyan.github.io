@@ -279,4 +279,25 @@ for animal in FindAnimal {
 #### 실패 가능한 초기자의 오버라이딩 (Overriding Failable Initializer)
     - superclass의 실패가능한 초기자를 subclass에서 실패불가능한 초기자로 오버라이딩 할 수 있습니다.
     - 단, 그 반대는 불가능합니다
-    - 
+    - 결국 핵심은 overridingd을 통해 실패해서 생기는 nil값을 다른값으로 대처하는 것입니다.
+
+#### 실패 가능한 init! 초기자 (The init! Failable Initializer)
+   -  실패 가능한 초기자 init!로 오버라이딩 할수 있고 아니면 위임해서 사용할수 있습니다.
+
+### 필수 초기자 (Required Initializer)
+   - 모든 subclass에서 반드시 구현해야 하는 초기자에는 required 키워드를 붙여줍니다.
+   - class ClassName { required init() { }} 형태입니다.
+   - 필수초기자는 결국 무조건 만들어야하는 필수적인 init이 아니라, 서브클라스에서 상속받아갔을떄 무조건 써야하는 초기자라는 의미입니다.
+
+### 클로저나 함수를 이용해 기본 프로퍼티 값을 설정하기 (Setting a Default Property Value with a Closure or Function)
+   - 기본값이 다소 복잡한 계산을 필요하다면 클로저나 함수를 이용해 값을 초기화하는데 사용할수 있습니다.
+   - class ClassName { let propertyname: propertyType = { closure or statement   return value }()}
+
+```swift
+class ClassName {
+    let propertyName: DataType = {
+        closure or statement for value
+        return value
+    }()
+}
+```
