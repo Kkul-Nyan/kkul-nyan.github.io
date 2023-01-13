@@ -86,3 +86,21 @@ else{
    - 옵셔널값을 반환하지 않는 프로퍼티, 메소드, 서브스크립트를 호출하더라도 옵셔널체이닝에 의해 옵셔널 값이 반환됩니다.
    - 이 옵셔널 리턴값을 이용해 옵셔널 체이닝이 성공적으로 실행 됐는지 아니면 nil을 반환했는지 확인할수 있습니다.
    - 옵셔널체이닝에 의해 호출되면 반환값과 같은 타입에 옵셔널이 붙어 반환됩니다. int를 반환시 int에 옵셔널인 ?가 붙어 int?가 반환됩니다.
+
+``` swift
+class Animal{
+    var basic: Basic?
+}
+
+class Basic{
+    var name: String
+    init(name: String) {
+        self.name = name
+    }
+}
+
+let cat = Animal()
+print(cat.basic!.name) //런타임 오류 nil이기때문에
+
+let catName = cat.basic?.name
+print(catName)
