@@ -5,7 +5,7 @@ show_date: true
 title:  MetaverseStore 성과정리
 date:   2023-01-11
 description: about Optional
-img: banner/Swift_logo.jpg
+img: banner/unity.jpeg
 tags: [Swift]
 author: Noranfox
 github:  noranfox/
