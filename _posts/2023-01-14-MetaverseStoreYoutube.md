@@ -4,9 +4,9 @@ read_time: true
 show_date: true
 title:  MetaverseStore 성과정리
 date:   2023-01-11
-description: about Optional
+description: about MetaverseStore
 img: banner/unity.jpeg
-tags: [Swift]
+tags: [SmartStore]
 author: Noranfox
 github:  noranfox/
 mathjax: yes
