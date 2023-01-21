@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title:  Swift 프로그래머스 입문(2)
-date:   2023-01-11
+date:   2023-01-21
 description: about Programmers Question(02)
 img: banner/Swift_logo.jpg
 tags: [Swift]
