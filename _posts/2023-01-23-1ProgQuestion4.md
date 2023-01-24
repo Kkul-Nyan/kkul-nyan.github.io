@@ -144,7 +144,6 @@ func solution(_ n:Int) -> Int {
     }
     return num
 }
-
 ```
 ### 30. 편지
 ```swift
