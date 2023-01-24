@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title:  Swift 프로그래머스 입문(3)
 date:   2023-01-21
-description: about Programmers Question(02)
+description: about Programmers Question(03)
 img: banner/Swift_logo.jpg
 tags: [Swift]
 author: Noranfox
@@ -131,20 +131,20 @@ func solution(_ n:Int) -> [Int] {
 }
 
 ```
-### 29. 문자 반복 출력하기
+### 29. 제곱수 판별하기
 ```swift
 import Foundation
 
-func solution(_ my_string:String, _ n:Int) -> String {
-    var str = ""
-
-    for i in my_string{
-        for _ in 0..<n {
-            str.append(i)
+func solution(_ n:Int) -> Int {
+    var num = 2
+    for i in 1..<n {
+        if(i * i == n){
+            num = 1
         }
     }
-    return str
+    return num
 }
+
 ```
 ### 30. 편지
 ```swift
