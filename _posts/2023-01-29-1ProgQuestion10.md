@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title:  Swift 프로그래머스 2차원으로 만들기
 date:   2023-01-25
-description: about Programmers Question(08)
+description: about Programmers Question(09)
 img: banner/Swift_logo.jpg
 tags: [Swift]
 author: Noranfox
