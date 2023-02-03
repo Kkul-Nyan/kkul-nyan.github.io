@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title:  Swift 프로그래머스 k의 개수
 date:   2023-02-01
-description: about Programmers Question(10)
+description: about Programmers Question(11)
 img: banner/Swift_logo.jpg
 tags: [Swift]
 author: Noranfox
