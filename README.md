@@ -1,2 +1,2 @@
-https://noranfox.github.io
+blog address : https://noranfox.github.io
 study about Swift, C# and Unity Engine
