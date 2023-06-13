@@ -29,7 +29,7 @@ func solution(_ numbers:String) -> Int64 {
 }
 ```
 
-replacingOccurrences를 사용하면 간단하게 풀이가 가능한 문제입니다</br>
+replacingOccurrences를 사용하면 간단하게 풀이가 가능한 문제입니다<br>
 
 
 ```swift
