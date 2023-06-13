@@ -22,7 +22,8 @@ mathjax: yes
 
 선언은 클래스 내나 외부 어디서 해도 상관없이 땡겨서 사용할수 있었습니다
 
-2. 람다함수 : 사실 람다함수는 여러 형태가 존재합니다. 익명함수처럼 이름이 없고, 즉석에서 매게변수많을 통해 만드는 것입니다.</br>즉, (변수) => {함수식;}; 형식이지만,
+2. 람다함수 : 사실 람다함수는 여러 형태가 존재합니다. 익명함수처럼 이름이 없고, 즉석에서 매게변수많을 통해 만드는 것입니다.</br>
+즉, (변수) => {함수식;}; 형식이지만,
 Only assignment, call, increment, decrement, await, and new object expressions can be used as a statement 오류를 볼수 있을것입니다.
 
 하지만, 일반함수를 람다식으로 표현하는 부분은 잘작동합니다. 한줄정도의 짧은 함수를 작성할때는 자주 사용할수있습니다.
@@ -70,6 +71,9 @@ Only assignment, call, increment, decrement, await, and new object expressions c
    }
 ```
 
-위의 스크립트는 개인프로젝트 스크립트중 일부를 바꾼 것입니다.</br> <mark style='background-color: #dcffe4'>criticalPopup</mark>을 델리게이트로 선언해주었으며, 델리게이트를 <mark style='background-color: #dcffe4'>사용할 max와 min 함수</mark>가 존재합니다.</br>
-두개의 함수는 damege를 주는 과정에서 damage가 랜덤하게 나올 때, </br>maxdamage와 damage가 같은 수이면, 델리게이트는 max함수를 받아쓰게되고,
-그외의 경우는 min을 받아주게됩니다.</br> 사실 명확히 그걸 보여주기 위해 else를 작성했지만, message라는 델리게이트 변수를 선언해줄때 min으로 바로 받아주게되면 else는 필요없습니다.
+위의 스크립트는 개인프로젝트 스크립트중 일부를 바꾼 것입니다.</br>
+ <mark style='background-color: #dcffe4'>criticalPopup</mark>을 델리게이트로 선언해주었으며, 델리게이트를 <mark style='background-color: #dcffe4'>사용할 max와 min 함수</mark>가 존재합니다.</br>
+ 
+두개의 함수는 damege를 주는 과정에서 damage가 랜덤하게 나올 때,</br>
+maxdamage와 damage가 같은 수이면, 델리게이트는 max함수를 받아쓰게되고, 그외의 경우는 min을 받아주게됩니다.</br> 
+사실 명확히 그걸 보여주기 위해 else를 작성했지만, message라는 델리게이트 변수를 선언해줄때 min으로 바로 받아주게되면 else는 필요없습니다.
