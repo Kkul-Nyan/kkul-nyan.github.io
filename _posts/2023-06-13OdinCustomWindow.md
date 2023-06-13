@@ -16,7 +16,7 @@ mathjax: yes
 ## Unity 오딘인스팩터 커스텀 윈도우 만들기
 ---
 
-![Example](assets/img/posts/20230613/example.png )
+![Example](assets/img/posts/20230613/example.gif )
 
 ```c#
 using UnityEngine;
@@ -69,4 +69,5 @@ public class ItemToolbar : OdinMenuEditorWindow
 
 4. OpenWindow()의 경우 유니티 윈도우에서 메뉴를 만들어 줍니다. 위 GIF를 보았을때, Tool에서 DataTable메뉴가 생성되고, 거기에 있는 Item을 클릭하면 윈도우가 열리게 됩니다. 메서드 바로 위의 [MenuItem("Tools/DataTable/Item")]의 경우는 메뉴를 만들 경로 입니다.
 
+![Example](assets/img/posts/20230613/01.png )
 5. 
