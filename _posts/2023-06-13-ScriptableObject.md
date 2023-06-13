@@ -2,9 +2,9 @@
 layout: post
 read_time: true
 show_date: true
-title:  Unity 오딘인스팩터 커스텀 윈도우 만들기
+title:  Unity ScriptableObject 사용방법
 date:   2023-06-13
-description: about Unity Custom Window using Odin Inspector
+description: about Unity ScriptableObject
 img: banner/unity.jpeg
 tags: [Unity]
 author: Noranfox
@@ -16,7 +16,7 @@ sitemap:
 ---
 
 ---
-## 오딘인스팩터 커스텀윈도우
+## Unity ScriptableObject 설명 및 작성방법
 ---
 
 
