@@ -67,7 +67,7 @@ public class ItemToolbar : OdinMenuEditorWindow
 
 3. 가장 기본적으로 작성해야 하는 2가지 메서드는 OpenWindow()와 BuildMenuTree()입니다.
 
-4. OpenWindow()의 경우 유니티 윈도우에서 메뉴를 만들어 줍니다. 위 GIF를 보았을때, Tool에서 DataTable메뉴가 생성되고, 거기에 있는 Item을 클릭하면 윈도우가 열리게 됩니다. 메서드 바로 위의 [MenuItem("Tools/DataTable/Item")]의 경우는 메뉴를 만들 경로 입니다.
+4. OpenWindow()의 경우, 유니티 윈도우에서 메뉴를 만들어 줍니다. 위 GIF를 보았을때, Tool에서 DataTable메뉴가 생성되고, 거기에 있는 Item을 클릭하면 윈도우가 열리게 됩니다. 메서드 바로 위의 [MenuItem("Tools/DataTable/Item")]의 경우는 메뉴를 만들 경로 입니다.
 
 ![Example](assets/img/posts/20230613/01.png )
-5. 
+5. BuildMenuTree()의 경우, 윈도우창 내부를 작성하는 메서드입니다. 위의 코드에서 작성된 부분은 Create New Item 트리를 만들고, 어떻게 작동할지 CreateNewItemData() 클래스를통해 작성했습니다. 따라서앞의 String의 경우 Tree의 이름부분이며, 뒤의 메서드의 경우, 작동방식에 대한 메서드입니다.
