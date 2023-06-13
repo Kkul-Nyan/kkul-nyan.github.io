@@ -10,6 +10,9 @@ tags: [Unity, AR, Maxst, Vuforia]
 author: Noranfox
 github:  noranfox/
 mathjax: yes
+sitemap:
+  changefreq: daily
+  priority : 1.0
 ---
 
 ## AR - MAXST와 Vuforia

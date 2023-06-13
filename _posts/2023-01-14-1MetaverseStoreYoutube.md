@@ -10,6 +10,9 @@ tags: [SmartStore]
 author: Noranfox
 github:  noranfox/
 mathjax: yes
+sitemap:
+  changefreq: daily
+  priority : 1.0
 ---
 
 ---
