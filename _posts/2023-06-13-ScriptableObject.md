@@ -2,7 +2,7 @@
 layout: post
 title:  ScriptableObject 사용방법
 date:   2023-06-13
-image: unity.jpeg
+image: newunity.jpeg
 tags: Unity
 sitemap:
   changefreq: daily
