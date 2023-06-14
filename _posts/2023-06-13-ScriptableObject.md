@@ -3,7 +3,7 @@ layout: post
 title:  Unity ScriptableObject 사용방법
 date:   2023-06-13
 description: about Unity ScriptableObject
-image: banner/unity.jpeg
+image: unity.jpeg
 tags: Unity
 sitemap:
   changefreq: daily
@@ -18,7 +18,7 @@ sitemap:
 
 
 
-![03](assets/img/posts/20230613/03.png )
+![03](images/20230613/03.png )
 
 ```c#
 using UnityEngine;
