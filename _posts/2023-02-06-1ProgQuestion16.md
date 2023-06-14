@@ -1,15 +1,9 @@
 ---
 layout: post
-read_time: true
-show_date: true
 title:  Swift 프로그래머스 이진수 더기
 date:   2023-02-06
-description: about Programmers Question(15)
-img: banner/Swift_logo.jpg
-tags: [Swift]
-author: Noranfox
-github:  noranfox/
-mathjax: yes
+image: Swift_logo.jpg
+tags: Swift
 sitemap:
   changefreq: daily
   priority : 1.0

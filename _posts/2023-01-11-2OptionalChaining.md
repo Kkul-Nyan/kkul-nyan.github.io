@@ -1,15 +1,10 @@
 ---
 layout: post
-read_time: true
-show_date: true
 title:  Swift Optional
 date:   2023-01-11
 description: about Optional
-img: banner/Swift_logo.jpg
-tags: [Swift]
-author: Noranfox
-github:  noranfox/
-mathjax: yes
+image: Swift_logo.jpg
+tags: Swift
 sitemap:
   changefreq: daily
   priority : 1.0

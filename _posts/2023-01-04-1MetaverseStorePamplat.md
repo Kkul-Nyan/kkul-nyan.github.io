@@ -1,7 +1,5 @@
 ---
 layout: post
-read_time: true
-show_date: true
 title:  Metaverse Smart Store Pamphlet
 date:   2023-01-07
 description: Metaverse Smart Store Pamphlet

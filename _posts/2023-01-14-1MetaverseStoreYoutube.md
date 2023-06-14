@@ -1,7 +1,5 @@
 ---
 layout: post
-read_time: true
-show_date: true
 title:  MetaverseStore 성과정리
 date:   2023-01-11
 description: about MetaverseStore

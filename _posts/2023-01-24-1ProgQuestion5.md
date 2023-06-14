@@ -1,15 +1,10 @@
 ---
 layout: post
-read_time: true
-show_date: true
 title:  Swift 프로그래머스 입문(4)
 date:   2023-01-24
 description: about Programmers Question(04)
-img: banner/Swift_logo.jpg
-tags: [Swift]
-author: Noranfox
-github:  noranfox/
-mathjax: yes
+image: Swift_logo.jpg
+tags: Swift
 sitemap:
   changefreq: daily
   priority : 1.0

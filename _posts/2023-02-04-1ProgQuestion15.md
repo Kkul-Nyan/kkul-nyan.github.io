@@ -1,15 +1,9 @@
 ---
 layout: post
-read_time: true
-show_date: true
 title:  Swift 프로그래머스 숨어있는 숫자의 덧셈 (2)
 date:   2023-02-04
-description: about Programmers Question(14)
-img: banner/Swift_logo.jpg
-tags: [Swift]
-author: Noranfox
-github:  noranfox/
-mathjax: yes
+image: Swift_logo.jpg
+tags: Swift
 sitemap:
   changefreq: daily
   priority : 1.0

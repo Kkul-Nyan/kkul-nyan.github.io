@@ -1,15 +1,10 @@
 ---
 layout: post
-read_time: true
-show_date: true
 title:  Swift 프로그래머스 진료순서 정하기
 date:   2023-02-02
 description: about Programmers Question(12)
-img: banner/Swift_logo.jpg
-tags: [Swift]
-author: Noranfox
-github:  noranfox/
-mathjax: yes
+image: Swift_logo.jpg
+tags: Swift
 sitemap:
   changefreq: daily
   priority : 1.0

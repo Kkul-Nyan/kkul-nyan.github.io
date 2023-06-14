@@ -1,15 +1,10 @@
 ---
 layout: post
-read_time: true
-show_date: true
 title:  Swift DataType02
 date:   2022-12-27
 description: Basic DataType
-img: banner/Swift_logo.jpg
-tags: [Swift]
-author: Noranfox
-github:  noranfox/
-mathjax: yes
+image: Swift_logo.jpg
+tags: Swift
 sitemap:
   changefreq: daily
   priority : 1.0
