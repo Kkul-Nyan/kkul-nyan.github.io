@@ -17,8 +17,7 @@ sitemap:
 ---
 
 
-
-![03]({{ site.baseurl }}images/20230613/03.png )
+![]({{ site.baseurl }}/images/20230613/03.png )
 
 ```c#
 using UnityEngine;
