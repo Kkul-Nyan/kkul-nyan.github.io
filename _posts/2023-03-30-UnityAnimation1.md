@@ -1,15 +1,9 @@
 ---
 layout: post
-read_time: true
-show_date: true
 title:  Unity 애니메이터 인스팩터창
 date:   2023-03-30
-description: about Unity Animator Inspector
-img: banner/unity.jpeg
-tags: [Swift]
-author: Noranfox
-github:  noranfox/
-mathjax: yes
+image: unity.jpeg
+tags: Swift
 sitemap:
   changefreq: daily
   priority : 1.0

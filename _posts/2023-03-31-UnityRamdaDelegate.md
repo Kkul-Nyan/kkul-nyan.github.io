@@ -1,15 +1,9 @@
 ---
 layout: post
-read_time: true
-show_date: true
 title:  Unity 델리게이트 람다식
 date:   2023-03-31
-description: about Delegate, Ramda
-img: banner/unity.jpeg
-tags: [Swift]
-author: Noranfox
-github:  noranfox/
-mathjax: yes
+image: unity.jpeg
+tags: Swift
 sitemap:
   changefreq: daily
   priority : 1.0

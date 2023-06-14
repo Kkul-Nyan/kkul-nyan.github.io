@@ -1,15 +1,9 @@
 ---
 layout: post
-read_time: true
-show_date: true
 title:  .?Invoke()
 date:   2023-06-09
-description: about .?Invoke()
-img: banner/unity.jpeg
-tags: [Unity]
-author: Noranfox
-github:  noranfox/
-mathjax: yes
+image: unity.jpeg
+tags: Unity
 sitemap:
   changefreq: daily
   priority : 1.0
