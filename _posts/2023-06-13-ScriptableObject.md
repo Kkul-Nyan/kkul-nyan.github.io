@@ -1,8 +1,7 @@
 ---
 layout: post
-title:  Unity ScriptableObject 사용방법
+title:  ScriptableObject 사용방법
 date:   2023-06-13
-description: about Unity ScriptableObject
 image: unity.jpeg
 tags: Unity
 sitemap:
