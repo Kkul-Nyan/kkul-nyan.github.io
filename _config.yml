@@ -1,10 +1,6 @@
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://noranfox.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
-social:
-  - name: GitHub
-    icon: "github_fill.svg"
-    url: https://github.com/noranfox
 
 # Build settings
 markdown: kramdown

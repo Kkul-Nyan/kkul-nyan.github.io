@@ -1,7 +1,7 @@
 #-------------------------------
 # General Site Settings
 title: Noranfox's C#, Shader and Unity
-logo: title1.svg # You can add own logo.
+logo: logo.svg # You can add own logo.
 description: Nornafox's C#, Shader, Unity Study
 
 
@@ -15,7 +15,7 @@ author:
 
 #-------------------------------
 # Contact links
-github:  https://github.com/noranfox # Add your Pinterest handle
+github:  https://github.com/noranfox 
 
 
 #-------------------------------
