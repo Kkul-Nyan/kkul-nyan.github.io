@@ -1,15 +1,11 @@
 /*
   Syntax Highlighting
 */
-.parent {
-  overflow: auto; /* 좌우 스크롤바를 위한 스타일 */
-}
 
 .highlight {
   background: #1e1e1e;
   color: #e5e5e5;
   margin-bottom: 1em;
-  overflow-x: auto; /* 좌우 스크롤 추가 */
 
   .highlighter-rouge & {
     background: #1e1e1e;
