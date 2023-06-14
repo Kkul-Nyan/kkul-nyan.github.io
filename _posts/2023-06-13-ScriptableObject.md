@@ -35,7 +35,7 @@ public class ItemData : ScriptableObject
    
 }
 ```
-
+<br>
 1. <mark style='background-color: #dcffe4'>UnityEditorScriptableObject</mark>는 기존 클래스와 다르게 데이터를 저장할수 있는 대용량 데이터 컨테이너입니다.
 
 2. 굳이 기존 class 대신 사용하는 이유는 프리팹을 생성할때마다 사본을 계속생성합니다. 즉, 중복되는 데이터가 인스턴스를 생성할수록 계속 생성되게 됩니다. 그러나 ScriptableObject를 이용해서 데이터를 저장한후, 인스턴스로 생선되 프리팹에서 값을 참조하게되면, <mark style='background-color: #dcffe4'>사본을 계속 생성하지 않고, 메모리에 단 하나의 사본만 생성해서 사용합니다.</mark>
