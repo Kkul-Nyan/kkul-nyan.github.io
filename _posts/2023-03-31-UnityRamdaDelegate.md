@@ -3,7 +3,7 @@ layout: post
 title:  Unity 델리게이트 람다식
 date:   2023-03-31
 image: unity.jpg
-tags: Swift
+tags: Unity
 sitemap:
   changefreq: daily
   priority : 1.0
