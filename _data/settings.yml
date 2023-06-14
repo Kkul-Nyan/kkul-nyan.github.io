@@ -1,6 +1,6 @@
 #-------------------------------
 # General Site Settings
-title: Noranfox
+title: Noranfox's C#, Shader and Unity
 logo: title1.svg # You can add own logo.
 description: Nornafox's C#, Shader, Unity Study
 
@@ -20,7 +20,7 @@ twitter: https://twitter.com/ # Add your Twitter handle
 facebook: https://facebook.com/ # Add your Facebook handle
 dribbble: https://dribbble.com/ # Add your Dribbble handle
 instagram: https://instagram.com/ # Add your Instagram handle
-pinterest: https://pinterest.com/ # Add your Pinterest handle
+github: https://github.com/noranfox # Add your Pinterest handle
 
 
 #-------------------------------
