@@ -2,7 +2,6 @@
 layout: post
 title:  Swift 프로그래머스 입문(3)
 date:   2023-01-21
-description: about Programmers Question(03)
 image: Swift_logo.jpg
 tags: Swift
 sitemap:

@@ -2,7 +2,6 @@
 layout: post
 title:  프로그래머스 옹알이(1)
 date:   2023-01-19
-description: about Programmers Question
 image: Swift_logo.jpg
 tags: Swift
 sitemap:

@@ -2,7 +2,6 @@
 layout: post
 title:  Swift Operator
 date:   2022-12-28
-description: about Operator
 image: Swift_logo.jpg
 tags: Swift
 sitemap:

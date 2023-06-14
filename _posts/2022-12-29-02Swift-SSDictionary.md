@@ -2,7 +2,6 @@
 layout: post
 title:  Swift Dictionary
 date:   2022-12-28
-description: about Dictionary collection
 image: Swift_logo.jpg
 tags: Swift
 sitemap:

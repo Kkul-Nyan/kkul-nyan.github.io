@@ -2,12 +2,8 @@
 layout: post
 title:  MetaverseStore 성과정리
 date:   2023-01-11
-description: about MetaverseStore
-img: banner/unity.jpeg
-tags: [SmartStore]
-author: Noranfox
-github:  noranfox/
-mathjax: yes
+image: unity.jpeg
+tag: SmartStore
 sitemap:
   changefreq: daily
   priority : 1.0

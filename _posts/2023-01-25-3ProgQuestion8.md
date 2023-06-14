@@ -2,7 +2,6 @@
 layout: post
 title:  Swift 프로그래머스 A로 B 만들기
 date:   2023-01-25
-description: about Programmers Question(07)
 image: Swift_logo.jpg
 tags: Swift
 sitemap:

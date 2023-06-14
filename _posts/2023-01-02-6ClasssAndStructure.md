@@ -2,7 +2,6 @@
 layout: post
 title:  Swift Class and Structure
 date:   2022-12-31
-description: about Class and Structure
 image: Swift_logo.jpg
 tags: Swift
 sitemap:

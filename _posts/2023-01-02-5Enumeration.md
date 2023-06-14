@@ -2,7 +2,6 @@
 layout: post
 title:  Swift Enumeration
 date:   2022-12-31
-description: about Enumeration
 image: Swift_logo.jpg
 tags: Swift
 sitemap:

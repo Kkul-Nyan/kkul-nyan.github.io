@@ -2,7 +2,6 @@
 layout: post
 title:  Swift 프로그래머스 진료순서 정하기
 date:   2023-02-02
-description: about Programmers Question(12)
 image: Swift_logo.jpg
 tags: Swift
 sitemap:

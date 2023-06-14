@@ -2,7 +2,6 @@
 layout: post
 title:  Swift DataType01
 date:   2022-12-27
-description: Basic DataType
 image: Swift_logo.jpg
 tags: Swift
 sitemap:

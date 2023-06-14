@@ -2,7 +2,6 @@
 layout: post
 title:  Swift Optional
 date:   2023-01-11
-description: about Optional
 image: Swift_logo.jpg
 tags: Swift
 sitemap:

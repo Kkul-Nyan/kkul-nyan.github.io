@@ -2,7 +2,6 @@
 layout: post
 title:  Swift Deinitialization
 date:   2023-01-11
-description: about Deinitialization
 image: Swift_logo.jpg
 tags: Swift
 sitemap:

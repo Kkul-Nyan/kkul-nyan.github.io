@@ -2,7 +2,6 @@
 layout: post
 title:  Swift Collection
 date:   2022-12-28
-description: about Collection and Array
 image: Swift_logo.jpg
 tags: Swift
 sitemap:

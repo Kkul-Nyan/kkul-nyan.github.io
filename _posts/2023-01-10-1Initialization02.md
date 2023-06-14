@@ -2,7 +2,6 @@
 layout: post
 title:  Swift Inheritance02
 date:   2023-01-10
-description: about Inheritance02
 image: Swift_logo.jpg
 tags: Swift
 sitemap:

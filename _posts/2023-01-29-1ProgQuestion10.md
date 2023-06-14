@@ -2,7 +2,6 @@
 layout: post
 title:  Swift 프로그래머스 2차원으로 만들기
 date:   2023-01-25
-description: about Programmers Question(09)
 image: Swift_logo.jpg
 tags: Swift
 sitemap:

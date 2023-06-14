@@ -2,7 +2,6 @@
 layout: post
 title:  Swift Control Flow
 date:   2022-12-31
-description: about Control Flow
 image: Swift_logo.jpg
 tags: Swift
 sitemap:
