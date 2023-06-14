@@ -34,7 +34,7 @@ sitemap:
    2. 편리한 초기자는 반드시 같은 클래스의 다른 초기자를 호출해야합니다.
    3. 편리한 초기자는 궁극적으로 지정초기자를 호출해야합니다.
 
-![ClassDelegation](assets/img/posts/Swift/ClassDelegation.png)
+![ClassDelegation]({{ site.baseurl }}/images/Swift/ClassDelegation.png)
 
 #### 2단계 초기화 (Two-Phase Initialization)
    - 클래스 초기화는 2단계로 진행됩니다.

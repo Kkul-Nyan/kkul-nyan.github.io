@@ -13,7 +13,7 @@ sitemap:
 ## Unity 애니메이터 인스팩터창
 ---
 
-![Example](assets/img/posts/UnityAnimator/01.png )
+![Example]({{ site.baseurl }}/images/UnityAnimator/01.png )
 
 1.Controller : Asset에 만든 Animator Controller를 추가하여 Animator를 정리 및 관리
 

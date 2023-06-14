@@ -17,5 +17,5 @@ sitemap:
 ## Metaverse Store Pamphlet
 ---
 
-![Metaverse1](assets/img/posts/Metaverse/metaverse1.png)
-![Metaverse2](assets/img/posts/Metaverse/metaverse2.png)
+![Metaverse1]({{ site.baseurl }}/images/Metaverse/metaverse1.png)
+![Metaverse2]({{ site.baseurl }}/images/Metaverse/metaverse2.png)
