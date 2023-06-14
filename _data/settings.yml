@@ -12,6 +12,7 @@ author:
   image: main1.jpg
   say-hello: Hello, I’m <strong>Hyeonki jung</strong>
   bio: talks, and writes about <strong>Shader</strong>, <strong>C#</strong>, <strong>Unity</strong>. Loves <a href="#">music</a> & cat.
+
 #-------------------------------
 social:
    name: GitHub
@@ -24,7 +25,7 @@ twitter: https://twitter.com/ # Add your Twitter handle
 facebook: https://facebook.com/ # Add your Facebook handle
 dribbble: https://dribbble.com/ # Add your Dribbble handle
 instagram: https://instagram.com/ # Add your Instagram handle
-github: noranfox # Add your Pinterest handle
+github:  https://github.com/noranfox # Add your Pinterest handle
 
 
 #-------------------------------
