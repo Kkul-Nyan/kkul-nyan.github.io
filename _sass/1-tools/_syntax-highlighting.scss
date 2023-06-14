@@ -7,7 +7,6 @@
   color: #e5e5e5;
   overflow-x: auto;
   margin-bottom: 1em;
-  position: relative;
 
   .highlighter-rouge & {
     background: #1e1e1e;
@@ -72,34 +71,6 @@
   .vg    { color: #a6e22e; } // Name.Variable.Global
   .vi    { color: #a6e22e; } // Name.Variable.Instance
   .il    { color: #ae81ff; } // Literal.Number.Integer.Long
-
-  &::before {
-    content: ""; /* 빈 요소 생성 */
-    position: absolute; /* 절대적인 위치 설정 */
-    top: 0; /* 상단 위치 설정 */
-    left: 0; /* 좌측 위치 설정 */
-    width: 100%; /* 가로 폭 100% 설정 */
-    height: 5px; /* 상단바 높이 설정 */
-    background: #000; /* 상단바 배경색 설정 */
-  }
-
-  &::after {
-    content: ""; /* 빈 요소 생성 */
-    position: absolute; /* 절대적인 위치 설정 */
-    top: 5px; /* 상단바 아래에 위치하도록 설정 */
-    left: 0; /* 좌측 위치 설정 */
-    width: 100%; /* 가로 폭 100% 설정 */
-    height: 1px; /* 구분선 높이 설정 */
-    background: #999; /* 구분선 배경색 설정 */
-  }
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    z-index: 1; /* 상단바와 구분선이 다른 내용 위에 오도록 설정 */
-  }
 
   &::-webkit-scrollbar {
     width: 10px; /* 스크롤바 폭 설정 */
