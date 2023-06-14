@@ -81,22 +81,6 @@ blockquote {
   }
 }
 
-code-block {
-  background-color: #2d2d2d;
-  color: #dcdcdc;
-  padding: 10px;
-  border-radius: 4px;
-  
-  pre {
-    overflow-x: auto;
-  }
-  
-  code {
-    display: block;
-    font-family: 'Courier New', monospace;
-  }
-}
-
 pre {
   overflow: auto;
   padding: 15px;
