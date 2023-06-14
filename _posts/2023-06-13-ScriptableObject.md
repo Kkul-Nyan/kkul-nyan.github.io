@@ -1,19 +1,16 @@
 ---
 layout: post
-read_time: true
-show_date: true
 title:  Unity ScriptableObject 사용방법
 date:   2023-06-13
 description: about Unity ScriptableObject
-img: banner/unity.jpeg
-tags: [Unity]
-author: Noranfox
-github:  noranfox/
-mathjax: yes
+image: banner/unity.jpeg
+tags: Unity
 sitemap:
   changefreq: daily
   priority : 1.0
 ---
+---
+
 
 ---
 ## Unity ScriptableObject 설명 및 작성방법
