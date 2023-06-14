@@ -2,7 +2,7 @@
 layout: post
 title:  Metaverse Smart Store Pamphlet
 date:   2023-01-07
-image: unity.jpeg
+image: VR1.jpg
 tags: SmartStore
 sitemap:
   changefreq: daily
