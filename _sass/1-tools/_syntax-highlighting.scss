@@ -5,18 +5,17 @@
 .highlight {
   background: #1e1e1e;
   color: #e5e5e5;
-  //overflow-x: auto;
   margin-bottom: 1em;
-  white-space: nowrap;
+  overflow-x: auto; /* 좌우 스크롤 추가 */
 
   .highlighter-rouge & {
     background: #1e1e1e;
   }
 
-  .c     { color: #6a9955; font-style: italic; } // Comment
-  .err   { color: #ff6b6b; background-color: #392a2a; } // Error
-  .k     { color: #66d9ef; font-weight: bold; } // Keyword
-  .o     { color: #f92672; font-weight: bold; } // Operator
+  .c     { color: #6a9955; font-style: italic; }
+  .err   { color: #ff6b6b; background-color: #392a2a; }
+  .k     { color: #66d9ef; font-weight: bold; }
+  .o     { color: #f92672; font-weight: bold; }
   .cm    { color: #6a9955; font-style: italic; } // Comment.Multiline
   .cp    { color: #6a9955; font-weight: bold; } // Comment.Preproc
   .c1    { color: #6a9955; font-style: italic; } // Comment.Single
