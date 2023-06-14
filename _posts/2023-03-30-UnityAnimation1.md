@@ -2,7 +2,7 @@
 layout: post
 title:  Unity 애니메이터 인스팩터창
 date:   2023-03-30
-image: newunity.jpeg
+image: unity.jpg
 tags: Swift
 sitemap:
   changefreq: daily
