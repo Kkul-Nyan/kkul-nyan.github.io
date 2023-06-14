@@ -3,6 +3,7 @@ url: "https://noranfox.github.io/" # the base hostname & protocol for your site,
 
 social:
   - name: GitHub
+    icon: "github_fill.svg"
     url: https://github.com/noranfox
 
 # Build settings
