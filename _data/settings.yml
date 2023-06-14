@@ -14,17 +14,7 @@ author:
   bio: talks, and writes about <strong>Shader</strong>, <strong>C#</strong>, <strong>Unity</strong>. Loves <a href="#">music</a> & cat.
 
 #-------------------------------
-social:
-   name: GitHub
-   icon: "github_fill.svg"
-   url: https://github.com/noranfox
-
-#-------------------------------
 # Contact links
-twitter: https://twitter.com/ # Add your Twitter handle
-facebook: https://facebook.com/ # Add your Facebook handle
-dribbble: https://dribbble.com/ # Add your Dribbble handle
-instagram: https://instagram.com/ # Add your Instagram handle
 github:  https://github.com/noranfox # Add your Pinterest handle
 
 
