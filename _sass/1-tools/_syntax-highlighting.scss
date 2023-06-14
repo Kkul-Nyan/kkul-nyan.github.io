@@ -100,4 +100,21 @@
     width: 100%;
     z-index: 1; /* 상단바와 구분선이 다른 내용 위에 오도록 설정 */
   }
+
+  &::-webkit-scrollbar {
+    width: 10px; /* 스크롤바 폭 설정 */
+    height: 10px; /* 스크롤바 높이 설정 */
+    background-color: #f5f5f5; /* 스크롤바 배경색 설정 */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #888; /* 스크롤바 색상 설정 */
+    border-radius: 5px; /* 스크롤바 모서리 반경 설정 */
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f5f5f5; /* 스크롤바 트랙 배경색 설정 */
+    border-radius: 5px; /* 스크롤바 트랙 모서리 반경 설정 */
+  }
+
 }
