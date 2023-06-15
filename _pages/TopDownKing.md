@@ -2,7 +2,7 @@
 layout: page
 title: TopDownKing
 permalink: /TopDownKing/
-image: TopdownKing.png
+image: login.png
 ---
 
 # TopDownKing
@@ -16,6 +16,7 @@ image: TopdownKing.png
 작업 기간: 2023.5.1 ~23.5.19
 프로젝트 완료일: 2023년 5월 19일
 플랫폼: Android, Ios,PC
+
 
 ![login]({{ site.baseurl }}/images/TopDownKing/login.gif)
 
@@ -155,45 +156,6 @@ public class PhotonCamera : MonoBehaviourPunCallbacks
     {
 				//타켓을 기준으로 탑다운 방식으로 카메라를 컨트롤하게 됩니다.
 				//오프셋을 통해 얼마나 타켓기준 떨어지거나, 어떤각도로 볼지를 컨트롤합니다.using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class GameManager : MonoBehaviour
-{
-    public int mapSizeX;
-    public int mapSizeZ;
-    public int mapTileScale;
-    public int charactorSelectNumber = 0;
-    public int userCoin;
-    public float soundSize;
-    
-    public string userName;
-    public bool isMute = false;
-
-    //게임매니저는 유저정보등을 가지고 있기 떄문에 만들어준 싱글톤입니다. 
-    public static GameManager instance;
-    private void Awake() {
-        if(instance == null){
-            instance = this;
-            DontDestroyOnLoad(instance);
-            return;
-        }
-        Destroy(this.gameObject);
-    }
-    private void Update() {
-        
-    }
-
-    // 사운드 크기를 조정합니다.
-    public void SoundChange(){
-        AudioListener.volume = soundSize;
-    }
-
-    //사운드를 중지합니다.
-    public void MuteSound(){
-        AudioListener.pause = isMute;
-    }
-}
         transform.position = target.position + offset;
         transform.eulerAngles = new Vector3(60, 0, 0);
         
@@ -1430,7 +1392,7 @@ public class PlayerHud : MonoBehaviourPunCallbacks
 
 ### OdinDataTable
 
-![스크린샷 2023-05-29 오후 8.20.23.png](TopDownKing%205936895909e24a06ba63c96c52723e8d/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-05-29_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.20.23.png)
+![Odin]({{ site.baseurl }}/images/TopDownKing/Odin.png)
 
 ```csharp
 using System.Collections;
