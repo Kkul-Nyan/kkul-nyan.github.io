@@ -7,14 +7,14 @@ image: Metaverse.png
 
 # MetaverseStore
 
-개발 환경: Windows10+, Mac Ventura
-개발툴: Unity 2020.03.37f1, Adobe Substance 3D 2022, Blender 3.0
-게임 이름: MetaverseStore
-게임 장르: VR 쇼핑
-기획 의도: 휴대폰의 쿠팡, 인터넷의 네이버스토어같은 메타버스의 온라인쇼핑중개플랫폼
-작업 기간: 22.08.01 ~ 22.11.20
-프로젝트 완료일: 2022년 11월 20일
-플랫폼: 오큘러스퀘스트, PC
+개발 환경: Windows10+, Mac Ventura<br>
+개발툴: Unity 2020.03.37f1, Adobe Substance 3D 2022, Blender 3.0<br>
+게임 이름: MetaverseStore<br>
+게임 장르: VR 쇼핑<br>
+기획 의도: 휴대폰의 쿠팡, 인터넷의 네이버스토어같은 메타버스의 온라인쇼핑중개플랫폼<br>
+작업 기간: 22.08.01 ~ 22.11.20<br>
+프로젝트 완료일: 2022년 11월 20일<br>
+플랫폼: 오큘러스퀘스트, PC<br>
 
 
 ![metaverse1]({{ site.baseurl }}/images/Metaverse/metaverse1.png )

@@ -7,16 +7,15 @@ image: login.png
 
 # TopDownKing
 
-개발 환경: Mac Ventura
-개발툴: Unity 2021.3.24f1
-게임 이름: TopDownKing
-게임 장르: Topdown view FPS
-기획 의도: 빠르고 간편하게 즐기는 모바일 배틀로얄 게임
-다운로드 URL: https://drive.google.com/drive/folders/1g67VpUrbOjOg2KYSo8XiclkaqKwPVBBg?usp=sharing
-작업 기간: 2023.5.1 ~23.5.19
-프로젝트 완료일: 2023년 5월 19일
-플랫폼: Android, Ios,PC
-
+개발 환경: Mac Ventura<br>
+개발툴: Unity 2021.3.24f1<br>
+게임 이름: TopDownKing<br>
+게임 장르: Topdown view FPS<br>
+기획 의도: 빠르고 간편하게 즐기는 모바일 배틀로얄 게임<br>
+다운로드 URL: https://drive.google.com/drive/folders/1g67VpUrbOjOg2KYSo8XiclkaqKwPVBBg?usp=sharing<br>
+작업 기간: 2023.5.1 ~ 23.5.19<br>
+프로젝트 완료일: 2023년 5월 19일<br>
+플랫폼: Android, Ios,PC<br>
 
 ![login]({{ site.baseurl }}/images/TopDownKing/login.gif)
 
@@ -58,9 +57,9 @@ public class GameManager : MonoBehaviour
     public int mapSizeZ;
     public int mapTileScale;
     public int charactorSelectNumber = 0;
-		//유저가 가지고있는 코인의 갯수입니다. 플레이팹과 연동됩니다.
+	//유저가 가지고있는 코인의 갯수입니다. 플레이팹과 연동됩니다.
     public int userCoin;
-		//유저가 지정한 사운드 크기입니다. 다른씬에서도 동일한 사운드크기를 제공하기위해 자기고있습니다.
+	//유저가 지정한 사운드 크기입니다. 다른씬에서도 동일한 사운드크기를 제공하기위해 자기고있습니다.
     public float soundSize;
     
     public string userName;
@@ -104,6 +103,7 @@ public enum ItemType{
     Bullet,
     Consumable
 }
+
 //Consumable아이탬일 경우 어떤 Status와 연관되었는지 간단하게 관리하게해줍니다.
 public enum ConsumableType{
     Health,
@@ -111,14 +111,13 @@ public enum ConsumableType{
 }
 
 // 아이탬을 한번에 관리하게 편하게 자료를모아주는 데이터타입입니다.
-// 
 [CreateAssetMenu(fileName = "Item", menuName = "NewData")]
 public class ItemData : ScriptableObject
 {
     public string displayName;
     public string description;
     public ItemType type;
-//포톤인스턴스로 생성될 프리팹입니다.
+    //포톤인스턴스로 생성될 프리팹입니다.
     [PreviewField(100)]public GameObject dropPrefab;
 
     public ConsumableItemData consumable;
@@ -146,19 +145,19 @@ public class PhotonCamera : MonoBehaviourPunCallbacks
     [SerializeField] PhotonView pv;
 
     private void Start() {
-				//카메라가 쫒아갈 캐릭터를 찾아줍니다.
+		//카메라가 쫒아갈 캐릭터를 찾아줍니다.
         pv = GameObject.FindWithTag("Player").GetComponent<PhotonView>();
         if(pv.IsMine){
             target = GameObject.FindWithTag("Player").GetComponent<Transform>();
         }
     }
+
     private void LateUpdate()
     {
-				//타켓을 기준으로 탑다운 방식으로 카메라를 컨트롤하게 됩니다.
-				//오프셋을 통해 얼마나 타켓기준 떨어지거나, 어떤각도로 볼지를 컨트롤합니다.using System.Collections;
+		//타켓을 기준으로 탑다운 방식으로 카메라를 컨트롤하게 됩니다.
+		//오프셋을 통해 얼마나 타켓기준 떨어지거나, 어떤각도로 볼지를 컨트롤합니다.using System.Collections;
         transform.position = target.position + offset;
-        transform.eulerAngles = new Vector3(60, 0, 0);
-        
+        transform.eulerAngles = new Vector3(60, 0, 0); 
     }
 }
 ```
@@ -174,7 +173,7 @@ using Photon.Realtime;
 
 public class Bullets : MonoBehaviourPunCallbacks
 {
-		//다른스크립트에서 인스턴스생성시 구분하기 위해 사용되는 id값입니다.
+	//다른스크립트에서 인스턴스생성시 구분하기 위해 사용되는 id값입니다.
     public int bulletID;
     public PhotonView pv;
     public float speed;
@@ -188,11 +187,12 @@ public class Bullets : MonoBehaviourPunCallbacks
         Invoke("selfDestroy", limitTime);
     }
 
-		//생성된 이후 일정 시간뒤 자동 오브젝트 파괴합니다.
+	//생성된 이후 일정 시간뒤 자동 오브젝트 파괴합니다.
     void selfDestory(){
         pv.RPC("DestroyRPC", RpcTarget.AllBuffered);  
     }
-	  // 오브젝트를 맞췄을 때, Idamagable을 가지고있다면 데미지를 입히고 오브젝트를 파괴합니다
+
+	// 오브젝트를 맞췄을 때, Idamagable을 가지고있다면 데미지를 입히고 오브젝트를 파괴합니다
     private void OnCollisionEnter(Collision other) {
         var ob = other.transform.gameObject.GetComponent<IDamagable>();
         if(  ob != null)
@@ -200,7 +200,8 @@ public class Bullets : MonoBehaviourPunCallbacks
 
         pv.RPC("DestroyRPC", RpcTarget.AllBuffered);
     }
-		//오브젝트를 파괴합니다. 포톤RPC를 통해 모든 플레이어에게 전달합니다.
+
+	//오브젝트를 파괴합니다. 포톤RPC를 통해 모든 플레이어에게 전달합니다.
     [PunRPC]
     void DestroyRPC() => Destroy(transform.gameObject);
 }
@@ -215,9 +216,10 @@ using UnityEngine;
 
 public class ItemBullets : MonoBehaviour
 {
-		// 아이탬데이터에 불렛의 인스턴스 및 대부분 정보를 가지고있습니다.
+	// 아이탬데이터에 불렛의 인스턴스 및 대부분 정보를 가지고있습니다.
     public ItemData bulletData; 
-		//플레이어가 총알아이탬에 닿는다면, 닿은 총알로 플레이어가 발사하는 총알을 변경한뒤 파괴됩니다.
+	
+    //플레이어가 총알아이탬에 닿는다면, 닿은 총알로 플레이어가 발사하는 총알을 변경한뒤 파괴됩니다.
     private void OnTriggerEnter(Collider other) {
         if(!other.gameObject.CompareTag("Player")){
             return;
@@ -257,8 +259,9 @@ public class Potion : MonoBehaviour
     private void Awake() {
         pv = GetComponent<PhotonView>();
     }
-		//플레이어가 포션을 닿게된다면, 플레이어의 Status를 가져오고 포션의 타입에 맞게 미리 설정된 Status를 증가시키고
-		//포션프리팹을 파괴합니다.
+
+	//플레이어가 포션을 닿게된다면, 플레이어의 Status를 가져오고 포션의 타입에 맞게 미리 설정된 Status를 증가시키고
+	//포션프리팹을 파괴합니다.
     private void OnTriggerEnter(Collider other) {
         playerStatus = other.GetComponent<PlayerStatus>();
         if(playerStatus != null){
@@ -274,7 +277,8 @@ public class Potion : MonoBehaviour
             }
         }
     }
-//포톤RPC를 통해 오브젝트를 파괴합니다.
+    
+    //포톤RPC를 통해 오브젝트를 파괴합니다.
     [PunRPC]
     void DestroyPotion(){
         Destroy(transform.gameObject);
@@ -304,11 +308,11 @@ public class MapGenerator : MonoBehaviourPunCallbacks
     
     void Start()
     {
-				//플레이어가 랜덤으로 생성될 범위를 지정해줍니다.
-				GameManager.instance.mapTileScale = objectScale;
+		//플레이어가 랜덤으로 생성될 범위를 지정해줍니다.
+		GameManager.instance.mapTileScale = objectScale;
         GameManager.instance.mapSizeX = mapSizeX * objectScale;
         GameManager.instance.mapSizeZ = mapSizeZ * objectScale;
-				//호스트가 방을만들어 접속할떄 실행되게합니다. 호스트외에 다시금 맵을 생성할 필요가 없으니 호스트만 작동시킵니다.
+		//호스트가 방을만들어 접속할떄 실행되게합니다. 호스트외에 다시금 맵을 생성할 필요가 없으니 호스트만 작동시킵니다.
         if(PhotonNetwork.IsMasterClient){
             GenerateMap();
             GenerateEdge();
@@ -320,18 +324,18 @@ public class MapGenerator : MonoBehaviourPunCallbacks
     //맵타일을 제작하는 부분입니다.
     void GenerateMap()
     {
-				//블록사이즈를 조정하면 서로 겹치는 문제가 생기기때문에, 스케일에 따른 위치값을 조정하게됩니다.
+		//블록사이즈를 조정하면 서로 겹치는 문제가 생기기때문에, 스케일에 따른 위치값을 조정하게됩니다.
         GameManager.instance.mapTileScale = objectScale;
         GameManager.instance.mapSizeX = mapSizeX * objectScale;
         GameManager.instance.mapSizeZ = mapSizeZ * objectScale;
 
-				// 간단한 패턴디자인을 통해 미리 지정된 x,z 사이즈 만큼의 맵을 만듭니다.
+		// 간단한 패턴디자인을 통해 미리 지정된 x,z 사이즈 만큼의 맵을 만듭니다.
         for (int x = 0; x < mapSizeX; x++)
         {
             for (int z = 0; z < mapSizeZ; z++)
             {
                 Vector3 tilePosition = new Vector3(x * objectScale, positionY, z * objectScale);
-								//Resources폴더에있는 미리 지정된 블록을 생성합니다.
+				//Resources폴더에있는 미리 지정된 블록을 생성합니다.
                 PhotonNetwork.Instantiate("Maptile", tilePosition, Quaternion.identity);
             }
         }
@@ -342,7 +346,7 @@ public class MapGenerator : MonoBehaviourPunCallbacks
         for(int x = 0; x < mapSizeX; x++){
             Vector3 edgePosition = new Vector3(x * objectScale, Mathf.Abs(positionY * objectScale) - 1f, (mapSizeZ - 1) * objectScale);
             //Resources폴더에있는 미리 지정된 블록을 생성합니다
-						PhotonNetwork.Instantiate("Maptile", edgePosition, Quaternion.identity);
+			PhotonNetwork.Instantiate("Maptile", edgePosition, Quaternion.identity);
 
             edgePosition = new Vector3(x * objectScale, Mathf.Abs(positionY * objectScale)-1, 0);
             PhotonNetwork.Instantiate("Maptile", edgePosition, Quaternion.identity);
@@ -354,27 +358,27 @@ public class MapGenerator : MonoBehaviourPunCallbacks
             PhotonNetwork.Instantiate("Maptile", edgePosition, Quaternion.identity);
 
             edgePosition = new Vector3(0, Mathf.Abs(positionY * objectScale) - 1f, z * objectScale);
-						//Resources폴더에있는 미리 지정된 블록을 생성합니다
+			//Resources폴더에있는 미리 지정된 블록을 생성합니다
             PhotonNetwork.Instantiate("Maptile", edgePosition, Quaternion.identity);
         }
     }
 
     //맵내부 오브젝트를 제작하는 부분입니다.
     void ObjectGenerator(){
-				// 미리 지정해둔 최대 생성갯수와 최소생성 갯수 사이의 랜덤한 값을 생성할 숫자로 가져옵니다.
+		// 미리 지정해둔 최대 생성갯수와 최소생성 갯수 사이의 랜덤한 값을 생성할 숫자로 가져옵니다.
         int totalObject = Random.Range(minObjects, maxObjects + 1);
         Vector3[] bannedPosition = new Vector3[totalObject];
 
         for(int i = 0; i < totalObject; i++){
             
-						//어떤 오브젝트를 만들지 랜덤으로 선택합니다.
+		    //어떤 오브젝트를 만들지 랜덤으로 선택합니다.
             int selectRandomObject = Random.Range(0, 6);
-						//오브젝트가 생성될 랜덤한 위치값을 생성합니다.
+			//오브젝트가 생성될 랜덤한 위치값을 생성합니다.
             int randomPositinX = Random.Range(objectScale, (mapSizeX - 2) * objectScale); 
             int randomPositinZ = Random.Range(objectScale, (mapSizeZ - 2) * objectScale);
 
             randomPosition = new Vector3(randomPositinX, Mathf.Abs(positionY * objectScale) - 1f, randomPositinZ);
-					  // 생성된 랜덤한 위치값이 기존에 오브젝트가 생성된 위치라면 재귀함수를 통해 다시 실행하게합니다.
+			// 생성된 랜덤한 위치값이 기존에 오브젝트가 생성된 위치라면 재귀함수를 통해 다시 실행하게합니다.
             foreach(Vector3 pos in bannedPosition){
                 if(pos == randomPosition){
                     ObjectGenerator();
@@ -391,13 +395,13 @@ public class MapGenerator : MonoBehaviourPunCallbacks
             else if(selectRandomObject > 2){
                 PhotonNetwork.Instantiate("Tree", randomPosition, Quaternion.identity);
             }
-						//랜덤한값을 이제 중복생성이 되지않도록 저장해줍니다.
+			//랜덤한값을 이제 중복생성이 되지않도록 저장해줍니다.
             bannedPosition[i] = randomPosition;
         }
     }
     void CreatePlayer(){
         PhotonNetwork.Instantiate("Player", transform.position, Quaternion.identity);
-    
+    }
 ```
 
 ### DestoryFloor
@@ -432,13 +436,13 @@ public class DestoryFloor : MonoBehaviour
         RemoveFloor();
     }
 		
-		//플레이어가 닿을경우, 색상을 변경합니다.
+	//플레이어가 닿을경우, 색상을 변경합니다.
     private void OnCollisionStay(Collision other) {
         if(other.transform.CompareTag("Player")){
             ColorChangeFloor();
         }
     }
-		//색상이 변경되는 경우 RPC를 통해 모든플레이어에게 동기화시킵니다.
+	//색상이 변경되는 경우 RPC를 통해 모든플레이어에게 동기화시킵니다.
     [PunRPC]
     void ColorChangeFloor(){
         //타임값에 따라 색상을 변경합니다.
@@ -451,13 +455,13 @@ public class DestoryFloor : MonoBehaviour
         else
         {
             renderer.material.color = destoryColor;
-					//바닥오브젝트가 파괴되기전 바닥은 중력으로 인해 밑으로 떨어지게됩니다.
+			//바닥오브젝트가 파괴되기전 바닥은 중력으로 인해 밑으로 떨어지게됩니다.
             transform.gameObject.AddComponent<Rigidbody>();
             isDestory = true;
         }
         
     }
-	  //바닥이 일정시간이 지나면 바닥을 파괴합니다. 모든플레이어에게 동기화 해줍니다.
+	//바닥이 일정시간이 지나면 바닥을 파괴합니다. 모든플레이어에게 동기화 해줍니다.
     [PunRPC]
     void RemoveFloor(){
         if(isDestory == true){
@@ -469,7 +473,7 @@ public class DestoryFloor : MonoBehaviour
             }
         } 
     }
-		//파닥을 파괴하고, 모든플레이어에게 동기화해줍니다.
+	//파닥을 파괴하고, 모든플레이어에게 동기화해줍니다.
     [PunRPC]
     void Die() => Destroy(transform.gameObject);
 }
@@ -508,17 +512,18 @@ public class DropItem : MonoBehaviourPunCallbacks
 // dropType이 총알인 경우 작동하며, 총알인스턴스를 만들어줍니다.
     void DropBullet(){
         int dropItemNum = Random.Range(0, items.Length);
-				// 혹시 총알타입의 아이탬이 아닐경우 작동을 멈춥니다.
+		// 혹시 총알타입의 아이탬이 아닐경우 작동을 멈춥니다.
         if(items[dropItemNum].type != ItemType.Bullet){
             DropBullet();
             return;
         }
         Bullets bullet = items[dropItemNum].dropPrefab.GetComponent<Bullets>();
-				//transform.position으로 생성시 바닥오브젝트에 박히게 되어 보정값을 넣어주었습니다.
+		//transform.position으로 생성시 바닥오브젝트에 박히게 되어 보정값을 넣어주었습니다.
         Vector3 bulletPosition =  transform.position + new Vector3(0, 1, 0);
         PhotonNetwork.Instantiate("itemBullet" + bullet.bulletID, bulletPosition, Quaternion.identity);
     }
-// dropType이 소모아이탬인 경우 작동하며, 소모성아이탬을 랜덤하게 생성합니다.
+
+    // dropType이 소모아이탬인 경우 작동하며, 소모성아이탬을 랜덤하게 생성합니다.
     void DropConsumableItem(){
         int dropItemNum = Random.Range(0, items.Length);
         if(items[dropItemNum].type != ItemType.Consumable){
@@ -559,33 +564,34 @@ public class mapObject : MonoBehaviourPunCallbacks, IDamagable
 				dropItem = GetComponent<DropItem>();
     }
 
-		// 인터페이스를 통해 필수적으로 작성해야합니다. 총알등이 적중했을때 데미지를 입히는데 사용합니다.
+	// 인터페이스를 통해 필수적으로 작성해야합니다. 총알등이 적중했을때 데미지를 입히는데 사용합니다.
     public void TakePhysicalDamage(int amount){
         curhealth -= amount;
-				//스크립트가 호출되면, RPC를 통해 색상 변경이 모든플레이어게 동기화하도록합니다.
+		//스크립트가 호출되면, RPC를 통해 색상 변경이 모든플레이어게 동기화하도록합니다.
         pv.RPC("HitColor", RpcTarget.All);
-				//일정이하 체력이 되었을 때 오브젝트를 파괴하는 스크립트입니다.
+		//일정이하 체력이 되었을 때 오브젝트를 파괴하는 스크립트입니다.
         CheckDestroy();
     }
-		//맵을 구성하는오브젝트를 파괴하는 스크립트입니다. 모든플레이어가 알아야하는 정보임으로 동기화합니다.
+	
+    //맵을 구성하는오브젝트를 파괴하는 스크립트입니다. 모든플레이어가 알아야하는 정보임으로 동기화합니다.
     [PunRPC]
     void Die() => Destroy(transform.gameObject);
 
-		//RPC를통해 맵오브젝트 생상이 변경되면 모든플레이어에게 동기화 해줍니다.
+	//RPC를통해 맵오브젝트 생상이 변경되면 모든플레이어에게 동기화 해줍니다.
     [PunRPC]
     void HitColor(){
         float  t = (float)(maxHealth - curhealth) / (float)maxHealth;
         renderer.material.color = Color.Lerp(startColor, destroyColor, t);
     }
-		// 일정이하 체력이 되면 오브젝트를 파괴합니다.
+	
+    // 일정이하 체력이 되면 오브젝트를 파괴합니다.
     void CheckDestroy(){
         if( curhealth <= 0){
             pv.RPC("Die", RpcTarget.All);
-						//파괴될시 아이탬을 생성합니다.
-						dropItem.Drop();
+			//파괴될시 아이탬을 생성합니다.
+			dropItem.Drop();
         }
     }
-
 }
 ```
 
@@ -613,7 +619,8 @@ public class AutoOwnershipTransfer : MonoBehaviourPunCallbacks
             photonView.TransferOwnership(PhotonNetwork.MasterClient);
         }
     }
-		//호스트가 접속을 끊어졌을떄, 자동으로 미리지정된 오브젝트들을 새로운 호스트에게 오브젝트소유권을 이동시킵니다.
+	
+    //호스트가 접속을 끊어졌을떄, 자동으로 미리지정된 오브젝트들을 새로운 호스트에게 오브젝트소유권을 이동시킵니다.
     public override void OnMasterClientSwitched(Player newMasterClient)
     {
         if (photonView.Owner == PhotonNetwork.LocalPlayer)
@@ -639,20 +646,20 @@ using UnityEngine.SceneManagement;
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
     private void Awake() {
-
         //포톤서버와 얼마나 자주 데이터 송수신을 할지를 결정합니다.
         PhotonNetwork.SendRate = 60;
         PhotonNetwork.SerializationRate = 30;
     }
 		
-		// 포톤에서 랜덤한 방 참여를 시도합니다.
+	// 포톤에서 랜덤한 방 참여를 시도합니다.
     public void JoinRandomRoom()
     {
-				//닉네임을 저장해둡니다.
-				PhotonNetwork.NickName = GameManager.instance.userName;
+		//닉네임을 저장해둡니다.
+		PhotonNetwork.NickName = GameManager.instance.userName;
         PhotonNetwork.JoinRandomRoom();
     }
-		// 랜덤한 방참여에 실패하면 랜덤한 방을 생성합니다.
+
+	// 랜덤한 방참여에 실패하면 랜덤한 방을 생성합니다.
     public override void OnJoinRandomFailed(short returnCode, string message)
     {
         Debug.Log("Join random failed, creating new room.");
@@ -673,14 +680,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
 
     // 방접속 종료시 메인화면씬으로 전환합니다.
-    public override void OnDisconnected(DisconnectCause cause)
-    {
+    public override void OnDisconnected(DisconnectCause cause){
         SceneManager.LoadScene(0);
     }
-		// 접속종료 버튼을 눌릴시 메인씬으로 돌아가고, 포톤서버에 재접속합니다.
-		public void Disconnected(){
-        PhotonNetwork.Disconnect();
-        Connect();
+
+    // 접속종료 버튼을 눌릴시 메인씬으로 돌아가고, 포톤서버에 재접속합니다.
+    public void Disconnected(){
+    PhotonNetwork.Disconnect();
+    Connect();
     }
 }
 ```
@@ -726,7 +733,7 @@ public class PlayFabManager : MonoBehaviourPunCallbacks
     bool isfade = false;
 
     private void Update() {
-			// 로그인이 실패시 로그인을 다시 시도하라는 캔버스를 서서히 사라지게합니다.
+	    // 로그인이 실패시 로그인을 다시 시도하라는 캔버스를 서서히 사라지게합니다.
         if( isfade == true){
             FadeOutCanvas();
         }
@@ -735,13 +742,14 @@ public class PlayFabManager : MonoBehaviourPunCallbacks
     //아이디, 비밀번호를 inputfield에 넣고 로그인 버튼 클릭시, Playfab에 로그인 요청을 합니다.
     public void OnLoginButton()
     {
-				//버튼클릭시 클릭버튼을 재생합니다.
+		//버튼클릭시 클릭버튼을 재생합니다.
         lobbyAudioSource.Play();
-				//중복된 접속시도를 막기위해 버튼클릭을 막아둡니다.
+		//중복된 접속시도를 막기위해 버튼클릭을 막아둡니다.
         joinButton.interactable = false;
         var request = new LoginWithEmailAddressRequest {Email = loginEmailInput.text, Password = loginPasswoadInput.text};
         PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnLoginFailure);
     }
+
     //아이디, 비밀번호, 유저네임(닉네임)을 작성하고 회원가입버튼을 클릭시, Playfab에 Rigister요청을 합니다.
     public void RegisterButton(){
         lobbyAudioSource.Play();
@@ -759,6 +767,7 @@ public class PlayFabManager : MonoBehaviourPunCallbacks
                     ShowDisplayName = true
             }
         },
+
         //정보를 가져오는데 성공했다면, 싱글톤인 게임매니저에 정보를 전달합니다.
         result => {
             GameManager.instance.userName = result.PlayerProfile.DisplayName.ToString();
@@ -789,7 +798,8 @@ public class PlayFabManager : MonoBehaviourPunCallbacks
         isfade = true;
         
     }
-    //로그인 실패시 작동하는 켄버스입니다. 캔버스그룹을 이용하여, 알파값을 조절해서 알파값이 0이되는 순간, 캔버스를 끄고, 관련된 변수를 초기화합니다.
+    //로그인 실패시 작동하는 켄버스입니다. 캔버스그룹을 이용하여, 알파값을 조절해서 알파값이 0이되는 순간, 
+    //캔버스를 끄고, 관련된 변수를 초기화합니다.
     void FadeOutCanvas(){
         if(timer < fadetime){
             timer += Time.deltaTime;
@@ -802,17 +812,20 @@ public class PlayFabManager : MonoBehaviourPunCallbacks
             timer = 0f;
         }
     }
+
     //회원가입에 성공하면 기존 로그인 캔버스를 가져옵니다.
     void OnRegisterSuccess(RegisterPlayFabUserResult result){
         loginMenuController.status = LoadingStatus.Main;
         loginMenuController.IsStatus();
     }
+
     //회원가입에 실패시 실패캔버스를 작동시킵니다.
     void OnRegisterFailure(PlayFabError error){
         failCanvas.gameObject.SetActive(true);
         isfade = true;
     }
-		// 코인을 구매하거나 얻게될시 플레이팹의 통화를 증가시키고 최공값을 가져와 게임매니저값과 동기화합니다.
+
+	// 코인을 구매하거나 얻게될시 플레이팹의 통화를 증가시키고 최공값을 가져와 게임매니저값과 동기화합니다.
     public void AddCoin(int amount){
         var request = new AddUserVirtualCurrencyRequest(){ VirtualCurrency = "CO", Amount = amount};
         PlayFabClientAPI.AddUserVirtualCurrency(request, (result) => {
@@ -821,15 +834,14 @@ public class PlayFabManager : MonoBehaviourPunCallbacks
             mainAudioSource.clip = getCoinSound;
             mainAudioSource.Play();
         },
-        (error) => Debug.Log("Coin Add Failed"));
-        
+        (error) => Debug.Log("Coin Add Failed"));  
     }
-		//코인을 사용할시 플래이팹 통화를 감소시키고 최종값을 가져와서, 게임매니저의 값과 동기화합니다.
+
+	//코인을 사용할시 플래이팹 통화를 감소시키고 최종값을 가져와서, 게임매니저의 값과 동기화합니다.
     public void SubtractCoin(int amount)
     {
         var request = new SubtractUserVirtualCurrencyRequest(){VirtualCurrency = "CO", Amount = amount};
         PlayFabClientAPI.SubtractUserVirtualCurrency(request,(result) => GameManager.instance.userCoin = result.Balance, (error) => Debug.Log("Coin Subtract Failed"));
-        
     }
 }
 ```
@@ -856,7 +868,7 @@ public class PlayerCharactor : MonoBehaviourPunCallbacks
     }
     private void Start() {
         if(pv.IsMine){
-						//지정한 캐릭터로 변경합니다.
+			//지정한 캐릭터로 변경합니다.
             Invoke("ChooseCharactor",0.1f);
         }
     }
@@ -864,7 +876,7 @@ public class PlayerCharactor : MonoBehaviourPunCallbacks
     //변경된 캐릭터를 모든 플레이어가 알아야하므로 PRC를 통해 동기화 해줍니다.
     [PunRPC]
     public void ChooseCharactor(){
-				//메인화면에서 선택해둔 캐릭터값을 가지고있는 싱글톤 게임매니저에서 값을 가져옵니다.
+		//메인화면에서 선택해둔 캐릭터값을 가지고있는 싱글톤 게임매니저에서 값을 가져옵니다.
         charactorSelectNumber = GameManager.instance.charactorSelectNumber;
         for(int i = 0; i < bodyObject.Length; i++){
             bodyObject[i].gameObject.SetActive(false);
@@ -908,7 +920,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
     private void Start() {
         anim = GetComponentInChildren<Animator>();
         playerStatus =  GetComponent<PlayerStatus>();
-				//내가 소유권을 가진 캐릭터만 랜덤한 위치로 이동합니다. 
+				
+        //내가 소유권을 가진 캐릭터만 랜덤한 위치로 이동합니다. 
         if(pv.IsMine){
             rig = GetComponent<Rigidbody>();
             RandomPosition();
@@ -932,7 +945,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
             transform.position = randomPosition;
         }
     }
-		//내캐릭터의 위치값만 변동해줍니다. OnMoveInput을통해 inputsystem에서 입력값을 받아옵니다.
+		
+    //내캐릭터의 위치값만 변동해줍니다. OnMoveInput을통해 inputsystem에서 입력값을 받아옵니다.
     void Move(){
         if(pv.IsMine){    
             Vector3 dir = Vector3.forward * moveVec.y + Vector3.right * moveVec.x;
@@ -946,7 +960,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
             }
         }
     }
-		//inputsystem에 의해 입력된값을 콜백 받으면, 지정된 애니메이션을 자동시키고, 콜랙받은 값을 변수에 전달합니다
+	
+    //inputsystem에 의해 입력된값을 콜백 받으면, 지정된 애니메이션을 자동시키고, 콜랙받은 값을 변수에 전달합니다
     public void OnMoveInput(InputAction.CallbackContext context){
         if(context.phase == InputActionPhase.Performed){
             anim.SetBool("isMove", true);
@@ -957,7 +972,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
             moveVec = Vector2.zero;
         }
     }
-		//inputsystem을 통해 콜백으로 값을 받으면, 사격애니메이션을 작동시키고, 총알프리팹을 생성합니다.
+	//inputsystem을 통해 콜백으로 값을 받으면, 사격애니메이션을 작동시키고, 총알프리팹을 생성합니다.
     public void OnAttackInput(InputAction.CallbackContext context){
         if(pv.IsMine){
             if(context.phase == InputActionPhase.Performed){
@@ -970,13 +985,12 @@ public class PlayerController : MonoBehaviourPunCallbacks
             }
         }
     }
-		//총알을 생성합니다. 포톤인스턴스를 이용하며, 총알을 생성할떄마다, 플레이어가 사진마나값을 소모하며, 마나가 0이면 생성된지 않습니다.
+	//총알을 생성합니다. 포톤인스턴스를 이용하며, 총알을 생성할떄마다, 플레이어가 사진마나값을 소모하며, 마나가 0이면 생성된지 않습니다.
     public void ShootBullet(){
         if(playerStatus.mana.curValue >= bullet.manaDecoy){
             PhotonNetwork.Instantiate("Bullet" + bullet.bulletID, shootPosition.position , shootPosition.rotation);
             playerStatus.mana.Subtract(bullet.manaDecoy);
-        }
-        
+        } 
         Debug.Log("Bullet" + bullet.bulletID);
     }
 }
@@ -1013,30 +1027,35 @@ public class PlayerStatus : MonoBehaviourPunCallbacks, IDamagable
         mana.Add(mana.regenRate * Time.deltaTime);
         CheckStatus();
     }
-		//동기화된 Status를 ui바와 동기화합니다. 모든플레이어에게 동기화해줍니다.
+
+	//동기화된 Status를 ui바와 동기화합니다. 모든플레이어에게 동기화해줍니다.
     [PunRPC]
     void CheckStatus(){
         health.uiImage.fillAmount = health.GetPercent();
         mana.uiImage.fillAmount = mana.GetPercent();
     }
-		//플레이어의 사망유무를 판정합니다.
+
+	//플레이어의 사망유무를 판정합니다.
     public void CheckisPlayerDead(){
         if(health.curValue == 0f){
             Die();
         }
     }
-		//플레이어가 데미지를 받을시 작동합니다. 바뀐 스테이터스를 CheckStatus를 통해 동기화합니다.
+
+	//플레이어가 데미지를 받을시 작동합니다. 바뀐 스테이터스를 CheckStatus를 통해 동기화합니다.
     public void TakePhysicalDamage(int amount){
         health.Subtract(amount);
         pv.RPC("CheckStatus", RpcTarget.AllBuffered);
     }
-		//플레이어가 사망했을때, 사망캔버스를 작동시킵니다.
+
+	//플레이어가 사망했을때, 사망캔버스를 작동시킵니다.
     void Die(){
         Debug.Log( GameManager.instance.userName + "Die");
         endCanvas.gameObject.SetActive(true);
         playerCharactor.SetActive(false);
     }
-		//플레이어가 일정높이 이하로 떨어졌을때, 사망한것으로 판정합니다.
+
+	//플레이어가 일정높이 이하로 떨어졌을때, 사망한것으로 판정합니다.
     public void CheckHeight(){
         if(transform.position.y < -5){
             Die();
@@ -1053,20 +1072,24 @@ public class Status
     public float regenRate;
     public float decayRate;
     public Image uiImage;
-   //스테이터스를 증가시킵니다. 맥스값이상으로 회복되는것을 방지합니다.
+
+    //스테이터스를 증가시킵니다. 맥스값이상으로 회복되는것을 방지합니다.
     public void Add(float amount){
         curValue = Mathf.Min(curValue + amount, maxValue);
     }
+
     //스테이터스를 감소시킵니다. 0값이하로 감소되는것을 방지합니다.
     public void Subtract(float amount){
         curValue = Mathf.Max(curValue - amount, 0);
     }
-		//ui바와 동기화 하기위해 퍼센트값을 만들어줍니다.
+
+	//ui바와 동기화 하기위해 퍼센트값을 만들어줍니다.
     public float GetPercent(){
         return curValue / maxValue;
     }
     
 }
+
 //데미지를 받을때, 작동할 인터페이스입니다. 플레이어외에도 다양한 데미지를 받는 오브젝트에서 상속받아 사용합니다.
 public interface IDamagable 
 {
@@ -1100,16 +1123,16 @@ public class LoginMenuController : MonoBehaviour
     public LoadingStatus status;
    
     private void Start() {
-				//프로그램 실행시 자동으로 메인캔버스를 열어줍니다.
+		//프로그램 실행시 자동으로 메인캔버스를 열어줍니다.
         status = LoadingStatus.Main;
         audio = GetComponent<AudioSource>();
         IsStatus();
     }
 
     public void IsStatus(){
-				// 모든 캔버스를 닫아줍니다.
+		// 모든 캔버스를 닫아줍니다.
         Reset();
-				// status 상태에 따라, 지정된 캔버스만 작동해줍니다.
+		// status 상태에 따라, 지정된 캔버스만 작동해줍니다.
         switch (status){
             case LoadingStatus.Main : 
                 loginCanvas.gameObject.SetActive(true);
@@ -1127,13 +1150,15 @@ public class LoginMenuController : MonoBehaviour
             
         }
     }
-		//모든캔버스를 안보이게합니다.
+
+	//모든캔버스를 안보이게합니다.
     void Reset(){
         loginCanvas.gameObject.SetActive(false);
         emailLoginCanvas.gameObject.SetActive(false);
         singinEmailCanvas.gameObject.SetActive(false);
     }
-		//버튼과 동기화할 부분입니다. 버튼을 클릭할시 미리지정해준 0,1,2값이 들어오게되고, status 상태를 그 숫자에 맞게 바꾸게됩니다.
+
+	//버튼과 동기화할 부분입니다. 버튼을 클릭할시 미리지정해준 0,1,2값이 들어오게되고, status 상태를 그 숫자에 맞게 바꾸게됩니다.
     public void OnButtonControll(int statusInt){
         int statusNum = statusInt;
         switch(statusNum){
@@ -1200,17 +1225,14 @@ public class MainMenuController : MonoBehaviour
 
     private void Start() {
         audioSource = GetComponent<AudioSource>();
-				//씬전환과 동시에 작동시키니 작동하지않아 약간의 텀을 주게합니다.
+		//씬전환과 동시에 작동시키니 작동하지않아 약간의 텀을 주게합니다.
         Invoke("CheckBasic",1f);
     }
 
-    private void Update() {
-        
-    }
     public void IsStatus(){
-				//모든 캔버스를 닫아줍니다.
+		//모든 캔버스를 닫아줍니다.
         Reset();
-				// status 상태에 따라, 지정된 캔버스만 작동해줍니다.
+		// status 상태에 따라, 지정된 캔버스만 작동해줍니다.
         switch (status){
             case UIStatus.Main : 
                 mainCanvas.gameObject.SetActive(true);
@@ -1235,7 +1257,8 @@ public class MainMenuController : MonoBehaviour
             break;
         }
     }
-		// 모든 캔버스를 닫아줍니다.
+	
+    // 모든 캔버스를 닫아줍니다.
     void Reset(){
         mainCanvas.gameObject.SetActive(false);
         startGameCanvas.gameObject.SetActive(false);
@@ -1244,7 +1267,8 @@ public class MainMenuController : MonoBehaviour
         optionCanvas.gameObject.SetActive(false);
 
     }
-		// 미리버튼에 특정 번호를 넣어주어서, 클릭시 자동으로 입력된 값에 맞게 stutus상태를 변경해줍니다.
+	
+    // 미리버튼에 특정 번호를 넣어주어서, 클릭시 자동으로 입력된 값에 맞게 stutus상태를 변경해줍니다.
     public void OnButtonControll(int statusInt){
         int statusNum = statusInt;
         switch(statusNum){
@@ -1266,6 +1290,7 @@ public class MainMenuController : MonoBehaviour
         }
         IsStatus();
     }
+
     // 플레이어 이름과 가지고있는 통화량을 보여줍니다.
     void CheckBasic(){
         playerNameText.text = GameManager.instance.userName;
@@ -1285,6 +1310,7 @@ public class MainMenuController : MonoBehaviour
         charactorSelectNumber += 1;
         ChangeImage();
     }
+
     //캐릭터선택창에서 왼쪽이동버튼입니다.
     public void OnLeftChangeButton(){
         if(charactorSelectNumber == 0){
@@ -1293,6 +1319,7 @@ public class MainMenuController : MonoBehaviour
         charactorSelectNumber -= 1;
         ChangeImage();
     }
+
     //캐릭터선택캔버스에서 이미지스프라이트를 변경해줍니다.
     void ChangeImage() => charactorImage.sprite = charactorSprites[charactorSelectNumber];
 
@@ -1326,6 +1353,7 @@ public class MainMenuController : MonoBehaviour
         GameManager.instance.MuteSound();
         GameManager.instance.SoundChange();
     }
+
     //음소거 버튼을 눌렸을때 사운드를 무음으로 만들어줍니다.
     public void OnMuteButton(){
         if(GameManager.instance.isMute == false){
@@ -1369,25 +1397,25 @@ public class PlayerHud : MonoBehaviourPunCallbacks
     }
 
     private void Update() {
-				//UI 위치를 플레이어를 중심으로 지정합니다.
+		//UI 위치를 플레이어를 중심으로 지정합니다.
         transform.position = player.position + offset;
         transform.eulerAngles = roOffset;
 
     }
 
     public void ChangeName(){
-				// 내가소유한 캐릭터라면 내 닉네임을 넣어주고, 색상을 흰색으로합니다.
+		// 내가소유한 캐릭터라면 내 닉네임을 넣어주고, 색상을 흰색으로합니다.
         if(pv.IsMine){
             playerNameText.text = PhotonNetwork.NickName;
             playerNameText.color = Color.white;
         }
-				// 다른플레이어가 소유한 캐릭터라면, 그 플레이어의 닉네임을 넣고, 생상을 붉은색으로합니다.
+		// 다른플레이어가 소유한 캐릭터라면, 그 플레이어의 닉네임을 넣고, 생상을 붉은색으로합니다.
         else{
             playerNameText.text = photonView.Owner.NickName;
             playerNameText.color = Color.red;
         }
     }
-
+}
 ```
 
 ### OdinDataTable
@@ -1405,18 +1433,19 @@ using Sirenix.Utilities.Editor;
 
 public class OdinDataTable : OdinMenuEditorWindow
 {
-		//유니티 윈도우 메뉴에 메뉴 제작
+	//유니티 윈도우 메뉴에 메뉴 제작
     [MenuItem("Tools/DataTable")]
     private static void OpenWindow(){
         GetWindow<OdinDataTable>().Show();
     }
-		//메뉴 내부 트리 작성.
+
+	//메뉴 내부 트리 작성.
     protected override OdinMenuTree BuildMenuTree()
     {
         var tree = new OdinMenuTree();
-				//새로운 데이터 생성 Tree메뉴
+		//새로운 데이터 생성 Tree메뉴
         tree.Add("Create New Enemy", new CreateNewEnemyData());
-				//만들어지거나, 만들어진 데이터들을 가져와서 테이블에 제공
+		//만들어지거나, 만들어진 데이터들을 가져와서 테이블에 제공
         tree.AddAllAssetsAtPath("Item", "Assets/Resources", typeof(ItemData));
 
         return tree;
@@ -1430,7 +1459,8 @@ public class OdinDataTable : OdinMenuEditorWindow
         }
         [InlineEditor(ObjectFieldMode = InlineEditorObjectFieldModes.Hidden)]
         public ItemData itemData;
-				//오딘인스펙터 버튼, 새로운 데이터를 정해진 규칙에 따라 이름을 정하고 확장자를 정하고, 지정된 경로에 생성합니다.
+		
+        //오딘인스펙터 버튼, 새로운 데이터를 정해진 규칙에 따라 이름을 정하고 확장자를 정하고, 지정된 경로에 생성합니다.
         [Button("Add New Item")]
         private void CreateNewData(){
             AssetDatabase.CreateAsset(itemData, "Assets/Resources/" + itemData.displayName + ".asset");
