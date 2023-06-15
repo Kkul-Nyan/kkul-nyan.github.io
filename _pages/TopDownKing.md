@@ -17,11 +17,11 @@ image: login.png
 프로젝트 완료일: 2023년 5월 19일<br>
 플랫폼: Android, Ios,PC<br>
 
-![login]({{ site.baseurl }}/images/TopDownKing/login.gif)
+![Login]({{ site.baseurl }}/images/TopDownKing/login.gif)
 
-![main]({{ site.baseurl }}/images/TopDownKing/main.gif)
+![Main]({{ site.baseurl }}/images/TopDownKing/main.gif)
 
-![game]({{ site.baseurl }}/images/TopDownKing/game.gif)
+![Game]({{ site.baseurl }}/images/TopDownKing/game.gif)
 
 ## 프로젝트 기획
 
@@ -1482,11 +1482,14 @@ public class OdinDataTable : OdinMenuEditorWindow
 로그인씬에서 로그인 과정 중 Memory leak이 일부 생겨있음을 확인했습니다.
 
 ### 1. Xcode Debug 네이게이터(CPU,Memory)
-![xcode4]({{ site.baseurl }}/images/TopDownKing/xcode4.png)
+
+![Xcode4]({{ site.baseurl }}/images/TopDownKing/xcode4.png)
+
 ![03]({{ site.baseurl }}/images/TopDownKing/03.png)
 
 ### 2.Xcode CPU Profile
-![xcode5]({{ site.baseurl }}/images/TopDownKing/xcode5.png)
+
+![Xcode5]({{ site.baseurl }}/images/TopDownKing/xcode5.png)
 
 ### 3.Xcode Profile Metal System Trace
 
