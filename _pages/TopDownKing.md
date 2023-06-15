@@ -1,8 +1,8 @@
 ---
 layout: page
-title: MetaverseStore
-permalink: /MetaverseStore/
-image: 08.jpg
+title: TopDownKing
+permalink: /TopDownKing/
+image: TopdownKing.png
 ---
 
 # TopDownKing
@@ -16,8 +16,6 @@ image: 08.jpg
 작업 기간: 2023.5.1 ~23.5.19
 프로젝트 완료일: 2023년 5월 19일
 플랫폼: Android, Ios,PC
-
-![login]({{ site.baseurl }}/images/TopDownKing/login.png)
 
 ![login]({{ site.baseurl }}/images/TopDownKing/login.gif)
 
