@@ -2,7 +2,7 @@
 layout: page
 title: MetaverseStore
 permalink: /MetaverseStore/
-image: 08.jpg
+image: Metaverse.png
 ---
 
 # MetaverseStore
@@ -16,7 +16,6 @@ image: 08.jpg
 프로젝트 완료일: 2022년 11월 20일
 플랫폼: 오큘러스퀘스트, PC
 
-![01]({{ site.baseurl }}/images/Metaverse/01.png )
 
 ![metaverse1]({{ site.baseurl }}/images/Metaverse/metaverse1.png )
 
