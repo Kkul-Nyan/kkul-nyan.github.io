@@ -17,15 +17,21 @@ image: TopdownKing.png
 프로젝트 완료일: 2023년 5월 19일<br>
 플랫폼: Android, Ios,PC<br>
 
+
 ![Login]({{ site.baseurl }}/images/TopDownKing/login.gif)
+
 
 ![Main]({{ site.baseurl }}/images/TopDownKing/main.gif)
 
+
 ![Game]({{ site.baseurl }}/images/TopDownKing/game.gif)
+
 
 ## 프로젝트 기획
 
+
 ![01]({{ site.baseurl }}/images/TopDownKing/01.png)
+
 
 ## 사용 에셋
 
