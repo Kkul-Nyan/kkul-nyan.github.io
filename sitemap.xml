@@ -1,56 +1,582 @@
----
-layout: null
-sitemap:
-  exclude: 'yes'
----
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% for post in site.posts %}
-    {% unless post.published == false %}
-    <url>
-      <loc>{{ site.url }}{{ post.url }}</loc>
-      {% if post.sitemap.lastmod %}
-        <lastmod>{{ post.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
-      {% elsif post.date %}
-        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      {% endif %}
-      {% if post.sitemap.changefreq %}
-        <changefreq>{{ post.sitemap.changefreq }}</changefreq>
-      {% else %}
-        <changefreq>daily</changefreq>
-      {% endif %}
-      {% if post.sitemap.priority %}
-        <priority>{{ post.sitemap.priority }}</priority>
-      {% else %}
-        <priority>0.5</priority>
-      {%- endif -%}
-    </url>
-    {% endunless %}
-  {% endfor %}
-  {% for page in site.pages %}
-    {% unless page.sitemap.exclude == "yes" or page.url contains "assets" %}
-    <url>
-      <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
-      {% if page.sitemap.lastmod %}
-        <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
-      {% elsif page.date %}
-        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      {% endif %}
-      {% if page.sitemap.changefreq %}
-        <changefreq>{{ page.sitemap.changefreq }}</changefreq>
-      {% else %}
-        <changefreq>daily</changefreq>
-      {% endif %}
-      {% if page.sitemap.priority %}
-        <priority>{{ page.sitemap.priority }}</priority>
-      {% else %}
-        <priority>0.5</priority>
-      {% endif %}
-    </url>
-    {% endunless %}
-  {% endfor %}
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://noranfox.github.io/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/About/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/06/16/cinematicCam/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/06/13/custom/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/06/13/ScriptableObject/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/06/09/dotInvoke/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/03/31/UnityRamdaDelegate/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/page/2/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/page/3/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/page/4/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/page/5/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/page/6/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/page/7/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/page/8/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/page/9/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/page/10/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/page/11/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/page/12/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/page/13/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/page/14/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/page/15/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/page/16/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/page/17/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/page/18/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/page/19/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/03/30/UnityAnimation1/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/02/28/1ProgQuestion20/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/02/24/1ProgQuestion19/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/02/20/1ProgQuestion18/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/02/06/1ProgQuestion17/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/02/06/1ProgQuestion16/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/02/04/1ProgQuestion15/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/02/03/1ProgQuestion14/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/02/02/1ProgQuestion13/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/02/01/1ProgQuestion12/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/01/25/1ProgQuestion11/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/01/25/1ProgQuestion10/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/01/25/1ProgQuestion9/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/01/25/3ProgQuestion8/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/01/25/2ProgQuestion7/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/01/25/1ProgQuestion6/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/01/24/1ProgQuestion5/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/01/21/1ProgQuestion4/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/01/21/1ProgQuestion3/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/01/19/1ProgQuestion1/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/01/11/1ProgQuestion2/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/01/11/1MetaverseStoreYoutube/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/01/11/2OptionalChaining/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/01/11/1Deinitialization/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/01/10/1Initialization02/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2023/01/07/1MetaverseStorePamplat/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/31/2Initialization/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/31/1Inheritance/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/31/3SubScript/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/31/2Method/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/31/1Property/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/31/6ClasssAndStructure/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/31/5Enumeration/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/31/4Closures/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/31/3Tuple/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/31/2Functions/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/31/1question-602/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/31/3SControlFlow/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/31/2question-502/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/31/1question-407/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/28/01Swift-Operator/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/28/02Swift-SSDictionary/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/28/01Swift-Set/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/28/3question-406/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/28/2Swift-Collection/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/27/1Swift-DataType02/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/27/Swift-DataType01/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/24/question-405/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/23/question-404/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/22/question-403/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/12/21/question-402/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/09/15/UnityAR-002/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/09/01/UnityAR-001/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/31/question-313/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/31/question-312/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/31/question-311/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/31/question-310/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/31/question-309/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/31/question-308/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/31/question-307/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/31/question-306/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/31/question-304/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/31/question-303/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/31/question-302/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/31/question-301/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/31/question-207/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/31/question-206/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/31/question-205/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/31/question-204/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/31/question-203/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/31/question-202/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/31/question-201/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/30/question-115/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/30/question-114/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/30/question-113/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/29/question-112/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/29/question-111/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/29/question-110/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/29/question-1-9/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/29/question-1-8/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/29/question-1-7/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/29/question-1-6/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/29/question-1-5/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/29/question-1-4/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/29/question-1-3/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/29/question-1-2/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/29/question-1-1/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/26/RunCycle/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://noranfox.github.io/2022/08/25/tweet/</loc>
+  <lastmod>2023-06-22T10:19:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
