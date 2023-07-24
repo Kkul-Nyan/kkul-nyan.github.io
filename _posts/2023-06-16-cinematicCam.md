@@ -12,7 +12,7 @@ sitemap:
 
 
 ---
-## Unity ScriptableObject 설명 및 작성방법
+## Cinematic Camera 세팅 설명 및 작성방법
 ---
 
 시네머신 카메라에 대해 기본적인 설정 방법을 알려드리겠습니다.<br> 
