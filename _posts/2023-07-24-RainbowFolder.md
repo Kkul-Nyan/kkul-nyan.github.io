@@ -77,3 +77,19 @@ BackGround 내부 Custom : 글자 백그라운드에 이미지를 사용할수�
 Recursive의 경우, 현재폴더의 하위폴더에도 적용여부입니다. 마치 상속처럼 적용을하고 싶다면 Check를 해주시면되고, 이렇게 적용시키고도 몇개의 하위폴더는 자체적인 방식을 사용해야한다면 위에서 설명해드린, Priority를 통해 우선순위를 적용해주면됩니다.
 
 ![07]({{ site.baseurl }}/images/Unity/RainbowFolder/07.png )
+
+톱니바퀴의 경우 누르게 되면 아래 이미지 같이, 인스펙터창에서 레인보우폴더가 적용된 모든 폴더를 보여줍니다. 간편하게 설정을 수정 할수 있습니다.
+
+![10]({{ site.baseurl }}/images/Unity/RainbowFolder/10.png )
+
+![08]({{ site.baseurl }}/images/Unity/RainbowFolder/08.png )
+
+이 버튼의 누를경우, 현재 이 설정을 인스펙터창으로 보여줍니다.
+
+![09]({{ site.baseurl }}/images/Unity/RainbowFolder/09.png )
+이 버튼의 누를경우, 현재 설정된 정보를 초기화합니다. 
+
+RainbowFolder의 경우 정말 한번 사용하면 기본적으로 세팅하게되는 저렴한가격에 굉장히 많이 애용하는 에셋입니다.
+설정도 간편하고, 관리도 편하기에 사용해보시는걸 추천 드립니다.
+
+
