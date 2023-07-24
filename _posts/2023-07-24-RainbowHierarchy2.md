@@ -2,7 +2,7 @@
 layout: post
 title:  RainbowHierarchy2 사용방법
 date:   2023-06-16
-image: Unity/RainbowHierarchy2/RainbowHierarchy2.jpeg
+image: Unity/RainbowHierarchy2/rainbow.jpeg
 tags: Unity
 sitemap:
   changefreq: daily
