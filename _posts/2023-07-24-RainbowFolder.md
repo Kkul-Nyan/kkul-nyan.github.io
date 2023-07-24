@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  RainbowFolder
+title:  RainbowFolder 사용방법
 date:   2023-06-16
 image: Unity/RainbowFolder/RainbowFolder.jpeg
 tags: Unity
@@ -12,7 +12,7 @@ sitemap:
 
 
 ---
-# RainbowFolder 설명 및 작성방법
+# RainbowFolder 설명 및 사용 방법
 ---
 
 ## 01.소개
