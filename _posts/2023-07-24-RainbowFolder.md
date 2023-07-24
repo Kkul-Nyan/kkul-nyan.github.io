@@ -34,8 +34,8 @@ sitemap:
 패키지매니저를 통해 RainbowFolder를 프로젝트에 import하셨다면, 바로 사용 할 수 있습니다.
 색상이나 아이콘을 변경하고 싶은 폴더를 
 
-윈도우의 경우 : <mark style='background-color: #dcffe4'>Alt</mark> + 마우스 좌클릭<br>
-맥의 경우 : <mark style='background-color: #dcffe4'>Option</mark> + 마우스 좌클릭
+**윈도우**의 경우 : <mark style='background-color: #dcffe4'>Alt</mark> + 마우스 좌클릭<br>
+**맥**의 경우 : <mark style='background-color: #dcffe4'>Option</mark> + 마우스 좌클릭
 
 입니다.
 
