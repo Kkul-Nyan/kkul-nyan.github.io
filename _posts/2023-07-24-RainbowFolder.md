@@ -56,7 +56,7 @@ sitemap:
 
 ![03-1]({{ site.baseurl }}/images/Unity/RainbowFolder/03-1.png )
 
-Icon 내부 Custom :  원하는 이미지를 폴더 Icon으로 사용할수 있습니다. x16의 경우 위사진에서 좌측 미리보기를 보시면, 좌하단 Bed를 보시면 이해할수 있습니다. 폴더 좌하단에 작은 이미지를 생성하는데, 거기에 사용됩니다. x64의 경우 폴더에 사용될 이미지입니다.
+Icon 내부 **Custom** :  원하는 이미지를 폴더 Icon으로 사용할수 있습니다. x16의 경우 위사진에서 좌측 미리보기를 보시면, 좌하단 Bed를 보시면 이해할수 있습니다. 폴더 좌하단에 작은 이미지를 생성하는데, 거기에 사용됩니다. x64의 경우 폴더에 사용될 이미지입니다.
 
 ![02]({{ site.baseurl }}/images/Unity/RainbowFolder/02.png )
 
