@@ -16,20 +16,20 @@ sitemap:
 ---
 
 시네머신 카메라에 대해 기본적인 설정 방법을 알려드리겠습니다.<br> 
-시네머신 카메라는 스크립트 없이 다양한 스타일의 카메라를 조절 할 수도 있으며,<br> 
-말 그대로 시네마틱 영상을 만들 때, 손쉽게 만들수 있게 해줍니다.<br> 
+시네머신 카메라는 스크립트 없이 다양한 스타일의 카메라를 조절할 수도 있으며,<br> 
+말 그대로 시네마틱 영상을 만들 때, 손쉽게 만들 수 있게 해줍니다.<br> 
 
-특히, 간단한 설정만으로 다양한 시점을 만들고, 상당히 퀄리티가 좋은 카메라를 완성 할 수 있습니다.<br> 
+특히, 간단한 설정만으로 다양한 시점을 만들고, 상당히 퀄리티가 좋은 카메라를 완성할 수 있습니다.<br> 
 
 <br>
 ![01]({{ site.baseurl }}/images/20230616/01.png )
 <br>
 
-1. 시네마틱 카메라를 사용하기 위해선 가장먼저 <mark style='background-color: #ffd700'> PackageManager에서 Cinemachine을 설치</mark>해줍니다.<br> *Cinematic Studio를 설치한다면 다양한 영상과 관련된 패키지를 설치가능합니다. 이패키지에 Cinemachine이 포함되어있습니다.<br> 
+1. 시네마틱 카메라를 사용하기 위해선 가장 먼저 <mark style='background-color: #ffd700'> PackageManager에서 Cinemachine을 설치</mark>해줍니다.<br> *Cinematic Studio를 설치한다면 다양한 영상과 관련된 패키지를 설치 가능합니다. 이 패키지에 Cinemachine이 포함되어 있습니다.<br>
 
 ![02]({{ site.baseurl }}/images/20230616/02.png )
 
-2. 패키지가 추가 되었다면, 이제 씬에 시네머신카메라를 추가 하겠습니다.<br> 히치하이키 창에서 우클릭을 한뒤, Cinemachine에서 다양한 카메라 중 사용할 카메라를 선택해주면 됩니다.<br> 
+2. 패키지가 추가 되었다면, 이제 씬에 시네머신 카메라를 추가하겠습니다.<br> 히치하이키 창에서 우클릭을 한뒤, Cinemachine에서 다양한 카메라 중 사용할 카메라를 선택해주면 됩니다.<br> 
 
 3. 여기서는 캐릭터를 따라다닐 카메라를 만들것이므로, <mark style='background-color: #ffd700'> Virtual Camera</mark>를 사용하겠습니다.<br> 
 
