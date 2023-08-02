@@ -3,7 +3,7 @@ layout: post
 title:  Swift Operator
 date:   2022-12-28
 image: Swift_logo.jpg
-tags: Swift
+tags: [Swift]
 ---
 
 ---

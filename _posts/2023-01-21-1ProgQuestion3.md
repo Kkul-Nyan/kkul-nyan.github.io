@@ -3,7 +3,7 @@ layout: post
 title:  Swift 프로그래머스 입문(2)
 date:   2023-01-21
 image: Swift_logo.jpg
-tags: Swift
+tags: [Swift]
 ---
 
 ---

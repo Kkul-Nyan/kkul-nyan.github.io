@@ -3,7 +3,7 @@ layout: post
 title:  Cinematic Camera 세팅
 date:   2023-06-16
 image: unity.jpg
-tags: Unity
+tags: ["Unity"]
 ---
 
 

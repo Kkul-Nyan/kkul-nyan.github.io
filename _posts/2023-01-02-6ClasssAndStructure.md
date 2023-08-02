@@ -3,7 +3,7 @@ layout: post
 title:  Swift Class and Structure
 date:   2022-12-31
 image: Swift_logo.jpg
-tags: Swift
+tags: [Swift]
 ---
 
 ---

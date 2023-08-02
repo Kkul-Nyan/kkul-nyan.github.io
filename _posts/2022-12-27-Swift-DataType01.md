@@ -3,7 +3,7 @@ layout: post
 title:  Swift DataType01
 date:   2022-12-27
 image: Swift_logo.jpg
-tags: Swift
+tags: [Swift]
 ---
 
 ---

@@ -3,7 +3,7 @@ layout: post
 title:  Swift Optional
 date:   2023-01-11
 image: Swift_logo.jpg
-tags: Swift
+tags: [Swift]
 ---
 
 ---

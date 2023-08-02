@@ -3,7 +3,7 @@ layout: post
 title:  ScriptableObject 사용방법
 date:   2023-06-13
 image: Unity/cat001.jpeg
-tags: Unity
+tags: ["Unity"]
 ---
 ---
 

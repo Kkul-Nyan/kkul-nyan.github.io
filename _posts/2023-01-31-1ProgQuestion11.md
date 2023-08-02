@@ -3,7 +3,7 @@ layout: post
 title:  Swift 프로그래머스 가까운 수
 date:   2023-01-25
 image: Swift_logo.jpg
-tags: Swift
+tags: [Swift]
 ---
 
 ---

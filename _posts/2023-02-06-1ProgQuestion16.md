@@ -3,7 +3,7 @@ layout: post
 title:  Swift 프로그래머스 이진수 더기
 date:   2023-02-06
 image: Swift_logo.jpg
-tags: Swift
+tags: [Swift]
 ---
 
 ---
