@@ -1,7 +1,7 @@
 #-------------------------------
 # General Site Settings
 title: Noranfox's C#, Shader and Unity
-logo: catlogo.svg # You can add own logo.
+logo: logo.svg # You can add own logo.
 description: Nornafox's C#, Shader, Unity Study
 
 
@@ -9,14 +9,19 @@ description: Nornafox's C#, Shader, Unity Study
 # Author Settings
 author:
   name: Hyeonki Jung
-  image: main1.jpg
+  image: 01.jpg
   say-hello: Hello, I’m <strong>Hyeonki jung</strong>
   bio: talks, and writes about <strong>Shader</strong>, <strong>C#</strong>, <strong>Unity</strong>. I Loves <a href="#">music</a> & cat.
- 
+
 
 #-------------------------------
 # Contact links
-github:  https://github.com/noranfox 
+twitter: https://twitter.com/ # Add your Twitter handle
+facebook: https://facebook.com/ # Add your Facebook handle
+dribbble: https://dribbble.com/ # Add your Dribbble handle
+instagram: https://instagram.com/ # Add your Instagram handle
+pinterest: https://pinterest.com/ # Add your Pinterest handle
+github:  https://github.com/noranfox/
 
 
 #-------------------------------
@@ -32,7 +37,7 @@ instagram-profile: artemsheludko_ # Add instagram username
 
 #-------------------------------
 # Google Analytics
-google-analytics: G-F0BM2DD5RW
+google-analytics: G-F0BM2DD5RW # Add your identifier. For example UA-99631805-1.
 
 
 #-------------------------------
