@@ -41,7 +41,7 @@ tags: ["Unity"]
 
 6. Virtual Camera가 추적할 대상을 선택해 줍니다.<> 따라다닐 오브젝트를 Follow에 넣어주시면됩니다.<br> 다음으로 플레이어 캐릭터 하위에 카메라가 따라다닐 중심이 될 좌표를 만들어주기 위해 빈오브젝트인 LookAt을 만들어준뒤, LookAt에 넣어주면됩니다.<br> 
 
-![05]({{ site.baseurl }}/images/20230616/05.gif )
+![05]({{ site.baseurl }}/images/20230616/05.webp )
 
 7. 이제 <mark style='background-color: #ffd700'> VirtualCamera가 제공하는 다양한 옵션을 설정</mark>해주시면 됩니다. 저는 3인칭시점을 만들고 싶어서 Body에서 3rdPersonFollow를 선택해주었고 설정을 조정해서 카메라를 원하는 위치에 배치했습니다. 이과정에서 아까 만들어준 빈오브젝트 LookAt을 이용하여, 카메라를 좀더 위쪽으로 옮겨주었습니다.<br> 
 
