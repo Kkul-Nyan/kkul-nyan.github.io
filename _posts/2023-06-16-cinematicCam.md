@@ -19,7 +19,7 @@ tags: ["Unity"]
 특히, 간단한 설정만으로 다양한 시점을 만들고, 상당히 퀄리티가 좋은 카메라를 완성할 수 있습니다.<br> 
 
 <br>
-![01]({{ site.baseurl }}/images/20230616/01.png )
+![01]({{ site.baseurl }}/images/20230616/01.webp )
 <br>
 
 1. 시네마틱 카메라를 사용하기 위해선 가장 먼저 <mark style='background-color: #ffd700'> PackageManager에서 Cinemachine을 설치</mark>해줍니다.<br> *Cinematic Studio를 설치한다면 다양한 영상과 관련된 패키지를 설치 가능합니다. 이 패키지에 Cinemachine이 포함되어 있습니다.<br>
