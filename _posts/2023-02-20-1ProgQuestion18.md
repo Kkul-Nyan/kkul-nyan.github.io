@@ -4,9 +4,6 @@ title:  Swift 프로그래머스 영어가 싫어요
 date:   2023-02-20
 image: Swift_logo.jpg
 tags: Swift
-sitemap:
-  changefreq: daily
-  priority : 1.0
 ---
 
 ---

@@ -4,9 +4,6 @@ title:  Swift 프로그래머스 한 번만 등장한 문자
 date:   2023-02-03
 image: Swift_logo.jpg
 tags: Swift
-sitemap:
-  changefreq: daily
-  priority : 1.0
 ---
 
 ---

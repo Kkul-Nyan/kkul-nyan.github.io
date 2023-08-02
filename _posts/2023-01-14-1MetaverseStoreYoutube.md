@@ -4,9 +4,6 @@ title:  MetaverseStore 성과정리
 date:   2023-01-11
 image: VR.jpg
 tag: SmartStore
-sitemap:
-  changefreq: daily
-  priority : 1.0
 ---
 
 ---

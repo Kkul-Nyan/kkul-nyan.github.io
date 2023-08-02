@@ -4,9 +4,6 @@ title:  RainbowHierarchy2 사용방법
 date:   2023-07-25
 image: Unity/RainbowHierarchy2/rainbow.jpeg
 tags: Unity
-sitemap:
-  changefreq: daily
-  priority : 1.0
 ---
 
 

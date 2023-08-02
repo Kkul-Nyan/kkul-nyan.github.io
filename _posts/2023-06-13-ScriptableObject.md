@@ -4,9 +4,6 @@ title:  ScriptableObject 사용방법
 date:   2023-06-13
 image: Unity/cat001.jpeg
 tags: Unity
-sitemap:
-  changefreq: daily
-  priority : 1.0
 ---
 ---
 

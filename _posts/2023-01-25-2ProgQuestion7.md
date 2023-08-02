@@ -4,9 +4,6 @@ title:  Swift 프로그래머스 입문(6)
 date:   2023-01-25
 image: Swift_logo.jpg
 tags: Swift
-sitemap:
-  changefreq: daily
-  priority : 1.0
 ---
 
 ---

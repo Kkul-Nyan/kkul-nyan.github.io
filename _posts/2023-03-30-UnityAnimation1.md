@@ -4,9 +4,6 @@ title:  Unity 애니메이터 인스팩터창
 date:   2023-03-30
 image: Unity/cat004.jpeg
 tags: Unity
-sitemap:
-  changefreq: daily
-  priority : 1.0
 ---
 
 ---

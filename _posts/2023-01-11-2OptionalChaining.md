@@ -4,9 +4,6 @@ title:  Swift Optional
 date:   2023-01-11
 image: Swift_logo.jpg
 tags: Swift
-sitemap:
-  changefreq: daily
-  priority : 1.0
 ---
 
 ---

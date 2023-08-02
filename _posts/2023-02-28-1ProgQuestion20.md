@@ -4,9 +4,6 @@ title:  Swift 프로그래머스 문자열 계산하기
 date:   2023-02-28
 image: Swift_logo.jpg
 tags: Swift
-sitemap:
-  changefreq: daily
-  priority : 1.0
 ---
 
 ---

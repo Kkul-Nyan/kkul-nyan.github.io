@@ -4,9 +4,6 @@ title:  Swift 프로그래머스 외게어 사전
 date:   2023-02-24
 image: Swift_logo.jpg
 tags: Swift
-sitemap:
-  changefreq: daily
-  priority : 1.0
 ---
 
 ---

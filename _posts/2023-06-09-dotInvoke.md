@@ -4,9 +4,6 @@ title:  .?Invoke()
 date:   2023-06-09
 image: Unity/cat002.jpeg
 tags: Unity
-sitemap:
-  changefreq: daily
-  priority : 1.0
 ---
 
 ---

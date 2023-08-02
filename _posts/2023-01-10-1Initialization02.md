@@ -4,9 +4,6 @@ title:  Swift Inheritance02
 date:   2023-01-10
 image: Swift_logo.jpg
 tags: Swift
-sitemap:
-  changefreq: daily
-  priority : 1.0
 ---
 
 ---

@@ -4,9 +4,6 @@ title:  RainbowFolder 사용방법
 date:   2023-07-24
 image: Unity/RainbowFolder/RainbowFolder.jpeg
 tags: Unity
-sitemap:
-  changefreq: daily
-  priority : 1.0
 ---
 
 

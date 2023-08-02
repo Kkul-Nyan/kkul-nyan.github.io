@@ -4,9 +4,6 @@ title:  Cinematic Camera 세팅
 date:   2023-06-16
 image: unity.jpg
 tags: Unity
-sitemap:
-  changefreq: daily
-  priority : 1.0
 ---
 
 

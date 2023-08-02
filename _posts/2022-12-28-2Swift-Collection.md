@@ -4,9 +4,6 @@ title:  Swift Collection
 date:   2022-12-28
 image: Swift_logo.jpg
 tags: Swift
-sitemap:
-  changefreq: daily
-  priority : 1.0
 ---
 
 ---

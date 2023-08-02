@@ -4,9 +4,6 @@ title:  Swift DataType02
 date:   2022-12-27
 image: Swift_logo.jpg
 tags: Swift
-sitemap:
-  changefreq: daily
-  priority : 1.0
 ---
 
 ---
