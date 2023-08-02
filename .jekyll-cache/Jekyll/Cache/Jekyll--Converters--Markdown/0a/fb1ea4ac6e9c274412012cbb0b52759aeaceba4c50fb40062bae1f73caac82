@@ -1,0 +1,53 @@
+I"�<hr />
+
+<h3 id="백준-입출력과사칙연산-1330">백준 입출력과사칙연산 1330</h3>
+<hr />
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">question</span>
+<span class="p">{</span>
+    <span class="k">internal</span> <span class="k">class</span> <span class="err">1330</span>
+    <span class="err">{</span>
+        <span class="nc">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">string</span><span class="p">[]</span> <span class="n">Num</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">().</span><span class="nf">Split</span><span class="p">();</span>
+            <span class="kt">int</span> <span class="n">A</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">Num</span><span class="p">[</span><span class="m">0</span><span class="p">]);</span>
+            <span class="kt">int</span> <span class="n">B</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">Num</span><span class="p">[</span><span class="m">1</span><span class="p">]);</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">A</span> <span class="p">&gt;</span> <span class="n">B</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"&gt;"</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">A</span> <span class="p">&lt;</span> <span class="n">B</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"&lt;"</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"=="</span><span class="p">);</span>
+            <span class="p">}</span>
+
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="먼저-입력-조건과-출력-조건을-확인하겠습니다">먼저 입력 조건과 출력 조건을 확인하겠습니다.</h2>
+<ul>
+  <li>입력 : A, B 2개의 숫자가 주어진다</li>
+  <li>출력 : A,B를 비교해서 &lt;,&gt;,== 을 출시한다
+<br /><br />
+2개의 숫자가 연달아 주어 지므로 <mark style="background-color: #dcffe4"> string[]</mark>로 입력받는 문자열을 집합으로 받아주고, <br /> 바로 <mark style="background-color: #dcffe4">Split()</mark> 으로 각각 분리해줍니다.<br />
+문자열형으로 받은 입력 값을 각각 <mark style="background-color: #dcffe4">int.Parse</mark> 를 통해 정수형으로 변경해줍니다.
+<br /><br />
+입력 받은 값을 출력조건에 맞추어서 가공합니다.
+<br /> 가정법 if, swich 중 전 if가정법을 사용할것입니다.
+<br /> 3가지 중 하나가 정해진 조건에 따라 나와야 하므로 <mark style="background-color: #dcffe4">if, else if, else</mark> 를 통해 각각 조건을 주겠습니다.<br />
+<br /> 나온결과를 따로 식을 만들지 않고 <mark style="background-color: #dcffe4">if</mark>문에서 <mark style="background-color: #dcffe4">Console.WriteLine</mark>으로 바로 출력하도록 했습니다.</li>
+</ul>
+:ET

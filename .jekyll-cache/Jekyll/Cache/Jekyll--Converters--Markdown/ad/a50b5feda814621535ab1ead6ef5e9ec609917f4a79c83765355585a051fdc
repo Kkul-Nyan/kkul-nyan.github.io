@@ -1,0 +1,51 @@
+I"`<hr />
+<h3 id="백준-입출력과사칙연산-9498">백준 입출력과사칙연산 9498</h3>
+<hr />
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">question</span>
+<span class="p">{</span>
+    <span class="k">internal</span> <span class="k">class</span> <span class="err">9498</span>
+    <span class="err">{</span>
+        <span class="nc">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">string</span> <span class="n">str1</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">();</span>
+
+            <span class="kt">int</span> <span class="n">A</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">str1</span><span class="p">);</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">A</span> <span class="p">&gt;</span> <span class="m">89</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"A"</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="m">90</span> <span class="p">&gt;</span> <span class="n">A</span> <span class="p">&amp;&amp;</span> <span class="n">A</span> <span class="p">&gt;</span> <span class="m">79</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"B"</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="m">80</span> <span class="p">&gt;</span> <span class="n">A</span> <span class="p">&amp;&amp;</span> <span class="n">A</span> <span class="p">&gt;</span> <span class="m">69</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"C"</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="m">70</span> <span class="p">&gt;</span> <span class="n">A</span> <span class="p">&amp;&amp;</span> <span class="n">A</span> <span class="p">&gt;</span> <span class="m">59</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"D"</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"F"</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="기본적인-가정법-사용-문제입니다">기본적인 가정법 사용 문제입니다<br /></h2>
+<ul>
+  <li>If 혹은 Shich문으로 간단하게 각 조건을 적어주어 풀이 가능합니다<br /></li>
+  <li>각 조건을 적을떄 &gt;,&lt;문이 점수를 포함하는지 안하는지를 유의해줘야합니다</li>
+</ul>
+:ET

@@ -19,6 +19,8 @@
 }
 
 .page__head {
+  position: relative;
+  overflow: hidden;
   
   .page-image {
     background-size: cover;
