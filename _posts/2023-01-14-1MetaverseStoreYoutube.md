@@ -2,7 +2,7 @@
 layout: post
 title:  MetaverseStore 성과정리
 date:   2023-01-11
-image: VR.jpg
+image: VR.webp
 tag: ["SmartStore"]
 ---
 

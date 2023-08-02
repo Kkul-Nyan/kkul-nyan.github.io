@@ -2,7 +2,7 @@
 layout: post
 title:  Swift 프로그래머스 팩토리얼
 date:   2023-01-25
-image: Swift_logo.jpg
+image: Swift_logo.webp
 tags: [Swift]
 ---
 

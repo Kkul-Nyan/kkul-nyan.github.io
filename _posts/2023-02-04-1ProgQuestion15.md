@@ -2,7 +2,7 @@
 layout: post
 title:  Swift 프로그래머스 숨어있는 숫자의 덧셈 (2)
 date:   2023-02-04
-image: Swift_logo.jpg
+image: Swift_logo.webp
 tags: [Swift]
 ---
 

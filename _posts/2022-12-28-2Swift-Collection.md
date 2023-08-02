@@ -2,7 +2,7 @@
 layout: post
 title:  Swift Collection
 date:   2022-12-28
-image: Swift_logo.jpg
+image: Swift_logo.webp
 tags: [Swift]
 ---
 
@@ -12,7 +12,7 @@ tags: [Swift]
 \* 스스로 공부 및 정리를 위해 [The Swift Language Guide](https://jusung.gitbook.io/the-swift-language-guide/)을 요약 및 정리 한 내용입니다. 
 
 
-![image]({{ site.baseurl }}/images/Collection/Collection.png)
+![image]({{ site.baseurl }}/images/Collection/Collection.webp)
 \* 정말 좋은 이미지 자료입니다. C# 공부떄는 단순히 형식만 외운다보니 헷갈릴 때가 많았는데, 이 이미지 이후 그부분이 싹 사라졌습니다.
 
 ### 배열의 종류

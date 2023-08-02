@@ -2,7 +2,7 @@
 layout: post
 title:  프로그래머스 옹알이(1)
 date:   2023-01-19
-image: Swift_logo.jpg
+image: Swift_logo.webp
 tags: [Swift]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  Metaverse Smart Store Pamphlet
 date:   2023-01-07
-image: VR1.jpg
+image: VR1.webp
 tags: ["SmartStore"]
 ---
 
@@ -10,8 +10,8 @@ tags: ["SmartStore"]
 ## Metaverse Store Pamphlet
 ---
 
-![Metaverse1]({{ site.baseurl }}/images/Metaverse/metaverse1.png)
-![Metaverse2]({{ site.baseurl }}/images/Metaverse/metaverse2.png)
+![Metaverse1]({{ site.baseurl }}/images/Metaverse/metaverse1.webp)
+![Metaverse2]({{ site.baseurl }}/images/Metaverse/metaverse2.webp)
 
 유니티로 제작한 VR 쇼핑프로그램입니다. 
 프로그램은 최종소비자가 쇼핑을 즐길 Main VR프로그램과 1차소비자인 상점계정이 물건의 배치하는 window프로그램으로 구성되어있습니다.

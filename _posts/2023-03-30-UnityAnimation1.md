@@ -2,7 +2,7 @@
 layout: post
 title:  Unity 애니메이터 인스팩터창
 date:   2023-03-30
-image: Unity/cat004.jpeg
+image: Unity/cat004.webp
 tags: ["Unity"]
 ---
 
@@ -10,7 +10,7 @@ tags: ["Unity"]
 ## Unity 애니메이터 인스팩터창
 ---
 
-![Example]({{ site.baseurl }}/images/UnityAnimator/01.png )
+![Example]({{ site.baseurl }}/images/UnityAnimator/01.webp )
 
 1.Controller : Asset에 만든 Animator Controller를 추가하여 Animator를 정리 및 관리
 

@@ -2,7 +2,7 @@
 layout: post
 title:  Swift 프로그래머스 k의 개수
 date:   2023-02-01
-image: Swift_logo.jpg
+image: Swift_logo.webp
 tags: [Swift]
 ---
 

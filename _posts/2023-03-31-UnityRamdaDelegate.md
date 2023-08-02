@@ -2,7 +2,7 @@
 layout: post
 title:  Unity 델리게이트 람다식
 date:   2023-03-31
-image: Unity/cat003.jpeg
+image: Unity/cat003.webp
 tags: ["Unity"]
 ---
 

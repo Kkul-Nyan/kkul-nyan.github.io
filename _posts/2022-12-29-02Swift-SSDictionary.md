@@ -2,7 +2,7 @@
 layout: post
 title:  Swift Dictionary
 date:   2022-12-28
-image: Swift_logo.jpg
+image: Swift_logo.webp
 tags: [Swift]
 ---
 

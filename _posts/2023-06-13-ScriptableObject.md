@@ -2,7 +2,7 @@
 layout: post
 title:  ScriptableObject 사용방법
 date:   2023-06-13
-image: Unity/cat001.jpeg
+image: Unity/cat001.webp
 tags: ["Unity"]
 ---
 ---
@@ -13,7 +13,7 @@ tags: ["Unity"]
 ---
 
 
-![03]({{ site.baseurl }}/images/20230613/03.jpeg )
+![03]({{ site.baseurl }}/images/20230613/03.webp )
 
 ```c#
 using UnityEngine;

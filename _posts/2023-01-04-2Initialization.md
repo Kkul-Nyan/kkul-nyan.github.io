@@ -2,7 +2,7 @@
 layout: post
 title:  Swift Initialization
 date:   2022-12-31
-image: Swift_logo.jpg
+image: Swift_logo.webp
 tags: [Swift]
 ---
 

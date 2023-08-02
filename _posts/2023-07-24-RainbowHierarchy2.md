@@ -2,7 +2,7 @@
 layout: post
 title:  RainbowHierarchy2 사용방법
 date:   2023-07-25
-image: Unity/RainbowHierarchy2/rainbow.jpeg
+image: Unity/RainbowHierarchy2/rainbow.webp
 tags: ["Unity"]
 ---
 
@@ -34,7 +34,7 @@ Hierarchy 창의 색상이나, 아이콘의 변경하는 에셋입니다. 에셋
 
 클릭을 하시면 아래와 같은 창이 생성됩니다.
 
-![01]({{ site.baseurl }}/images/Unity/RainbowHierarchy2/01.png )
+![01]({{ site.baseurl }}/images/Unity/RainbowHierarchy2/01.webp )
 
 위에서부터 하나하나 설명해 드리겠습니다.
 
@@ -42,33 +42,33 @@ Hierarchy 창의 색상이나, 아이콘의 변경하는 에셋입니다. 에셋
 
 **Priority** : 적용 우선순위입니다. 사실 최상위 오브젝트에는 상관없지만, 하위 오브젝트의 경우 설정해 주어야 할 경우가 있습니다. 상위 오브젝트의 설정과 현재 오브젝트의 설정이 다른 경우, 우선순위를 통해 상위 오브젝트의 방식을 적용할지, 따로 설정한 세팅을 적용할지 결정합니다.
 
-![02]({{ site.baseurl }}/images/Unity/RainbowHierarchy2/02.png)
+![02]({{ site.baseurl }}/images/Unity/RainbowHierarchy2/02.webp)
 
 **Icon**: 어떤 아이콘으로 변경할지 예시가 보입니다. 원하는 오브젝트 아이콘을 선택해 주면 됩니다.
 
-![04]({{ site.baseurl }}/images/Unity/RainbowHierarchy2/04.png)
+![04]({{ site.baseurl }}/images/Unity/RainbowHierarchy2/04.webp)
 
 Icon 내부 **Custom** : 원하는 커스텀 이미지를 오브젝트 Icon으로 사용할 수 있습니다.
 
-![02]({{ site.baseurl }}/images/Unity/RainbowHierarchy2/02.png )
+![02]({{ site.baseurl }}/images/Unity/RainbowHierarchy2/02.webp )
 
 **BackGround** : 백그라운드의 경우 오브젝트에 있는 글자의 백그라운드 색상을 의미합니다. 원하는 글자의 백그라운드 색상을 선택하시면 됩니다.
 
-![03]({{ site.baseurl }}/images/Unity/RainbowHierarchy2/03.png )
+![03]({{ site.baseurl }}/images/Unity/RainbowHierarchy2/03.webp )
 
 BackGround 내부 **Custom** : 글자 백그라운드에 이미지를 사용할 수 있습니다. 원하는 이미지를 글자 뒤에 배치해서 사용할 수 있습니다.
 
-![05]({{ site.baseurl }}/images/Unity/RainbowHierarchy2/04.png)
-![06]({{ site.baseurl }}/images/Unity/RainbowHierarchy2/06.png)
+![05]({{ site.baseurl }}/images/Unity/RainbowHierarchy2/04.webp)
+![06]({{ site.baseurl }}/images/Unity/RainbowHierarchy2/06.webp)
 이렇게 한눈에 보기 편하거나, 원하는 방식으로 오브젝트를 꾸밀 수 있습니다. 또한 Hierarchy에 RainbowHierarchyRuleset이 생성됩니다. 이는 Hierarchy 내에서 RainbowHierarchy2로 바뀐 오브젝트의 설정이 모여있습니다.
 
-![08]({{ site.baseurl }}/images/Unity/RainbowHierarchy2/08.png )
+![08]({{ site.baseurl }}/images/Unity/RainbowHierarchy2/08.webp )
 
 세부 사항에 대해서도 설명해 드리겠습니다.
 **Recursive**의 경우, 현재 오브젝트의 하위 오브젝트에도 적용 여부입니다. 마치 상속처럼 적용을 하고 싶다면 Check를 해주시면 되고, 이렇게 적용시키고도 몇 개의 하위 오브젝트는 자체적인 방식을 사용해야 한다면 위에서 설명해 드린, Priority를 통해 우선순위를 적용해 주면 됩니다.
 
-![07]({{ site.baseurl }}/images/Unity/RainbowHierarchy2/07.png )
-![06]({{ site.baseurl }}/images/Unity/RainbowHierarchy2/06.png )
+![07]({{ site.baseurl }}/images/Unity/RainbowHierarchy2/07.webp )
+![06]({{ site.baseurl }}/images/Unity/RainbowHierarchy2/06.webp )
 
 **톱니바퀴**의 경우 누르게 되면 아래 이미지같이, 인 스펙터 창에서 Rainbow Hierarchy가 적용된 모든 오브젝트를 보여줍니다. 간편하게 설정을 수정할 수 있습니다.
 
