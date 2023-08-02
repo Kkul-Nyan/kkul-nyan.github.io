@@ -222,10 +222,6 @@
               
                 
               
-                
-              
-                
-              
             </ul>
 
           </div>
@@ -276,7 +272,7 @@
   
   
     <div class="post__head">
-      <div class="post-image" style="background-image: url(/images/Unity/Altas/Altas.jpeg)"></div>
+      <div class="post-image" style="background-image: url(/images/Unity/Altas/Altas.webp)"></div>
     </div>
   
 
@@ -305,51 +301,51 @@
 
 <p>이제 원하는 맵을 제작하기 위한 세팅 방법을 알려드리겠습니다.</p>
 
-<p><img src="/images/Unity/Altas/01.png" alt="01" /></p>
+<p><img src="/images/Unity/Altas/01.webp" alt="01" /></p>
 
 <p>가장 먼저, Hierarchy에서 마우스를 우클릭하신 뒤, <strong>3D Object - Terrain</strong>을 통해 Terrain을 먼저 만들어 줍니다.</p>
 
-<p><img src="/images/Unity/Altas/02.png" alt="02" /></p>
+<p><img src="/images/Unity/Altas/02.webp" alt="02" /></p>
 
 <p>다음으로는 만들어준 Terrain을 클릭하신 뒤, Paint Texture로 이동합니다. Eidt Terrain Layers에서 Add를 통해 기본적으로 제공해 주는 Layer을 추가해 줍니다.
 <strong>Layer의 순서는 Grass1, Grass2, Soil 1, Soil 2, Rock1, Rock2, Sand, Snow입니다.</strong> 미리 세팅된 레이어 순서로 텍스처가 자동으로 입력되기 때문에, 순서를 지켜주는 게 사용하기 좋습니다.</p>
 
 <p>다른 텍스처를 사용할 예정이시면, <strong>Replace를 통해 교체</strong> 해주는 게 좋습니다. Add를 통해 다른 Layer를 추가하면, 제대로 인식하지 못하고 검은색으로 변경되는 경우가 종종 생깁니다.</p>
 
-<p><img src="/images/Unity/Altas/03.png" alt="03" /></p>
+<p><img src="/images/Unity/Altas/03.webp" alt="03" /></p>
 
 <p><strong>Add Component</strong>를 눌리신 뒤, <strong>AtlasUnityTerrainRendererEditor</strong> 스크립트를 추가해 주시면, Terrain에서 할 세팅은 완료되었습니다.</p>
 
-<p><img src="/images/Unity/Altas/04.png" alt="04" /></p>
+<p><img src="/images/Unity/Altas/04.webp" alt="04" /></p>
 
 <p>이제 다시 Hierarchy 창에서 우클릭하신 뒤, <strong>Altas - Unity - Preview Volume</strong>을 추가해 주시면, 세팅이 완료됩니다.
 <br />
 <br /></p>
 <h4 id="altas---terrain-editor-사용방법">Altas - terrain editor 사용방법</h4>
 <p><br />
-<img src="/images/Unity/Altas/05.png" alt="05" /></p>
+<img src="/images/Unity/Altas/05.webp" alt="05" /></p>
 
 <p>세팅이 완료된 상황에서 사용하는 방법은 매우 간단합니다.
 위에 사진처럼 추가해 준 <strong>Preview Volume</strong>을 클릭한 뒤 원하는 Terrain 사이즈를 VolumeSize에 적어주면 됩니다. <br />기본값인 1000,300,1000은 딱 1개의 Terrain입니다. 만약 4개의 터레인으로 구성된 정사각형 모양의 맵을 사용하고 한다면, Volume Size에 2000, 300, 2000을 넣어주면 됩니다. Y인 300의 경우 높낮이 차이가 큰 맵을 구성할 거면 300 이상으로 세팅해 주는 것이 좋습니다.<br /> 그 후, <strong>Start editing</strong> 버튼을 클릭해 주면 Stamp를 사용한 맵을 구성할 수 있습니다.</p>
 
-<p><img src="/images/Unity/Altas/06.png" alt="06" /></p>
+<p><img src="/images/Unity/Altas/06.webp" alt="06" /></p>
 
 <p>Stamp를 통해 지형지물을 추가하는 방법은 매우 간단합니다.
 <strong>Assets - Atlas Trarrain Editor - Stamps</strong>에서 원하는 Stamps프리팹을 Hierarchy 창에 끌어다 놓기만 하면도 됩니다. 또는 Hierarchy 창에서 우클릭 <strong>Atlas - Unity - Stamp</strong>를 추가하신 뒤 Stamp에 원하는 Stamp를 선택해 주시면 됩니다.</p>
 
-<p><img src="/images/Unity/Altas/07.png" alt="07" />
-<img src="/images/Unity/Altas/08.png" alt="08" /></p>
+<p><img src="/images/Unity/Altas/07.webp" alt="07" />
+<img src="/images/Unity/Altas/08.webp" alt="08" /></p>
 
 <p>Stamp를 추가하실 때 <strong>주의하실 부분</strong>은 Hierarchy 창 기준으로 밑에 있는 Stamp가 위에 있는 Stamp를 덮어쓰게 됩니다. 따라서 Stamp의 순서에 따라 지형의 모양이 달라지기도 합니다.
 위에 2개의 스크린숏의 참조 바랍니다. 또한, Stamp의 Mask - Power를 통해서도 조정 가능합니다.</p>
 
-<p><img src="/images/Unity/Altas/09.png" alt="09" /></p>
+<p><img src="/images/Unity/Altas/09.webp" alt="09" /></p>
 
 <p>Stamp를 보시면 B와 BS로 나누어 저 있습니다. BS의 경우, 강줄기나 길같이 곡선 등의 다양한 형태로 만들 필요가 있는 Stamp들이 Spline stamps로서 BS로 구분되어 있습니다.</p>
 
 <p>Spline stamps는 위에도 설명했듯이 강줄기나 길처럼 구불구불한 모습으로 만들어야 할 때 유용합니다. 사용방법은 기존 Stamp와 동일하게 드래그&amp;드롭으로 프리팹을 추가해 준 뒤,</p>
 
-<p><img src="/images/Unity/Altas/10.png" alt="10" /></p>
+<p><img src="/images/Unity/Altas/10.webp" alt="10" /></p>
 
 <p><strong>Shift + 좌 클릭</strong>으로 포인트를 추가해서 길이를 추가할 수 있습니다.<br />
 <strong>Ctrl + 좌 클릭</strong>시에는 Spline 구성요소를 볼 수 있으며 이를 직접 움직여서 곡선을 구현할 수 있습니다.
@@ -383,7 +379,7 @@
           </li>
 
           <li class="share__item">
-            <a class="share__pinterest" href="http://pinterest.com/pin/create/button/?url=http://localhost:4000/2023/07/28/Altas/&amp;media=http://localhost:4000/images/Unity/Altas/Altas.jpeg&amp;description=Altas%20-%20terrain%20editor%20%EC%82%AC%EC%9A%A9%EB%B0%A9%EB%B2%95"
+            <a class="share__pinterest" href="http://pinterest.com/pin/create/button/?url=http://localhost:4000/2023/07/28/Altas/&amp;media=http://localhost:4000/images/Unity/Altas/Altas.webp&amp;description=Altas%20-%20terrain%20editor%20%EC%82%AC%EC%9A%A9%EB%B0%A9%EB%B2%95"
               onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest"
               rel="nofollow"><i class="ion ion-logo-pinterest"></i></a>
           </li>
@@ -398,7 +394,7 @@
   <div class="post__navigation">
     
     <div class="prev">
-      <a class="post__nav__image" href="/2023/07/26/LayerAI/" style="background-image: url(/images/Unity/LayerAI/layerAI.jpeg)"></a>
+      <a class="post__nav__image" href="/2023/07/26/LayerAI/" style="background-image: url(/images/Unity/LayerAI/layerAI.webp)"></a>
       <h2 class="post__nav__title">
         <i class="ion ion-md-arrow-back"></i>
         <a href="/2023/07/26/LayerAI/">Layer AI 사용방법</a>
@@ -419,7 +415,7 @@ Uni...
 
     
     <div class="next">
-      <a class="post__nav__image" href="/2023/08/01/Altas2/" style="background-image: url(/images/Unity/Altas/Altas.jpeg)">
+      <a class="post__nav__image" href="/2023/08/01/Altas2/" style="background-image: url(/images/Unity/Altas/Altas.webp)">
       </a>
       <h2 class="post__nav__title">
         <a href="/2023/08/01/Altas2/">Altas - terrain editor 상세</a>
@@ -430,6 +426,8 @@ Uni...
           ---
 # Altas - terrain editor 상세내용
 ---
+
+현재 내용을 수정 중입니다. 현재 블로그 이미지 변경과 겹쳐 조금 시간이 걸리고있습니다. 수정이 완료되는 즉시 다시 업로드...
         
       </p>
     </div>

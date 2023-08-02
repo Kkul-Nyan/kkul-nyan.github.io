@@ -1,0 +1,2508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Noranfox's C#, Shader and Unity</title>
+  <meta name='description' content='Nornafox's C#, Shader, Unity Study'>
+
+  <link rel="canonical" href="http://localhost:4000/tag/swift/">
+  <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <!-- Ionicons -->
+  <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+
+  <style>
+  
+  .text-left{text-align:left}.text-right{text-align:right}.text-center{text-align:center}.text-justify{text-align:justify}.block{display:block}.inline-block{display:inline-block}.inline{display:inline}.vertical-center{display:flex;align-items:center;justify-content:center}.show{display:block}.hide{display:none}.invisible{visibility:hidden}.float-left{float:left}.float-right{float:right}.no-padding{padding:0}.no-margin{margin:0}.list-reset{list-style-type:none;margin:0;padding:0}.clearfix::after,.clearfix ::before{content:"";display:table;clear:both}.screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px;word-wrap:normal !important}/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:rgba(0,0,0,0)}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}body,h1,h2,h3,h4,h5,h6,p,blockquote,pre,dl,dd,ol,ul,fieldset,legend,figure,hr{margin:0;padding:0}li>ul,li>ol{margin-bottom:0}table{border-collapse:collapse;border-spacing:0}h1,h2,h3,h4,h5,h6,ul,ol,dl,blockquote,p,address,hr,table,fieldset,figure,pre{margin-bottom:20px}ul,ol,dd{margin-left:20px}.highlight{background:#f8f8f8}.highlighter-rouge .highlight{background:#eef}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:teal}.highlight .nb{color:#0086b3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:teal}.highlight .ni{color:purple}.highlight .ne{color:#900;font-weight:bold}.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:navy}.highlight .nv{color:teal}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:teal}.highlight .vg{color:teal}.highlight .vi{color:teal}.highlight .il{color:#099}.container{max-width:1200px;padding-left:20px;padding-right:20px;margin:0 auto}.container-full{max-width:100%;padding-left:20px;padding-right:20px;margin:0 auto}.row{display:flex;flex-wrap:wrap;flex:0 1 auto;flex-direction:row;box-sizing:border-box;margin-left:-20px;margin-right:-20px}.col{padding-left:20px;padding-right:20px}[class^=col-]{flex:auto}.col-0{width:0%}.col-1{width:8.3333333333%}.col-2{width:16.6666666667%}.col-3{width:25%}.col-4{width:33.3333333333%}.col-5{width:41.6666666667%}.col-6{width:50%}.col-7{width:58.3333333333%}.col-8{width:66.6666666667%}.col-9{width:75%}.col-10{width:83.3333333333%}.col-11{width:91.6666666667%}.col-12{width:100%}.push-0{margin-left:0%}.push-1{margin-left:8.3333333333%}.push-2{margin-left:16.6666666667%}.push-3{margin-left:25%}.push-4{margin-left:33.3333333333%}.push-5{margin-left:41.6666666667%}.push-6{margin-left:50%}.push-7{margin-left:58.3333333333%}.push-8{margin-left:66.6666666667%}.push-9{margin-left:75%}.push-10{margin-left:83.3333333333%}.push-11{margin-left:91.6666666667%}.push-12{margin-left:100%}.pull-0{margin-right:0%}.pull-1{margin-right:8.3333333333%}.pull-2{margin-right:16.6666666667%}.pull-3{margin-right:25%}.pull-4{margin-right:33.3333333333%}.pull-5{margin-right:41.6666666667%}.pull-6{margin-right:50%}.pull-7{margin-right:58.3333333333%}.pull-8{margin-right:66.6666666667%}.pull-9{margin-right:75%}.pull-10{margin-right:83.3333333333%}.pull-11{margin-right:91.6666666667%}.pull-12{margin-right:100%}@media(max-width: 992px){.col-d-0{width:0%}.col-d-1{width:8.3333333333%}.col-d-2{width:16.6666666667%}.col-d-3{width:25%}.col-d-4{width:33.3333333333%}.col-d-5{width:41.6666666667%}.col-d-6{width:50%}.col-d-7{width:58.3333333333%}.col-d-8{width:66.6666666667%}.col-d-9{width:75%}.col-d-10{width:83.3333333333%}.col-d-11{width:91.6666666667%}.col-d-12{width:100%}.push-d-0{margin-left:0%}.push-d-1{margin-left:8.3333333333%}.push-d-2{margin-left:16.6666666667%}.push-d-3{margin-left:25%}.push-d-4{margin-left:33.3333333333%}.push-d-5{margin-left:41.6666666667%}.push-d-6{margin-left:50%}.push-d-7{margin-left:58.3333333333%}.push-d-8{margin-left:66.6666666667%}.push-d-9{margin-left:75%}.push-d-10{margin-left:83.3333333333%}.push-d-11{margin-left:91.6666666667%}.push-d-12{margin-left:100%}.pull-d-0{margin-right:0%}.pull-d-1{margin-right:8.3333333333%}.pull-d-2{margin-right:16.6666666667%}.pull-d-3{margin-right:25%}.pull-d-4{margin-right:33.3333333333%}.pull-d-5{margin-right:41.6666666667%}.pull-d-6{margin-right:50%}.pull-d-7{margin-right:58.3333333333%}.pull-d-8{margin-right:66.6666666667%}.pull-d-9{margin-right:75%}.pull-d-10{margin-right:83.3333333333%}.pull-d-11{margin-right:91.6666666667%}.pull-d-12{margin-right:100%}}@media(max-width: 768px){.col-t-0{width:0%}.col-t-1{width:8.3333333333%}.col-t-2{width:16.6666666667%}.col-t-3{width:25%}.col-t-4{width:33.3333333333%}.col-t-5{width:41.6666666667%}.col-t-6{width:50%}.col-t-7{width:58.3333333333%}.col-t-8{width:66.6666666667%}.col-t-9{width:75%}.col-t-10{width:83.3333333333%}.col-t-11{width:91.6666666667%}.col-t-12{width:100%}.push-t-0{margin-left:0%}.push-t-1{margin-left:8.3333333333%}.push-t-2{margin-left:16.6666666667%}.push-t-3{margin-left:25%}.push-t-4{margin-left:33.3333333333%}.push-t-5{margin-left:41.6666666667%}.push-t-6{margin-left:50%}.push-t-7{margin-left:58.3333333333%}.push-t-8{margin-left:66.6666666667%}.push-t-9{margin-left:75%}.push-t-10{margin-left:83.3333333333%}.push-t-11{margin-left:91.6666666667%}.push-t-12{margin-left:100%}.pull-t-0{margin-right:0%}.pull-t-1{margin-right:8.3333333333%}.pull-t-2{margin-right:16.6666666667%}.pull-t-3{margin-right:25%}.pull-t-4{margin-right:33.3333333333%}.pull-t-5{margin-right:41.6666666667%}.pull-t-6{margin-right:50%}.pull-t-7{margin-right:58.3333333333%}.pull-t-8{margin-right:66.6666666667%}.pull-t-9{margin-right:75%}.pull-t-10{margin-right:83.3333333333%}.pull-t-11{margin-right:91.6666666667%}.pull-t-12{margin-right:100%}}@media(max-width: 576px){.col-m-0{width:0%}.col-m-1{width:8.3333333333%}.col-m-2{width:16.6666666667%}.col-m-3{width:25%}.col-m-4{width:33.3333333333%}.col-m-5{width:41.6666666667%}.col-m-6{width:50%}.col-m-7{width:58.3333333333%}.col-m-8{width:66.6666666667%}.col-m-9{width:75%}.col-m-10{width:83.3333333333%}.col-m-11{width:91.6666666667%}.col-m-12{width:100%}.push-m-0{margin-left:0%}.push-m-1{margin-left:8.3333333333%}.push-m-2{margin-left:16.6666666667%}.push-m-3{margin-left:25%}.push-m-4{margin-left:33.3333333333%}.push-m-5{margin-left:41.6666666667%}.push-m-6{margin-left:50%}.push-m-7{margin-left:58.3333333333%}.push-m-8{margin-left:66.6666666667%}.push-m-9{margin-left:75%}.push-m-10{margin-left:83.3333333333%}.push-m-11{margin-left:91.6666666667%}.push-m-12{margin-left:100%}.pull-m-0{margin-right:0%}.pull-m-1{margin-right:8.3333333333%}.pull-m-2{margin-right:16.6666666667%}.pull-m-3{margin-right:25%}.pull-m-4{margin-right:33.3333333333%}.pull-m-5{margin-right:41.6666666667%}.pull-m-6{margin-right:50%}.pull-m-7{margin-right:58.3333333333%}.pull-m-8{margin-right:66.6666666667%}.pull-m-9{margin-right:75%}.pull-m-10{margin-right:83.3333333333%}.pull-m-11{margin-right:91.6666666667%}.pull-m-12{margin-right:100%}}@media(max-width: 992px){.col-d-0{width:0%}.col-d-1{width:8.3333333333%}.col-d-2{width:16.6666666667%}.col-d-3{width:25%}.col-d-4{width:33.3333333333%}.col-d-5{width:41.6666666667%}.col-d-6{width:50%}.col-d-7{width:58.3333333333%}.col-d-8{width:66.6666666667%}.col-d-9{width:75%}.col-d-10{width:83.3333333333%}.col-d-11{width:91.6666666667%}.col-d-12{width:100%}.push-d-0{margin-left:0%}.push-d-1{margin-left:8.3333333333%}.push-d-2{margin-left:16.6666666667%}.push-d-3{margin-left:25%}.push-d-4{margin-left:33.3333333333%}.push-d-5{margin-left:41.6666666667%}.push-d-6{margin-left:50%}.push-d-7{margin-left:58.3333333333%}.push-d-8{margin-left:66.6666666667%}.push-d-9{margin-left:75%}.push-d-10{margin-left:83.3333333333%}.push-d-11{margin-left:91.6666666667%}.push-d-12{margin-left:100%}.pull-d-0{margin-right:0%}.pull-d-1{margin-right:8.3333333333%}.pull-d-2{margin-right:16.6666666667%}.pull-d-3{margin-right:25%}.pull-d-4{margin-right:33.3333333333%}.pull-d-5{margin-right:41.6666666667%}.pull-d-6{margin-right:50%}.pull-d-7{margin-right:58.3333333333%}.pull-d-8{margin-right:66.6666666667%}.pull-d-9{margin-right:75%}.pull-d-10{margin-right:83.3333333333%}.pull-d-11{margin-right:91.6666666667%}.pull-d-12{margin-right:100%}}@media(max-width: 768px){.col-t-0{width:0%}.col-t-1{width:8.3333333333%}.col-t-2{width:16.6666666667%}.col-t-3{width:25%}.col-t-4{width:33.3333333333%}.col-t-5{width:41.6666666667%}.col-t-6{width:50%}.col-t-7{width:58.3333333333%}.col-t-8{width:66.6666666667%}.col-t-9{width:75%}.col-t-10{width:83.3333333333%}.col-t-11{width:91.6666666667%}.col-t-12{width:100%}.push-t-0{margin-left:0%}.push-t-1{margin-left:8.3333333333%}.push-t-2{margin-left:16.6666666667%}.push-t-3{margin-left:25%}.push-t-4{margin-left:33.3333333333%}.push-t-5{margin-left:41.6666666667%}.push-t-6{margin-left:50%}.push-t-7{margin-left:58.3333333333%}.push-t-8{margin-left:66.6666666667%}.push-t-9{margin-left:75%}.push-t-10{margin-left:83.3333333333%}.push-t-11{margin-left:91.6666666667%}.push-t-12{margin-left:100%}.pull-t-0{margin-right:0%}.pull-t-1{margin-right:8.3333333333%}.pull-t-2{margin-right:16.6666666667%}.pull-t-3{margin-right:25%}.pull-t-4{margin-right:33.3333333333%}.pull-t-5{margin-right:41.6666666667%}.pull-t-6{margin-right:50%}.pull-t-7{margin-right:58.3333333333%}.pull-t-8{margin-right:66.6666666667%}.pull-t-9{margin-right:75%}.pull-t-10{margin-right:83.3333333333%}.pull-t-11{margin-right:91.6666666667%}.pull-t-12{margin-right:100%}}@media(max-width: 576px){.col-m-0{width:0%}.col-m-1{width:8.3333333333%}.col-m-2{width:16.6666666667%}.col-m-3{width:25%}.col-m-4{width:33.3333333333%}.col-m-5{width:41.6666666667%}.col-m-6{width:50%}.col-m-7{width:58.3333333333%}.col-m-8{width:66.6666666667%}.col-m-9{width:75%}.col-m-10{width:83.3333333333%}.col-m-11{width:91.6666666667%}.col-m-12{width:100%}.push-m-0{margin-left:0%}.push-m-1{margin-left:8.3333333333%}.push-m-2{margin-left:16.6666666667%}.push-m-3{margin-left:25%}.push-m-4{margin-left:33.3333333333%}.push-m-5{margin-left:41.6666666667%}.push-m-6{margin-left:50%}.push-m-7{margin-left:58.3333333333%}.push-m-8{margin-left:66.6666666667%}.push-m-9{margin-left:75%}.push-m-10{margin-left:83.3333333333%}.push-m-11{margin-left:91.6666666667%}.push-m-12{margin-left:100%}.pull-m-0{margin-right:0%}.pull-m-1{margin-right:8.3333333333%}.pull-m-2{margin-right:16.6666666667%}.pull-m-3{margin-right:25%}.pull-m-4{margin-right:33.3333333333%}.pull-m-5{margin-right:41.6666666667%}.pull-m-6{margin-right:50%}.pull-m-7{margin-right:58.3333333333%}.pull-m-8{margin-right:66.6666666667%}.pull-m-9{margin-right:75%}.pull-m-10{margin-right:83.3333333333%}.pull-m-11{margin-right:91.6666666667%}.pull-m-12{margin-right:100%}}@media(max-width: 992px){.col-d-0{width:0%}.col-d-1{width:8.3333333333%}.col-d-2{width:16.6666666667%}.col-d-3{width:25%}.col-d-4{width:33.3333333333%}.col-d-5{width:41.6666666667%}.col-d-6{width:50%}.col-d-7{width:58.3333333333%}.col-d-8{width:66.6666666667%}.col-d-9{width:75%}.col-d-10{width:83.3333333333%}.col-d-11{width:91.6666666667%}.col-d-12{width:100%}.push-d-0{margin-left:0%}.push-d-1{margin-left:8.3333333333%}.push-d-2{margin-left:16.6666666667%}.push-d-3{margin-left:25%}.push-d-4{margin-left:33.3333333333%}.push-d-5{margin-left:41.6666666667%}.push-d-6{margin-left:50%}.push-d-7{margin-left:58.3333333333%}.push-d-8{margin-left:66.6666666667%}.push-d-9{margin-left:75%}.push-d-10{margin-left:83.3333333333%}.push-d-11{margin-left:91.6666666667%}.push-d-12{margin-left:100%}.pull-d-0{margin-right:0%}.pull-d-1{margin-right:8.3333333333%}.pull-d-2{margin-right:16.6666666667%}.pull-d-3{margin-right:25%}.pull-d-4{margin-right:33.3333333333%}.pull-d-5{margin-right:41.6666666667%}.pull-d-6{margin-right:50%}.pull-d-7{margin-right:58.3333333333%}.pull-d-8{margin-right:66.6666666667%}.pull-d-9{margin-right:75%}.pull-d-10{margin-right:83.3333333333%}.pull-d-11{margin-right:91.6666666667%}.pull-d-12{margin-right:100%}}@media(max-width: 768px){.col-t-0{width:0%}.col-t-1{width:8.3333333333%}.col-t-2{width:16.6666666667%}.col-t-3{width:25%}.col-t-4{width:33.3333333333%}.col-t-5{width:41.6666666667%}.col-t-6{width:50%}.col-t-7{width:58.3333333333%}.col-t-8{width:66.6666666667%}.col-t-9{width:75%}.col-t-10{width:83.3333333333%}.col-t-11{width:91.6666666667%}.col-t-12{width:100%}.push-t-0{margin-left:0%}.push-t-1{margin-left:8.3333333333%}.push-t-2{margin-left:16.6666666667%}.push-t-3{margin-left:25%}.push-t-4{margin-left:33.3333333333%}.push-t-5{margin-left:41.6666666667%}.push-t-6{margin-left:50%}.push-t-7{margin-left:58.3333333333%}.push-t-8{margin-left:66.6666666667%}.push-t-9{margin-left:75%}.push-t-10{margin-left:83.3333333333%}.push-t-11{margin-left:91.6666666667%}.push-t-12{margin-left:100%}.pull-t-0{margin-right:0%}.pull-t-1{margin-right:8.3333333333%}.pull-t-2{margin-right:16.6666666667%}.pull-t-3{margin-right:25%}.pull-t-4{margin-right:33.3333333333%}.pull-t-5{margin-right:41.6666666667%}.pull-t-6{margin-right:50%}.pull-t-7{margin-right:58.3333333333%}.pull-t-8{margin-right:66.6666666667%}.pull-t-9{margin-right:75%}.pull-t-10{margin-right:83.3333333333%}.pull-t-11{margin-right:91.6666666667%}.pull-t-12{margin-right:100%}}@media(max-width: 576px){.col-m-0{width:0%}.col-m-1{width:8.3333333333%}.col-m-2{width:16.6666666667%}.col-m-3{width:25%}.col-m-4{width:33.3333333333%}.col-m-5{width:41.6666666667%}.col-m-6{width:50%}.col-m-7{width:58.3333333333%}.col-m-8{width:66.6666666667%}.col-m-9{width:75%}.col-m-10{width:83.3333333333%}.col-m-11{width:91.6666666667%}.col-m-12{width:100%}.push-m-0{margin-left:0%}.push-m-1{margin-left:8.3333333333%}.push-m-2{margin-left:16.6666666667%}.push-m-3{margin-left:25%}.push-m-4{margin-left:33.3333333333%}.push-m-5{margin-left:41.6666666667%}.push-m-6{margin-left:50%}.push-m-7{margin-left:58.3333333333%}.push-m-8{margin-left:66.6666666667%}.push-m-9{margin-left:75%}.push-m-10{margin-left:83.3333333333%}.push-m-11{margin-left:91.6666666667%}.push-m-12{margin-left:100%}.pull-m-0{margin-right:0%}.pull-m-1{margin-right:8.3333333333%}.pull-m-2{margin-right:16.6666666667%}.pull-m-3{margin-right:25%}.pull-m-4{margin-right:33.3333333333%}.pull-m-5{margin-right:41.6666666667%}.pull-m-6{margin-right:50%}.pull-m-7{margin-right:58.3333333333%}.pull-m-8{margin-right:66.6666666667%}.pull-m-9{margin-right:75%}.pull-m-10{margin-right:83.3333333333%}.pull-m-11{margin-right:91.6666666667%}.pull-m-12{margin-right:100%}}img[data-action=zoom]{cursor:pointer;cursor:-webkit-zoom-in;cursor:-moz-zoom-in}.zoom-img,.zoom-img-wrap{position:relative;z-index:666;-webkit-transition:all 300ms;-o-transition:all 300ms;transition:all 300ms}img.zoom-img{cursor:pointer;cursor:-webkit-zoom-out;cursor:-moz-zoom-out}.zoom-overlay{z-index:420;background:#fff;position:fixed;top:0;left:0;right:0;bottom:0;pointer-events:none;opacity:0;-webkit-transition:opacity 300ms;-o-transition:opacity 300ms;transition:opacity 300ms}.zoom-overlay-open .zoom-overlay{opacity:1}.zoom-overlay-open,.zoom-overlay-transitioning{cursor:default}*,*::after,*::before{box-sizing:border-box}body{font-family:"Roboto",Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;line-height:26px;color:#393e46;background-color:#fff;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body input,body textarea{border:1px solid #e6eef0;outline:none}body input:focus:required:invalid,body textarea:focus:required:invalid{border-color:#e02f40}body input:required:valid,body textarea:required:valid{border-color:#34a74e}::placeholder{color:#666}*::selection{color:#fff;background-color:#393e46}h1,h2,h3,h4,h5,h6{font-family:"Roboto",Helvetica Neue,Helvetica,Arial,sans-serif;line-height:initial;letter-spacing:.5px}h1{font-size:36px}h2{font-size:28px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}blockquote{margin:30px -100px;font-size:28px;line-height:45px;letter-spacing:.5px;font-style:normal;text-align:center}@media only screen and (max-width: 768px){blockquote{margin:30px 0;font-size:24px;line-height:38px}}pre{overflow:auto;padding:15px;margin-bottom:0;font-size:14px;white-space:pre-wrap;word-wrap:break-word;word-break:break-all}img,.zoom-img-wrap{max-width:100%;height:auto;vertical-align:middle}img+em,.zoom-img-wrap+em{text-align:center;display:block;font-style:normal;font-weight:normal;font-size:14px;color:#bbb}a{text-decoration:none;color:#f6b141;transition:all .35s}a:hover{color:#f49d10}a:active{color:#c87f09}hr{display:block;height:1px;margin:40px 0;border:0;background:#e6eef0}.top{position:fixed;bottom:40px;right:-100px;z-index:1;width:35px;height:35px;text-align:center;line-height:35px;background-color:#393e46;color:#fff;cursor:pointer;transition:all .25s ease}.top.is-active{right:40px}.top:hover{background-color:#000}@media only screen and (max-width: 768px){.top{bottom:25px}.top.is-active{right:30px}}.header{position:relative;height:100px}.header .header__overlay{position:fixed;top:0;right:0;bottom:0;left:0;z-index:10;background-color:rgba(17,17,17,.7);cursor:pointer;opacity:0;visibility:hidden;transition:all .5s ease}@media only screen and (max-width: 992px){.header .header__overlay.is-visible{opacity:1;visibility:visible}}.logo{position:absolute;top:50%;left:0;transform:translateY(-50%)}.logo .logo__link{font-size:30px;font-weight:700;letter-spacing:.5px;color:#393e46;text-decoration:none}.logo .logo__link:hover{color:#000}.logo .logo__image{max-height:50px}.main-nav{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%)}.main-nav .nav-icon__close{display:none;font-size:24px;text-align:right;cursor:pointer}.main-nav .nav-icon__close:hover{color:#000}.main-nav .nav__title{display:none}.main-nav .nav__list{white-space:nowrap}.main-nav .nav__list .nav__item{display:inline-block}.main-nav .nav__list .nav__item .nav__link{display:inline-block;padding:10px 30px;font-size:14px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#393e46}.main-nav .nav__list .nav__item .nav__link:hover{color:#000}@media only screen and (max-width: 992px){.main-nav{position:fixed;top:0;left:inherit;right:-300px;bottom:0;transform:none;z-index:100;width:300px;height:100vh;padding:40px 30px 30px;transition:right .5s cubic-bezier(0.7, 0.4, 0, 1);background:#fff}.main-nav.is-open{right:0}.main-nav .nav-icon__close{display:block}.main-nav .nav__title{display:block;padding-left:30px;padding-bottom:7px;margin-bottom:10px;color:#bbb;border-bottom:1px solid #e6eef0}.main-nav .nav__list .nav__item{display:block}}.nav-buttons{position:absolute;top:50%;right:0;transform:translateY(-50%);font-size:21px}.nav-buttons .nav__icon{color:#393e46;cursor:pointer}.nav-buttons .nav__icon:hover{color:#000}.nav-buttons .nav__icon-menu{display:none;margin-right:10px}.nav-buttons .nav__icon-menu:hover{color:#000}@media only screen and (max-width: 992px){.nav-buttons .nav__icon-menu{display:inline-block}}.hero{padding:80px 0;margin-bottom:80px;background:#f5f5f5}.hero .last-item{display:flex}.hero .hero__content{display:flex;flex-direction:column;justify-content:center;width:100%;padding:0 40px 0 0}.hero .hero__content .hero__title{font-size:38px;font-weight:normal}.hero .hero__content .hero__subtitle{font-size:18px;line-height:32px;letter-spacing:.5px}.hero .hero__content .hero__social{display:flex}.hero .hero__content .hero__social-title{font-weight:700}.hero .hero__image img{box-shadow:0 1px 4px rgba(0,0,0,.15)}@media only screen and (max-width: 992px){.hero .hero__content{padding:0}.hero .hero__content .hero__subtitle{font-size:16px;line-height:28px}}@media only screen and (max-width: 768px){.hero{margin-bottom:40px}.hero .last-item{order:1}.hero .hero__content .hero__title{margin-bottom:20px;font-size:27px}.hero .hero__image{margin-bottom:20px}.hero .hero__image img{box-shadow:none}}@media only screen and (max-width: 576px){.hero{padding:40px 0}}.search{position:fixed;top:0;left:0;right:0;bottom:0;z-index:-1;transform:scale(0.95);opacity:0;background:#fff;transition:all 250ms ease}.search.is-visible{transform:scale(1);z-index:100;opacity:1;transition:all 250ms ease}.search__box{width:50%;margin:0 auto;padding-top:100px}@media only screen and (max-width: 992px){.search__box{width:70%;padding-top:70px}}@media only screen and (max-width: 576px){.search__box{width:100%;padding-top:30px}}.search__group{margin-bottom:50px}.search__group .search__close{margin-bottom:30px;font-size:27px;text-align:right;cursor:pointer}.search__group .search__close:hover{color:#000}.search__group .search__text{width:100%;padding:20px 20px 20px 30px;letter-spacing:.5px;border-radius:30px;border:1px solid #f8f8f8;color:#393e46;background:#f8f8f8}.search__group .search__text::placeholder{letter-spacing:.5px;color:rgba(57,62,70,.7)}.search-results-list{height:65vh;margin:0;padding:0 20px;list-style:decimal;overflow:auto;white-space:normal}.search-results-list .search-results__item{margin-bottom:10px;padding-left:10px;padding-bottom:10px;font-weight:700;border-bottom:1px solid #f5efef}.search-results-list .search-results__item:first-child{padding-top:20px;border-top:1px solid #f5efef}.search-results-list .search-results__link{font-size:18px;font-weight:700;letter-spacing:.5px;color:#393e46}.search-results-list .search-results__link:hover{color:#000}.search-results-list .search-results__date{font-size:12px;color:#bbb}.search-results-list .no-results{list-style:none;padding:20px 0;font-size:18px;font-weight:700;letter-spacing:.5px;border-top:1px solid #f5efef;border-bottom:1px solid #f5efef}.contact .contact__list li{margin-left:15px;display:inline-block}.contact .contact__list li a{font-size:18px;color:#bbb}.contact .contact__list li a:hover{color:#393e46}.pagination{margin:20px 0 40px;padding:40px 0;text-align:center}@media only screen and (max-width: 576px){.pagination{margin:0 0 20px}}.pagination__list{display:flex;justify-content:space-between;align-items:center}.pagination__list .next-link,.pagination__list .previous-link,.pagination__list .disabled{display:inline-block;width:140px;height:50px;line-height:50px;font-size:12px;letter-spacing:1px;text-transform:uppercase;transition:all .35s;box-shadow:0 1px 3px 0 rgba(0,0,0,.15);background:#fff}.pagination__list .next-link,.pagination__list .previous-link{color:#393e46}.pagination__list .next-link:hover,.pagination__list .previous-link:hover{color:#000}.pagination__list .disabled{color:#bbb;cursor:not-allowed}.pagination__list .counter-box a,.pagination__list .counter-box span{padding:0 5px;font-size:15px;color:#393e46}.pagination__list .counter-box .active-link{font-weight:700}@media only screen and (max-width: 576px){.pagination__list{flex-direction:column}.pagination__list .next-link,.pagination__list .previous-link,.pagination__list .disabled{margin:10px 0}}.subscribe{width:430px;max-width:100%;margin:0 auto 80px;text-align:center}.subscribe .subscribe__title{margin-bottom:10px;font-size:37px;line-height:57px}.subscribe .subscribe__subtitle{margin-bottom:30px;font-size:17px;line-height:27px}.subscribe .subscribe-form .subscribe-group{margin-bottom:30px}.subscribe .subscribe-form .subscribe__email{width:100%;padding:17px;font-size:16px;text-align:center;outline:none;border:none;border-bottom:3px solid #e6eef0}.subscribe .subscribe-form .subscribe__email::placeholder{font-size:18px;color:#e6eef0}.subscribe .subscribe-form .subscribe__button{width:127px;height:57px;font-size:14px;font-weight:700;letter-spacing:.5px;border-radius:30px;border:none;background:#e6eef0;cursor:pointer;transition:all .35s}.subscribe .subscribe-form .subscribe__button:hover{color:#fff;background:#393e46}@media only screen and (max-width: 576px){.subscribe{margin:0 auto 40px}.subscribe .subscribe__subtitle{font-size:16px;line-height:26px}}.instagram-box{position:relative;margin:0 0 80px}.instagram-box .istagram-contact{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);z-index:1;display:block;padding:8px 15px;font-size:14px;letter-spacing:.5px;border-radius:3px;box-shadow:0 4px 4px 0 rgba(0,0,0,.15);color:#393e46;background:#fff}.instagram-box .istagram-contact:hover{color:#000}.instagram-box .instagram .instagram-item{width:16.6%;display:inline-block;transition:all .35s}.instagram-box .instagram .instagram-item:hover{opacity:.9}@media only screen and (max-width: 768px){.instagram-box .instagram .instagram-item{width:33.3%}}@media only screen and (max-width: 576px){.instagram-box{margin:0 0 40px}}.footer{position:relative;padding:80px 0 40px;text-align:center;border-top:1px solid #e6eef0;background:#f5f5f5}.footer .contact{margin-bottom:15px}.footer .copyright a{color:#393e46}.footer .copyright a:hover{color:#f6b141}@media only screen and (max-width: 576px){.footer{padding:40px 0 20px}}.lates-title{position:relative;margin-bottom:80px;font-size:14px;line-height:24px;letter-spacing:1px;text-transform:uppercase;font-weight:normal;text-align:center}.lates-title:after,.lates-title:before{content:"";display:block;position:absolute;top:50%;transform:translateY(-50%);height:1px;background:#e6eef0}.lates-title:after{width:calc(50% - 90px);left:0}.lates-title:before{width:calc(50% - 90px);right:0}@media only screen and (max-width: 768px){.lates-title{margin-bottom:40px}.lates-title:after,.lates-title:before{width:calc(50% - 70px)}}.page-title-box{padding:80px 0;border-top:1px solid #e6eef0}.page-title-box .page-title{font-size:57px;line-height:70px;margin:0}@media only screen and (max-width: 576px){.page-title-box{padding:40px 0}.page-title-box .page-title{font-size:47px;line-height:53px}}.page__head .page-image{background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#e6eef0}.page__head .page-image:after{content:"";display:table;width:100%;min-height:300px;padding-top:50%}.page{margin:80px auto}.page img{margin:30px 0}@media only screen and (max-width: 768px){.page{margin:40px auto}}.page-box{text-align:center}.page-box .back-arrow a{display:inline-block;margin-left:10px;color:#393e46;font-weight:700}.page-box .back-arrow a:hover{color:#000}.article{margin-bottom:40px}.article .article__wrapper{display:flex;align-items:center}.article .article__image{width:50%;display:block;background-position:center;background-size:cover;background-repeat:no-repeat;background-color:#e6eef0}.article .article__image:hover{opacity:.9}.article .article__image:after{content:"";display:table;width:100%;padding-bottom:70%}.article .article__content{width:60%;padding:50px;margin-left:-10%;z-index:1;border-radius:3px;background:rgba(255,255,255,.98);box-shadow:0 1px 4px rgba(0,0,0,.15)}.article .article__content .article__tag{font-size:12px;letter-spacing:.5px;font-weight:700;text-transform:uppercase}.article .article__content .article__title{margin-bottom:20px;font-size:30px}.article .article__content .article__title a{color:#393e46}.article .article__content .article__title a:hover{color:#000}.article .article__content .article__excerpt{margin-bottom:20px;font-size:16px;line-height:26px}.article .article__content .article__meta{font-size:12px;line-height:18px;text-transform:uppercase;color:#bbb}.article .article__content .article__footer{display:flex;align-items:center}.article .article__content .article__footer .read-more{margin-left:auto;padding-bottom:5px;font-size:12px;line-height:18px;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid rgba(0,0,0,0);color:#bbb}.article .article__content .article__footer .read-more:hover{color:#393e46;border-color:#f6b141}.article .article-without-image{width:100%;margin-left:auto}@media only screen and (max-width: 768px){.article .article__wrapper{flex-direction:column}.article .article__image{width:100%}.article .article__content{width:90%;padding:20px;margin:-10% 0 0 0}.article .article-without-image{width:90%;margin:0}}@media only screen and (max-width: 576px){.article .article__content .article__title{font-size:27px}}.post-title-box{padding:80px 0;border-top:1px solid #e6eef0}.post-title-box .post-title{margin-bottom:10px;width:500px;max-width:100%;font-size:57px;line-height:70px}.post-title-box .post__date{font-weight:700}@media only screen and (max-width: 576px){.post-title-box{padding:40px 0}.post-title-box .post-title{margin:10px 0;font-size:47px;line-height:53px}}.post__info{display:flex;align-items:center}.post__info .post__author{margin-right:10px;font-weight:700}.post__info .post__author .author-name{color:#bbb;border-bottom:1px solid rgba(0,0,0,0)}.post__info .post__author .author-name:hover{border-bottom:1px solid #bbb}.post__info .post__tags .post__tags-tag{position:relative;padding-left:15px;font-weight:700}.post__info .post__tags .post__tags-tag:before{content:"";position:absolute;top:50%;left:0;transform:translateY(-50%);width:5px;height:5px;border-radius:50%;background:#393e46}.post-image{background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#e6eef0}.post-image:after{content:"";display:table;width:100%;min-height:300px;padding-top:50%}.post{margin:80px auto}.post.post-no-image{margin:0 auto 80px}@media only screen and (max-width: 576px){.post{margin:40px auto}.post.post-no-image{margin:0 auto 40px}}.post img{margin:30px 0}.post__content{margin-bottom:40px}.post__share{display:flex}.post__share .share__title{margin-right:10px;font-size:18px;font-weight:700;letter-spacing:.5px}.post__share .share__list .share__item{display:inline-block;margin:0 10px}.post__share .share__list .share__item a{font-size:18px;color:#bbb}.post__share .share__list .share__item a:hover{color:#393e46}.post__navigation{display:flex;align-items:baseline;margin-bottom:80px;padding-bottom:80px;border-bottom:1px solid #e6eef0}.post__navigation .prev,.post__navigation .next{flex:1 0 50%}.post__navigation .prev:last-child,.post__navigation .next:last-child{padding-right:0}.post__navigation .prev .post__nav__image,.post__navigation .next .post__nav__image{display:block;margin-bottom:40px;background-position:center;background-size:cover;background-repeat:no-repeat;background-color:#e6eef0;transition:.35s ease-in-out}.post__navigation .prev .post__nav__image:hover,.post__navigation .next .post__nav__image:hover{opacity:.9}.post__navigation .prev .post__nav__image:after,.post__navigation .next .post__nav__image:after{content:"";display:table;width:100%;padding-bottom:65%}.post__navigation .prev .post__nav__title,.post__navigation .next .post__nav__title{margin-bottom:20px;font-size:27px;line-height:37px;text-transform:uppercase;letter-spacing:2px;text-align:center}.post__navigation .prev .post__nav__title a,.post__navigation .next .post__nav__title a{display:inline-block;max-width:250px;padding:0 10px;vertical-align:middle;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#393e46}.post__navigation .prev .post__nav__title a:hover,.post__navigation .next .post__nav__title a:hover{color:#000}.post__navigation .prev{padding-right:10px}.post__navigation .next{padding-left:10px}.post__navigation .prev__excerpt,.post__navigation .next__excerpt{width:100%;max-width:400px;margin:0 auto;text-align:center}@media only screen and (max-width: 768px){.post__navigation{flex-wrap:wrap}.post__navigation .prev,.post__navigation .next{flex:1 0 100%;padding:0}.post__navigation .next{margin-top:40px}}@media only screen and (max-width: 576px){.post__navigation{margin-bottom:40px;padding-bottom:40px}.post__navigation .prev .post__nav__image,.post__navigation .next .post__nav__image{margin-bottom:20px}}.comments{margin-bottom:80px}@media only screen and (max-width: 576px){.comments{margin-bottom:40px}}.arhive-head{padding:80px 0;margin-bottom:40px;background:#f5f5f5}.arhive-head .archive-title{text-align:center;font-weight:normal}.arhive-head .archive-title span{font-weight:700}@media only screen and (max-width: 576px){.arhive-head{margin-bottom:40px}}
+  </style>
+</head>
+
+<body>
+
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F0BM2DD5RW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F0BM2DD5RW');
+</script>
+  
+
+  <div class="container">
+  <div class="row">
+    <div class="col col-12">
+      <!-- begin header -->
+      <header class="header">
+
+        <div class="logo">
+          <a class="logo__link" href="/">
+          
+            <img class="logo__image" src="/images/logo.svg" alt="Noranfox's C#, Shader and Unity">
+          
+          </a>
+        </div>
+
+        <nav class="main-nav">
+
+          <div class="main-nav__box">
+            <div class="nav-icon__close">
+              <i class="ion ion-ios-close-circle-outline"></i>
+            </div>
+
+            <div class="nav__title">Menu</div>
+
+            <ul class="nav__list list-reset">
+              <li class="nav__item">
+                <a href="/" class="nav__link">Home</a>
+              </li>
+              
+                
+              
+                
+              
+              <li class="nav__item">
+                <a href="/about/" class="nav__link">About</a>
+              </li>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+              <li class="nav__item">
+                <a href="/styleguide/" class="nav__link">Style Guide</a>
+              </li>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </ul>
+
+          </div>
+        </nav>
+
+        <div class="nav-buttons">
+          <i class="nav__icon nav__icon-menu ion ion-md-menu" aria-label="Menu Icon"></i>
+          <i class="nav__icon nav__icon-search ion ion-md-search" aria-label="Search Icon"></i>
+        </div>
+
+        <div class="header__overlay"></div>
+      </header>
+      <!-- end header -->
+    </div>
+  </div>
+</div>
+
+  <!-- begin content -->
+  <main class="content" aria-label="Content">
+    <div class="arhive-head">
+  <div class="container">
+    <h1 class="archive-title">Tag: <span>Swift</span></h1>
+  </div>
+</div>
+
+
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/02/28/1ProgQuestion20/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/02/28/1ProgQuestion20/">Swift 프로그래머스 문자열 계산하기</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 프로그래머스 문자열 계산하기
+
+
+func solution(_ my_string:String) -&gt; Int {
+    
+    let element = my_string.split(separator: " ")
+    var result = Int(element[0])!
+    for i in 0..&lt;el...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-02-28T00:00:00+09:00">February 28, 2023</time></span>
+            </div>
+
+            <a href="/2023/02/28/1ProgQuestion20/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/02/24/1ProgQuestion19/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/02/24/1ProgQuestion19/">Swift 프로그래머스 외게어 사전</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 프로그래머스 외계어 사전
+
+
+import Foundation
+
+func solution(_ spell:[String], _ dic:[String]) -&gt; Int {
+    var count = 0
+    var answer = 2
+    for i in 0..&lt;dic.count {
+        for...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-02-24T00:00:00+09:00">February 24, 2023</time></span>
+            </div>
+
+            <a href="/2023/02/24/1ProgQuestion19/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/02/20/1ProgQuestion18/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/02/20/1ProgQuestion18/">Swift 프로그래머스 영어가 싫어요</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 프로그래머스 영어가 싫어요
+
+
+import Foundation
+
+func solution(_ numbers:String) -&gt; Int64 {
+    let english: [String: String] = ["zero": "0", "one": "1", "two": "2", "three": "3", "four...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-02-20T00:00:00+09:00">February 20, 2023</time></span>
+            </div>
+
+            <a href="/2023/02/20/1ProgQuestion18/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/02/06/1ProgQuestion17/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/02/06/1ProgQuestion17/">Swift 프로그래머스 7의 개수</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 프로그래머스 7의 개수
+
+
+import Foundation
+
+func solution(_ array:[Int]) -&gt; Int {
+    var str = ""
+    var count = 0
+    for i in 0..&lt;array.count {
+        str.append(String(array...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-02-06T00:00:00+09:00">February 6, 2023</time></span>
+            </div>
+
+            <a href="/2023/02/06/1ProgQuestion17/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/02/06/1ProgQuestion16/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/02/06/1ProgQuestion16/">Swift 프로그래머스 이진수 더기</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 프로그래머스 이진수 더하기
+
+
+import Foundation
+
+func solution(_ bin1:String, _ bin2:String) -&gt; String {
+    let num1 = Int(bin1, radix: 2)!
+    let num2 = Int(bin2, radix: 2)!
+    let ...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-02-06T00:00:00+09:00">February 6, 2023</time></span>
+            </div>
+
+            <a href="/2023/02/06/1ProgQuestion16/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/02/04/1ProgQuestion15/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/02/04/1ProgQuestion15/">Swift 프로그래머스 숨어있는 숫자의 덧셈 (2)</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 프로그래머스 숨어있는 숫자의 덧셈 (2)
+
+
+import Foundation
+
+func solution(_ my_string:String) -&gt; Int {
+    let numbers = my_string.split(whereSeparator:{!$0.isNumber})
+    var answer = 0
+ ...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-02-04T00:00:00+09:00">February 4, 2023</time></span>
+            </div>
+
+            <a href="/2023/02/04/1ProgQuestion15/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/02/03/1ProgQuestion14/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/02/03/1ProgQuestion14/">Swift 프로그래머스 한 번만 등장한 문자</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 프로그래머스 한 번만 등장한 문자
+
+
+import Foundation
+
+func solution(_ s:String) -&gt; String {
+    var char = [Character]()
+    var group = [Character]()
+    var count = 0
+    for i in s {
+...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-02-03T00:00:00+09:00">February 3, 2023</time></span>
+            </div>
+
+            <a href="/2023/02/03/1ProgQuestion14/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/02/02/1ProgQuestion13/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/02/02/1ProgQuestion13/">Swift 프로그래머스 진료순서 정하기</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 프로그래머스 진료순서 정하기
+
+
+import Foundation
+
+func solution(_ emergency:[Int]) -&gt; [Int] {
+    let sorted = emergency.sorted(by:&gt;)
+    var dic = [Int : Int]()
+    
+    for i in 0 ...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-02-02T00:00:00+09:00">February 2, 2023</time></span>
+            </div>
+
+            <a href="/2023/02/02/1ProgQuestion13/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/02/01/1ProgQuestion12/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/02/01/1ProgQuestion12/">Swift 프로그래머스 k의 개수</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 프로그래머스 k의 개수
+
+
+import Foundation
+
+func solution(_ i:Int, _ j:Int, _ k:Int) -&gt; Int {
+    let startNum = i
+    let endNum = j
+    let checkNum = k
+    var nums = [Int]()
+    ...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-02-01T00:00:00+09:00">February 1, 2023</time></span>
+            </div>
+
+            <a href="/2023/02/01/1ProgQuestion12/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/01/25/1ProgQuestion11/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/01/25/1ProgQuestion11/">Swift 프로그래머스 가까운 수</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 프로그래머스 가까운 수
+
+
+import Foundation
+
+func solution(_ array:[Int], _ n:Int) -&gt; Int {
+    var beforeanswer = [Int]()
+    var num = [Int]()
+    for i in 0..&lt;array.count {
+    ...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-01-25T00:00:00+09:00">January 25, 2023</time></span>
+            </div>
+
+            <a href="/2023/01/25/1ProgQuestion11/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/01/25/1ProgQuestion10/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/01/25/1ProgQuestion10/">Swift 프로그래머스 2차원으로 만들기</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 프로그래머스 2차원으로 만들기
+
+
+import Foundation
+
+func solution(_ num_list:[Int], _ n:Int) -&gt; [[Int]] {
+    let bn = num_list.count / n
+
+    var count = 0
+    var answer: [[Int]] = Arr...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-01-25T00:00:00+09:00">January 25, 2023</time></span>
+            </div>
+
+            <a href="/2023/01/25/1ProgQuestion10/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/01/25/1ProgQuestion9/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/01/25/1ProgQuestion9/">Swift 프로그래머스 팩토리얼</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 프로그래머스 팩토리얼
+
+
+import Foundation
+
+func solution(_ n:Int) -&gt; Int {
+    var num = 1
+    var answer = 0
+    for i in 1...n{
+        num *= i
+        if num == n {
+            a...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-01-25T00:00:00+09:00">January 25, 2023</time></span>
+            </div>
+
+            <a href="/2023/01/25/1ProgQuestion9/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/01/25/3ProgQuestion8/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/01/25/3ProgQuestion8/">Swift 프로그래머스 A로 B 만들기</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 프로그래머스 A로 B 만들기
+
+
+import Foundation
+
+func solution(_ before:String, _ after:String) -&gt; Int {
+    let str1 = before.sorted()
+    let str2 = after.sorted()
+    var answer = 0...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-01-25T00:00:00+09:00">January 25, 2023</time></span>
+            </div>
+
+            <a href="/2023/01/25/3ProgQuestion8/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/01/25/2ProgQuestion7/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/01/25/2ProgQuestion7/">Swift 프로그래머스 입문(6)</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 프로그래머스 입문(6)
+
+
+51. 외계 행성의 나이
+import Foundation
+
+func solution(_ age:Int) -&gt; String {
+    var dic: [ Character : String ] = ["0" : "a", "1" : "b", "2" : "c", "3" : "d", "4" ...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-01-25T00:00:00+09:00">January 25, 2023</time></span>
+            </div>
+
+            <a href="/2023/01/25/2ProgQuestion7/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/01/25/1ProgQuestion6/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/01/25/1ProgQuestion6/">Swift 프로그래머스 입문(5)</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 프로그래머스 입문(5)
+
+
+41. 세균 증식
+import Foundation
+
+func solution(_ n:Int, _ t:Int) -&gt; Int {
+    var total = n
+    for _ in 1...t{
+        total *= 2
+    }
+    return total
+}
+
+42. ...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-01-25T00:00:00+09:00">January 25, 2023</time></span>
+            </div>
+
+            <a href="/2023/01/25/1ProgQuestion6/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/01/24/1ProgQuestion5/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/01/24/1ProgQuestion5/">Swift 프로그래머스 입문(4)</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 프로그래머스 입문(4)
+
+
+31. 배열 두 배 만들기
+import Foundation
+
+func solution(_ numbers:[Int]) -&gt; [Int] {
+    var num = [Int]()
+    for i in 0..&lt;numbers.count{
+        num.append(numbe...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-01-24T00:00:00+09:00">January 24, 2023</time></span>
+            </div>
+
+            <a href="/2023/01/24/1ProgQuestion5/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/01/21/1ProgQuestion4/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/01/21/1ProgQuestion4/">Swift 프로그래머스 입문(3)</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 프로그래머스 입문(3)
+
+21. 문자열 뒤집기
+import Foundation
+
+func solution(_ my_string:String) -&gt; String {
+    var string = ""
+    for i in my_string{
+        string.insert(i, at: string.s...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-01-21T00:00:00+09:00">January 21, 2023</time></span>
+            </div>
+
+            <a href="/2023/01/21/1ProgQuestion4/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/01/21/1ProgQuestion3/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/01/21/1ProgQuestion3/">Swift 프로그래머스 입문(2)</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 프로그래머스 입문(2)
+
+
+11.배열의 평균
+import Foundation
+
+func solution(_ numbers:[Int]) -&gt; Double {
+    var sum: Double = 0
+    for i in 0..&lt;numbers.count{
+        sum += Double(numb...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-01-21T00:00:00+09:00">January 21, 2023</time></span>
+            </div>
+
+            <a href="/2023/01/21/1ProgQuestion3/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/01/19/1ProgQuestion1/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/01/19/1ProgQuestion1/">프로그래머스 옹알이(1)</a>
+          </h2>
+      
+          <p class="article__excerpt">
+프로그래머스 옹알이(1)
+
+
+4개의 단어로 만들수 있는 경우의 수는 (4 * 3 * 2 * 1) + (4 * 3 * 2) + (4 * 3) + 4의 경우입니다. 
+(4 * 3 * 2 * 1)과 (4 * 3 * 2)는 명백히 다릅니다. 4단어와 3단어 조합의 차이입니다.
+이렇게 구할수 있는 경우의 수는 모두 64가지 입니다....</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-01-19T00:00:00+09:00">January 19, 2023</time></span>
+            </div>
+
+            <a href="/2023/01/19/1ProgQuestion1/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/01/11/1ProgQuestion2/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/01/11/1ProgQuestion2/">Swift 프로그래머스 입문(1)</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 프로그래머스 입문(1)
+
+
+1.두 수의 차
+import Foundation
+
+func solution(_ num1:Int, _ num2:Int) -&gt; Int {
+    let num3 = num1 - num2
+    return num3
+}
+
+
+2.숫자 비교하기
+import Foundation
+
+func s...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-01-11T00:00:00+09:00">January 11, 2023</time></span>
+            </div>
+
+            <a href="/2023/01/11/1ProgQuestion2/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/01/11/2OptionalChaining/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/01/11/2OptionalChaining/">Swift Optional</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift Optional
+
+* 스스로 공부 및 정리를 위해 The Swift Language Guide을 요약 및 정리 한 내용입니다.
+옵셔널 (Optional)
+
+  옵셔널을 래핑하는 옵셔널체이닝 하기전에 간단히 정리할려고합니다.
+  옵셔널의 형식은 타입선언부 뒤에 ? 문자를 씁니다. 예시 var animal: Stri...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-01-11T00:00:00+09:00">January 11, 2023</time></span>
+            </div>
+
+            <a href="/2023/01/11/2OptionalChaining/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/01/11/1Deinitialization/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/01/11/1Deinitialization/">Swift Deinitialization</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift Deinitialization
+
+* 스스로 공부 및 정리를 위해 The Swift Language Guide을 요약 및 정리 한 내용입니다.
+
+초기화 해지 (Deinitialization)
+
+  초기자와 반대로 클래스 인스턴스가 소멸되기 직전에 호출됩니다.
+  deinit 키워드를 사용합니다.
+  오직 클래스 타...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-01-11T00:00:00+09:00">January 11, 2023</time></span>
+            </div>
+
+            <a href="/2023/01/11/1Deinitialization/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2023/01/10/1Initialization02/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2023/01/10/1Initialization02/">Swift Inheritance02</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift Inheritance02
+
+* 스스로 공부 및 정리를 위해 The Swift Language Guide을 요약 및 정리 한 내용입니다.
+
+클래스 상속과 초기화 (Class Inheritance and Initialization)
+
+  모든 클래스의 저장 프로퍼티와 상속받은 프로퍼티는 초기화 단계에서 반드시 초기값...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2023-01-10T00:00:00+09:00">January 10, 2023</time></span>
+            </div>
+
+            <a href="/2023/01/10/1Initialization02/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2022/12/31/2Initialization/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2022/12/31/2Initialization/">Swift Initialization</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift Initialization
+
+* 스스로 공부 및 정리를 위해 The Swift Language Guide을 요약 및 정리 한 내용입니다.
+
+정의
+
+  초기화는 클래스, 구조체, 열거형 인스턴스를 사용하기 위해 준비 작업을 하는 단계입니다.
+  각 저장 프로퍼티의 초기값을 설정합니다.
+  초기화 과정은 inital...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2022-12-31T00:00:00+09:00">December 31, 2022</time></span>
+            </div>
+
+            <a href="/2022/12/31/2Initialization/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2022/12/31/1Inheritance/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2022/12/31/1Inheritance/">Swift Inheritance01</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift Inheritance01
+
+* 스스로 공부 및 정리를 위해 The Swift Language Guide을 요약 및 정리 한 내용입니다.
+
+상속 정의 (Inheritance)
+
+  클래스는 메소드, 프로퍼티와 다른 특징을 다른클래스로부터 상속 받아 올수 있습니다.
+  저장된 프로퍼티와 계산된프로퍼티와 상관없이 상복...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2022-12-31T00:00:00+09:00">December 31, 2022</time></span>
+            </div>
+
+            <a href="/2022/12/31/1Inheritance/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2022/12/31/3SubScript/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2022/12/31/3SubScript/">Swift Subscript</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift Subscript
+
+* 스스로 공부 및 정리를 위해 The Swift Language Guide을 요약 및 정리 한 내용입니다.
+
+정의
+
+  서브스크립트는 콜렉션, 리스트, 시퀀스 등 집합의 특정 멤버 엘리먼트에 간단하게 접근할수 있는 문법입니다.
+  메소드 없이 특정 값을 할당 하거나 가져올수 있습니다.
+  하...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2022-12-31T00:00:00+09:00">December 31, 2022</time></span>
+            </div>
+
+            <a href="/2022/12/31/3SubScript/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2022/12/31/2Method/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2022/12/31/2Method/">Swift Method</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift Method
+
+* 스스로 공부 및 정리를 위해 The Swift Language Guide을 요약 및 정리 한 내용입니다.
+
+매소드(Method)
+
+  특정타입의 클래스, 구조체, 열거형과 관련된 함수를 메소드라 합니다.
+  특정 타입의 인스턴스에서 실행할수 있는 메소드를 인스턴스 메소스, 특정형과 관련된 메소드...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2022-12-31T00:00:00+09:00">December 31, 2022</time></span>
+            </div>
+
+            <a href="/2022/12/31/2Method/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2022/12/31/1Property/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2022/12/31/1Property/">Swift Property</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift Property
+
+* 스스로 공부 및 정리를 위해 The Swift Language Guide을 요약 및 정리 한 내용입니다.
+
+프로퍼티(Property)
+
+  클래스, 구조체, 열거형과 관련된 값입니다.
+  저장 프로퍼티와 계산된 프로퍼티가 있습니다.
+  저장 프로퍼티는 말그대로 값을 저장하고 있는 프로퍼티입니...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2022-12-31T00:00:00+09:00">December 31, 2022</time></span>
+            </div>
+
+            <a href="/2022/12/31/1Property/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2022/12/31/6ClasssAndStructure/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2022/12/31/6ClasssAndStructure/">Swift Class and Structure</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift Class and Structure
+
+* 스스로 공부 및 정리를 위해 The Swift Language Guide을 요약 및 정리 한 내용입니다.
+
+클래스와 구조체
+
+  프로그램의 코드를 조직화 하기 위해 일반적으로 사용합니다
+  Swift는 다른 언어와 다르게 interface파일과 implementation ...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2022-12-31T00:00:00+09:00">December 31, 2022</time></span>
+            </div>
+
+            <a href="/2022/12/31/6ClasssAndStructure/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2022/12/31/5Enumeration/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2022/12/31/5Enumeration/">Swift Enumeration</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift Enumeration
+
+* 스스로 공부 및 정리를 위해 The Swift Language Guide을 요약 및 정리 한 내용입니다.
+
+열거형(Enumeration)
+
+  열거형은 관련된 값으로 이루어진 그룹을 공통의 형으로 선언하는 것입니다.
+  열거형은 1급 클래스형(first-class type)이어서 계산된...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2022-12-31T00:00:00+09:00">December 31, 2022</time></span>
+            </div>
+
+            <a href="/2022/12/31/5Enumeration/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2022/12/31/4Closures/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2022/12/31/4Closures/">Swift Closure</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift Closure
+
+* 스스로 공부 및 정리를 위해 The Swift Language Guide을 요약 및 정리 한 내용입니다.
+
+클러저의 정의 및 특징
+
+  클로저는 코드블럭으로 C와 Objective-C의 블록과 다른 언어의 람다와 비슷합니다.
+  어떤 상수나 변수의 참조를 캡처해 저장할 수 있습니다. Swift...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2022-12-31T00:00:00+09:00">December 31, 2022</time></span>
+            </div>
+
+            <a href="/2022/12/31/4Closures/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2022/12/31/3Tuple/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2022/12/31/3Tuple/">Swift Tuple</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift Tuple
+
+* 스스로 공부 및 정리를 위해 The Swift Language Guide을 요약 및 정리 한 내용입니다.
+
+Tuple
+
+  튜플은 스위프트 프로그래밍 언어에서 가장 강력한 기능중 하나입니다.
+  여러값을 하나의 개체에 일시적으로 묶는 방법입니다.
+  튜플에 저장되는 항목들은 어떠한 타입도 상관없으...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2022-12-31T00:00:00+09:00">December 31, 2022</time></span>
+            </div>
+
+            <a href="/2022/12/31/3Tuple/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2022/12/31/2Functions/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2022/12/31/2Functions/">Swift Function</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift Function
+
+* 스스로 공부 및 정리를 위해 The Swift Language Guide을 요약 및 정리 한 내용입니다.
+
+정의와 호출(Defining and Calling Function)
+
+  함수를 선언할때 가장 앞에 func 키워드를 붙이고 (person: String)파라미터와 형 그리고 -&gt;...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2022-12-31T00:00:00+09:00">December 31, 2022</time></span>
+            </div>
+
+            <a href="/2022/12/31/2Functions/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2022/12/31/3SControlFlow/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2022/12/31/3SControlFlow/">Swift Control Flow</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift Control Flow
+
+* 스스로 공부 및 정리를 위해 The Swift Language Guide을 요약 및 정리 한 내용입니다.
+
+For-In 문(For-In Loop)
+
+  For-In Loop는 속칭 반복문입니다. C#에 foreach반복문과 비슷하다고 느꼈습니다.
+  배열, 숫자, 문자열을 순서대로 순...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2022-12-31T00:00:00+09:00">December 31, 2022</time></span>
+            </div>
+
+            <a href="/2022/12/31/3SControlFlow/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2022/12/28/01Swift-Operator/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2022/12/28/01Swift-Operator/">Swift Operator</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift Collection Operators
+
+* 스스로 공부 및 정리를 위해 The Swift Language Guide을 요약 및 정리 한 내용입니다.
+
+할당연산자(Assignment Operator)
+
+  = 입니다. == 와는 다릅니다.
+  할당 연산자는 값을 초기화 시키거나 변경합니다. 상수, 변수 모두에 사용...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2022-12-28T00:00:00+09:00">December 28, 2022</time></span>
+            </div>
+
+            <a href="/2022/12/28/01Swift-Operator/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2022/12/28/02Swift-SSDictionary/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2022/12/28/02Swift-SSDictionary/">Swift Dictionary</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift Collection Dictionary
+
+* 스스로 공부 및 정리를 위해 The Swift Language Guide을 기반으로 요약 및 정리 한 내용입니다.
+
+Dictionary
+
+  Dictionary는 Key값과 Value 1쌍으로 이루어진 구성입니다. 처음에 배울때 정말 어려웠던 내용이었는데, 정말 Uni...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2022-12-28T00:00:00+09:00">December 28, 2022</time></span>
+            </div>
+
+            <a href="/2022/12/28/02Swift-SSDictionary/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2022/12/28/01Swift-Set/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2022/12/28/01Swift-Set/">Swift Set</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift Collection Set
+
+* 스스로 공부 및 정리를 위해 The Swift Language Guide을 기반으로 요약 및 정리 한 내용입니다.
+
+Set
+
+  Set형태로 저장되기 위해서는 반드시 타입이 hashable이어야만합니다.
+  Swift의 기본적인 타입들은 hashable입니다.
+    Hashabl...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2022-12-28T00:00:00+09:00">December 28, 2022</time></span>
+            </div>
+
+            <a href="/2022/12/28/01Swift-Set/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2022/12/28/2Swift-Collection/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2022/12/28/2Swift-Collection/">Swift Collection</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift Collection Array
+
+* 스스로 공부 및 정리를 위해 The Swift Language Guide을 요약 및 정리 한 내용입니다.
+
+
+* 정말 좋은 이미지 자료입니다. C# 공부떄는 단순히 형식만 외운다보니 헷갈릴 때가 많았는데, 이 이미지 이후 그부분이 싹 사라졌습니다.
+
+배열의 종류
+
+  Swift...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2022-12-28T00:00:00+09:00">December 28, 2022</time></span>
+            </div>
+
+            <a href="/2022/12/28/2Swift-Collection/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2022/12/27/1Swift-DataType02/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2022/12/27/1Swift-DataType02/">Swift DataType02</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 데이터 타입02
+
+* 스스로 공부 및 정리를 위해 The Swift Language Guide을 요약 및 정리 한 내용입니다.
+
+01.유니코드
+
+  유니코드는 전 세계의 모든 문자를 컴퓨터에서 일관되게 표현하고 다룰 수 있도록 설계된 국제 표준이다.
+  Swift의 네이티브 문자열 타입은 유니코드 스칼라 값으로 ...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2022-12-27T00:00:00+09:00">December 27, 2022</time></span>
+            </div>
+
+            <a href="/2022/12/27/1Swift-DataType02/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+  
+<!-- begin article -->
+<div class="article">
+  <div class="container">
+
+    <div class="article__wrapper">
+
+        
+          <a href="/2022/12/27/Swift-DataType01/" class="article__image" style="background-image: url(/images/Swift_logo.webp)">
+          </a>
+        
+
+        <div class="article__content ">
+          <div class="article-tags">
+          
+            <div class="article-tags__box">
+              
+                <a href="/tag/swift" class="article__tag">Swift</a>
+              
+            </div>
+          
+          </div>
+      
+          <h2 class="article__title">
+            <a href="/2022/12/27/Swift-DataType01/">Swift DataType01</a>
+          </h2>
+      
+          <p class="article__excerpt">
+Swift 데이터 타입01
+
+* 스스로 공부 및 정리를 위해 The Swift Language Guide을 요약 및 정리 한 내용입니다.
+
+01. 상수와 변수
+
+  기본적인 상수 let과 변수var가 있다
+  let 혹수 var는 추정되지 않기때문에, 변수 선언시 작성 해주어야한다.
+    var x = 10
+x = 20
+...</p>
+          
+          <div class="article__footer">
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2022-12-27T00:00:00+09:00">December 27, 2022</time></span>
+            </div>
+
+            <a href="/2022/12/27/Swift-DataType01/" class="read-more">Keep Reading <i class="ion ion-ios-arrow-forward"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+      
+  </div>
+</div>
+<!-- end article -->
+
+
+  </main>
+  <!-- end content -->
+
+  <div class="top ion ion-ios-arrow-up" title="Top"></div>
+
+  <!-- begin search -->
+<div class="search">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="search__box">
+          <div class="search__group">
+            <div class="search__close">
+              <i class="ion ion-ios-close-circle-outline"></i>
+            </div>
+            <label for="js-search-input" class="screen-reader-text">Search for Blog</label>
+            <input type="text" id="js-search-input" class="search__text" autocomplete="off" placeholder="Type to search">
+          </div>
+          <ul id="js-results-container" class="search-results-list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end search -->
+
+  <!-- begin footer -->
+<footer class="footer">
+  <div class="container">
+
+     
+
+    
+    
+    
+
+    <div class="contact">
+  <ul class="contact__list list-reset">
+    
+      <li><a href="https://twitter.com/"><i class="ion ion-logo-twitter"></i></a></li>
+    
+
+    
+      <li><a href="https://facebook.com/"><i class="ion ion-logo-facebook"></i></a></li>
+    
+  
+    
+      <li><a href="https://dribbble.com/"><i class="ion ion-logo-dribbble"></i></a></li>
+    
+  
+    
+      <li><a href="https://instagram.com/"><i class="ion ion-logo-instagram"></i></a></li>
+    
+  
+    
+      <li><a href="https://pinterest.com/"><i class="ion ion-logo-pinterest"></i></a></li>
+    
+
+    
+      <li><a href="https://github.com/noranfox/"><i class="ion ion-logo-github"></i></a></li>
+    
+  </ul>
+</div>
+
+    <div class="copyright">Copyright &copy; 2023 <a href="/">Noranfox's C#, Shader and Unity</a> — All right Reserved. Powered by <a href="https://jekyllrb.com/">Jekyll</a>.</div>
+</div>
+</footer>
+<!-- end footer -->
+
+
+  <script src="/js/vendors/jquery-3.3.1.min.js"></script>
+<script src="/js/vendors/simple-jekyll-search.min.js"></script>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById("js-search-input"),
+    resultsContainer: document.getElementById("js-results-container"),
+    json: "/search.json",
+    searchResultTemplate: '<li class="search-results__item"><a class="search-results__link" href="{url}">{title}</a><br> <span class="search-results__date">{date}</span></li>',
+    noResultsText: '<li class="no-results">No results found</li>'
+  });
+</script>
+<script src="/js/vendors/transition.js"></script>
+<script src="/js/vendors/zoom.min.js"></script>
+<script src="/js/vendors/instafeed.min.js"></script>
+<script src="/js/vendors/jquery.fitvids.js"></script>
+<script src="/js/common.js"></script>
+</body>
+
+</html>
