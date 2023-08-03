@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Swift 프로그래머스 이진수 더기
+title:  Swift 프로그래머스 이진수 더하기
 date:   2023-02-06
 image: Swift_logo.webp
 tags: [Swift]

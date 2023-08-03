@@ -1,17 +1,17 @@
 #-------------------------------
 # General Site Settings
-title: Noranfox's C#, Shader and Unity
+title: Kkul-Nyan's GamingDevHub
 logo: logo.svg # You can add own logo.
-description: Nornafox's C#, Shader, Unity Study
+description: Kkul-Nyan's GamingDevHub
 
 
 #-------------------------------
 # Author Settings
 author:
-  name: NoranFox
+  name: Kkul-Nyan
   image: 01.webp
-  say-hello: Hello, I’m <strong>NoranFox</strong>
-  bio: talks, and writes about <strong>Shader</strong>, <strong>C#</strong>, <strong>Unity</strong>. I Loves <a href="#">music</a> & cat.
+  say-hello: Hello, I’m <strong>Kkul-Nyan</strong>
+  bio: talks, and writes related to <strong>"GameDev"</strong> like <strong>Shader</strong>, <strong>Algorithm</strong>, <strong>Design Pattern</strong> and . I Loves <span style='color:yellow;'>music</span> & <span style='color:yellow;'>cat</span>.
 
 
 #-------------------------------
@@ -21,7 +21,7 @@ facebook: https://facebook.com/ # Add your Facebook handle
 dribbble: https://dribbble.com/ # Add your Dribbble handle
 instagram: https://instagram.com/ # Add your Instagram handle
 pinterest: https://pinterest.com/ # Add your Pinterest handle
-github:  https://github.com/noranfox/
+github:  https://github.com/Kkul-Nyan/
 
 
 #-------------------------------
@@ -37,7 +37,7 @@ instagram-profile: artemsheludko_ # Add instagram username
 
 #-------------------------------
 # Google Analytics
-google-analytics: G-F0BM2DD5RW # Add your identifier. For example UA-99631805-1.
+google-analytics:  # Add your identifier. For example UA-99631805-1.
 
 
 #-------------------------------
