@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://noranfox.github.io/sitemap.xml
+Sitemap: https://kkul-nyan.github.io/sitemap.xml
