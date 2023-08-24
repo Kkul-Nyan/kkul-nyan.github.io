@@ -11,6 +11,6 @@ image: cat01.webp
 VR/AR의 기본적인 부분을 다룰수 있으며, Xcode 프로파일링을 하는데 혹시나 필요할까 기본적인 Swift 개념을 공부했습니다.
 유니티 ML Agents에 관심이 있어 Python을 공부 할려고 합니다.
 
-문의 메일 : noranfox
-***
+***문의 메일 : kkulnyan@gmail.com***
+
 
