@@ -12,7 +12,7 @@ tags: ["Unity"]
 # HDRP Water Setting 방법
 ---
 
-유니티 2022 HDRP부터는 유니티에서 기본적인 고품질의 Water를 지원합니다. Ocean 과 River, Pool 3종류를 제공합니다.
+유니티 **2022 HDRP**부터는 유니티에서 기본적인 고품질의 Water를 지원합니다. Ocean 과 River, Pool 3종류를 제공합니다.
 3가지 모두 고품질의 HDRP에 어울리는 Water로서 세부적인 세팅 역시 가능합니다.
 
 그러나, 생각보다 아무것도 모르는 상태에서 Water를 히키라이키 창의 생성한다 해서 Water가 바로 작동하는 것은 아니라
