@@ -2,7 +2,7 @@
 layout: post
 title:  유니티 Input System 사용(이벤트핸들러)
 date:   2023-10-01
-image: Unity/cat005.webp
+image: Unity/cat001.webp
 tags: ["Unity"]
 ---
 
