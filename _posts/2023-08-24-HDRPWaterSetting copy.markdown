@@ -43,7 +43,7 @@ HDRP 세팅을 변경하기 위해 **Edit - Project Setting** 을 들어가겠�
 먼저 전자의 방법은 히치라이키창에서 **빈 게임오브젝트를 생성하신 뒤, Volume을 생성합니다.** 프로필이 없다면 생성해 주면됩니다. 
 이제 **Add Override**를 클릭합니다. **WaterRendering**을 선택해 주신 뒤에 **State**를 활성화하고, **Enable**로 해주시면, 바로 화면에 Water가 나타납니다.
 
-![HDRPWaterSettingProjectSetting03]({{ site.baseurl }}/images/Unity/HDRPWater/HDRPWaterSettingProjectSetting03.webp)
+![HDRPWaterProjectSetting03]({{ site.baseurl }}/images/Unity/HDRPWater/HDRPWaterProjectSetting03.webp)
 
 후자의 방법은 기존 **Project Setting**에서 전체 세팅을 변경하는 것입니다. 
 **Qualitay에서 HDRP**를 선택합니다. 바로 제일 상단에 위치하는 **Volume Profiles**에서 **Default Volume Profile Setting**에서 **Add Override** 하셔서 **WaterRendering**을 생성해 주시면 됩니다. 이렇게 되면 빠로 Volume을 씬에 추가하지 않더라도 기본적인 세팅에서 **WaterRendering**을 사용하기 때문에 씬에 나타나게 됩니다.
