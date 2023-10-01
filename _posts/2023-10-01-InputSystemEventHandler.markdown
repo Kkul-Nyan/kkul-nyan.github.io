@@ -40,7 +40,6 @@ Run의 경우, 누르고 있을 때, 캐릭터가 달리도록 만들기 위한 
 
 ```c#
 using UnityEngine;
-
 using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
