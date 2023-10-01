@@ -115,6 +115,8 @@ public class PlayerMove : MonoBehaviour
 }
 ```
 
+![MoveTest]({{ site.baseurl }}/images/Unity/InputSystem/MoveTest.webp)
+
 **Start()에서 이벤트 핸들러를 등록**하고 있습니다. 방식은 2가지 방식으로 작성했습니다.
 두 방식 다 크게 차이는 나지 않습니다
 첫 번째의 경우, **람다식**을 이용하여 간편하게 만들어준 방식입니다.
@@ -123,6 +125,6 @@ public class PlayerMove : MonoBehaviour
 이를 통해 Invoke Unity Event 방식과 다르게 InputAction.CallbackContext context를 통해 context 값을 일일이 지정해 주고
 다시 Player Input에 등록해 줄 필요는 없습니다.
 
-![MoveTest]({{ site.baseurl }}/images/Unity/InputSystem/MoveTest.webp)
+
 
 
