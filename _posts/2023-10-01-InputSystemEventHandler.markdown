@@ -122,5 +122,6 @@ Start()에서 이벤트 핸들러를 등록하고 있습니다. 방식은 2가�
 이를 통해 Invoke Unity Event 방식과 다르게 InputAction.CallbackContext context를 통해 context 값을 일일이 지정해 주고
 다시 Player Input에 등록해 줄 필요는 없습니다.
 
+![MoveTest]({{ site.baseurl }}/images/Unity/InputSystem/MoveTest.webp)
 
 
