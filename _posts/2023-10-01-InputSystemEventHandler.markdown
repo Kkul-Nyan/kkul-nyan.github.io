@@ -115,7 +115,7 @@ public class PlayerMove : MonoBehaviour
 }
 ```
 
-![MoveTest]({{ site.baseurl }}/images/Unity/InputSystem/MoveTest.webp)
+![MoveTest]({{ site.baseurl }}/images/Unity/InputSystem/MoveTest.gif)
 
 **Start()에서 이벤트 핸들러를 등록**하고 있습니다. 방식은 2가지 방식으로 작성했습니다.
 두 방식 다 크게 차이는 나지 않습니다
