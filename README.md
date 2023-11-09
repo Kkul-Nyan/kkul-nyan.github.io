@@ -1,1 +1,1 @@
-address : https://www.kkul-nyan.github.io
+page address : https://www.kkul-nyan.github.io
