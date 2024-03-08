@@ -2,7 +2,7 @@
 layout: post
 title:  유니티 ML-Agent를 위한 기본설치 및 문제해결
 date:   2024-03-07
-image: Unity/cat001.webp
+image: Unity/cat002.webp
 tags: ["Unity"]
 ---
 
