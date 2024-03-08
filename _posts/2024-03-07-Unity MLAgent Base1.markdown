@@ -66,6 +66,9 @@ Requirement already satisfied: pip in ./Library/Python/3.9/lib/python/site-packa
 **해결방법**<br>
 제대로 4번 과정인 가상환경을 실행해준뒤 명령어를 실행해서 가상환경내에 설치하면됩니다.
 
+모든것이 설치되었다면, 
+유니티를 실행 한 뒤,Behavior Parameters 스크립트에서 Behavior Type을 Default로 설정한니다.<br>
+터미널에서 source ~/python-envs/sample-env/bin/activate를 통해 가상환경을 실행하고,  **mlagents-learn "인공지능방식을 지정한 yaml파일 경로 및 yaml파일 이름" --run-id=저장하고싶은폴더명**을 작성하신뒤, 유니티에서 Play버튼을 눌리시면 정상적으로 작동하는것을 확인할수 있습니다. 
 
 
 
