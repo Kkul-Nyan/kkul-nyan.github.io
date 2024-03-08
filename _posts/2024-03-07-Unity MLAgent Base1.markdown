@@ -12,19 +12,19 @@ tags: ["Unity"]
 # 유니티 ML-Agent를 위한 기본설치 및 문제해결
 ---
 
-1.Pytion3 및 Pytorch<br>
-  -Pytion설치 및 PIP설치<br>
-  -경로 문제가 생길수 있음. 그럴경우 ./zshrc를 통해 경로지정 해줄 필요가 있습니다.<br>
-2.파이썬 가상환경폴더생성 (터미널을통해 mkdir ~/python-envs 명령어를 실행)<br>
-3.새로운 가상환경이름 생성 (python3 -m venv ~/python-envs/sample-env)<br>
-  -sample-env의 경우, 원하는 이름지정을 지정해줍니다.<br>
-4.가상환경실행(source ~/python-envs/sample-env/bin/activate)<br> 
-  -이후에도 MLAgents 사용을 위해 터미널에서 미리 가상환경을 실행해줘야한다.<br>
-5.실행된 가상환경에 pip및 setuptoos 설치(pip3 install --upgrade pip, pip3 install --upgrade setuptools)<br>
-6.MLAgents 설치(pip3 install mlagents==*version)<br>
-  -"==*version"에서 *version대신 원하는 버전을 넣거나, 통채로 아예 생략하면된다.<br>
-7.MLAgents 명령어를 통해 잘 설치가 되었는지 확인(mlagents-learn --help)<br>
-  -문제없을시 mlagents에 관련된 명령어 설명이 뜬다.<br>
+- Pytion3 및 Pytorch<br>
+    Pytion설치 및 PIP설치<br>
+    경로 문제가 생길수 있음. 그럴경우 ./zshrc를 통해 경로지정 해줄 필요가 있습니다.<br>
+- 파이썬 가상환경폴더생성 (터미널을통해 mkdir ~/python-envs 명령어를 실행)<br>
+- 새로운 가상환경이름 생성 (python3 -m venv ~/python-envs/sample-env)<br>
+    sample-env의 경우, 원하는 이름지정을 지정해줍니다.<br>
+- 가상환경실행(source ~/python-envs/sample-env/bin/activate)<br> 
+    이후에도 MLAgents 사용을 위해 터미널에서 미리 가상환경을 실행해줘야한다.<br>
+- 실행된 가상환경에 pip및 setuptoos 설치(pip3 install --upgrade pip, pip3 install --upgrade setuptools)<br>
+- MLAgents 설치(pip3 install mlagents==*version)<br>
+    "==*version"에서 *version대신 원하는 버전을 넣거나, 통채로 아예 생략하면된다.<br>
+- MLAgents 명령어를 통해 잘 설치가 되었는지 확인(mlagents-learn --help)<br>
+    문제없을시 mlagents에 관련된 명령어 설명이 뜬다.<br>
  
 발생했던 문제 및 해결방법<br>
 <br>
