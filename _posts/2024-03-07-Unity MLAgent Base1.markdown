@@ -26,7 +26,7 @@ tags: ["Unity"]
 - MLAgents 명령어를 통해 잘 설치가 되었는지 확인(mlagents-learn --help)<br>
     문제없을시 mlagents에 관련된 명령어 설명이 뜬다.<br>
  
-발생했던 문제 및 해결방법<br>
+**발생했던 문제 및 해결방법**<br>
 <br>
 1.Python 설치이후 PIP설치 과정에서 발생
 
@@ -35,10 +35,10 @@ WARNING: The scripts pip, pip3 and pip3.9 are installed in '/Users/jeonghyeongi/
   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
   NOTE: The current PATH contains path(s) starting with `~`, which may not be expanded by all applications. 
 ```
-문제원인 <br>
+**문제원인** <br>
 pip, pip3, 및 pip3.9 스크립트가 현재 사용자의 PATH에 추가되지 않았고, 해당 스크립트들이 /Users/username/Library/Python/3.9/bin 디렉토리에 설치되었다는 것을 나타냅니다. 즉, 터미널에서 애들을 정확한 PATH를 모르게 된다는 겁니다. 무시할경우 5번과정에서 가상환경내에 pip설치가 되지 않습니다.
 
-문제해결
+**문제해결**
 
 ```c#
 vi ~/.zshrc
@@ -59,11 +59,11 @@ source ~/.zshrc
 User Defaulting to user installation because normal site-packages is not writeable
 Requirement already satisfied: pip in ./Library/Python/3.9/lib/python/site-packages (24.0) 
 ```
-문제원인<br>
+**문제원인**<br>
 전역 패키지 디렉토리에 대한 쓰기 권한이 없이 설치를 시도시 발생합니다.
 사실 4번과정을 제대로 진행하면, 가상환경내에 설치를 하기 때문에 발생하지 않습니다.
 
-해결방법<br>
+**해결방법**<br>
 제대로 4번 과정인 가상환경을 실행해준뒤 명령어를 실행해서 가상환경내에 설치하면됩니다.
 
 
